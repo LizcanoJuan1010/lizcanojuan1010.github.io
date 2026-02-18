@@ -1,654 +1,619 @@
 <!DOCTYPE html>
-<html lang="es" class="no-js">
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Juan Lizcano</title>
+    <title>Juan Lizcano | Data Scientist & AI Engineer</title>
+    <meta name="description" content="Portfolio of Juan Lizcano Barbosa — Data Scientist, AI Engineer, and Machine Learning Developer based in Colombia. Specializing in NLP, Computer Vision, and database architecture.">
+    <meta property="og:title" content="Juan Lizcano | Data Scientist & AI Engineer">
+    <meta property="og:description" content="Data Scientist & AI Engineer specializing in Machine Learning, NLP, and Computer Vision.">
+    <meta property="og:type" content="website">
 
-    <!-- Google Fonts: Inter -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 
-    <!-- Spline Viewer Script -->
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.48/build/spline-viewer.js"></script>
-
-    <style>
-        /* --- Reset y Estilos Base --- */
-        :root {
-            --background-color: #0a0a0a;
-            --primary-text-color: #e0e0e0;
-            --secondary-text-color: #a0a0a0;
-            --highlight-color: #ffffff;
-            --accent-color: #4f46e5;
-            --chatbot-bg: #1a1a1a;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            font-family: 'Inter', sans-serif;
-            background-color: var(--background-color);
-            color: var(--primary-text-color);
-            overflow-x: hidden;
-        }
-
-        /* --- Fondo Animado --- */
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1;
-        }
-
-        /* --- Contenedor Principal --- */
-        .main-container {
-            position: relative;
-            z-index: 2;
-            width: 100%;
-        }
-
-        /* --- Barra de Navegación --- */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-            transition: background-color 0.3s ease, padding 0.3s ease;
-            box-sizing: border-box;
-        }
-        nav.scrolled {
-            background-color: rgba(10, 10, 10, 0.85);
-            backdrop-filter: blur(10px);
-            padding: 15px 50px;
-        }
-        .nav-logo {
-            font-weight: 900;
-            font-size: 1.5rem;
-            color: var(--highlight-color);
-        }
-        .nav-links a {
-            color: var(--primary-text-color);
-            text-decoration: none;
-            margin-left: 30px;
-            font-weight: 700;
-            transition: color 0.3s ease;
-        }
-        .nav-links a:hover {
-            color: var(--highlight-color);
-        }
-
-        /* --- Estructura de Secciones --- */
-        section {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 100px 40px;
-            box-sizing: border-box;
-            position: relative;
-        }
-
-        /* --- Sección Hero (Inicio) --- */
-        #inicio {
-            padding: 0;
-        }
-        spline-viewer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            outline: none;
-        }
-        .hero-text {
-            position: relative;
-            z-index: 3;
-            text-align: center;
-        }
-        h1 {
-            font-size: 4.5rem;
-            font-weight: 900;
-            color: var(--highlight-color);
-            margin: 0;
-            text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        }
-        .hero-text p {
-            font-size: 1.5rem;
-            color: var(--primary-text-color);
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            min-height: 2.2rem; /* Espacio para el texto que se escribe */
-        }
-        .typing-cursor {
-            display: inline-block;
-            width: 3px;
-            height: 1.5rem;
-            background-color: var(--highlight-color);
-            animation: blink 0.7s infinite;
-        }
-        @keyframes blink { 50% { opacity: 0; } }
-
-        /* --- EFECTO: Texto con Gradiente --- */
-        .gradient-text {
-            background: linear-gradient(90deg, #e0e0e0, #ffffff, #e0e0e0);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: gradient-flow 5s ease-in-out infinite;
-        }
-        @keyframes gradient-flow {
-            0% { background-position: 200% center; }
-            50% { background-position: 0% center; }
-            100% { background-position: 200% center; }
-        }
-
-        /* --- Contenido General --- */
-        .content-wrapper {
-            max-width: 960px;
-            text-align: center;
-            width: 100%;
-        }
-        h2 {
-            font-size: 3rem;
-            font-weight: 900;
-            margin-bottom: 40px;
-        }
-        h3 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--highlight-color);
-            margin-bottom: 20px;
-        }
-
-        /* --- Sección Acerca de Mí --- */
-        #acerca .intro-text {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: var(--secondary-text-color);
-            max-width: 700px;
-            margin: 0 auto 60px auto;
-            text-align: center;
-        }
-        .about-row {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            margin-bottom: 60px;
-            text-align: left;
-        }
-        .about-row:last-child {
-            margin-bottom: 0;
-        }
-        .about-row.reverse {
-            flex-direction: row-reverse;
-        }
-        .about-photo {
-            flex-basis: 300px;
-            flex-shrink: 0;
-        }
-        .about-photo img {
-            width: 100%;
-            border-radius: 16px;
-            border: 2px solid rgba(255,255,255,0.1);
-        }
-        .about-description p {
-            color: var(--secondary-text-color);
-            line-height: 1.7;
-            margin: 0;
-        }
-        .skills-title {
-            margin-top: 80px;
-        }
-        .skills-list {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .skill-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 700;
-            transition: all 0.3s ease;
-        }
-        .skill-item:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--highlight-color);
-        }
-
-        /* --- Sección Proyectos --- */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            width: 100%;
-        }
-        .project-card {
-            background: #1a1a1a;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid transparent;
-        }
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            border-color: rgba(255,255,255,0.2);
-        }
-        .project-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .project-info {
-            padding: 25px;
-            text-align: left;
-        }
-        .project-info h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.5rem;
-            color: var(--highlight-color);
-        }
-        .project-info p {
-             color: var(--secondary-text-color);
-        }
-
-        /* --- SECCIÓN: Chatbot --- */
-        .chatbot-container {
-            background: rgba(26, 26, 26, 0.5); /* Más transparente */
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.5);
-            animation: pulse-glow 2s infinite;
-        }
-        @keyframes pulse-glow {
-            0% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.7); }
-            70% { box-shadow: 0 0 30px 10px rgba(79, 70, 229, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0); }
-        }
-        .chat-header {
-            display: flex;
-            align-items: center;
-            padding: 15px 20px;
-            background: rgba(255,255,255,0.05);
-            border-top-left-radius: 16px;
-            border-top-right-radius: 16px;
-        }
-        .chat-header h3 {
-            margin: 0;
-            font-size: 1.2rem;
-        }
-        .status-dot {
-            width: 10px;
-            height: 10px;
-            background-color: #22c55e;
-            border-radius: 50%;
-            margin-left: 10px;
-            animation: pulse-dot 1.5s infinite;
-        }
-        @keyframes pulse-dot {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.4); opacity: 0.7; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-        .chat-messages {
-            height: 350px;
-            overflow-y: auto;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .message {
-            padding: 12px 18px;
-            border-radius: 16px;
-            max-width: 75%;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fade-in-up 0.5s forwards;
-            color: var(--highlight-color); /* Letra completamente blanca */
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(5px);
-        }
-        @keyframes fade-in-up {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .message.sent {
-            align-self: flex-end;
-            background: rgba(79, 70, 229, 0.4); /* Cristal azulado */
-            box-shadow: 0 0 20px rgba(79, 70, 229, 0.5);
-        }
-        .message.received {
-            align-self: flex-start;
-            background: rgba(255, 255, 255, 0.1); /* Cristal claro */
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-        }
-        .message.typing-indicator {
-            padding: 15px;
-            display: flex;
-            gap: 5px;
-            align-items: center;
-        }
-        .message.typing-indicator span {
-            height: 8px;
-            width: 8px;
-            background-color: #9ca3af;
-            border-radius: 50%;
-            display: inline-block;
-            animation: typing-bounce 1.4s infinite ease-in-out both;
-        }
-        .message.typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
-        .message.typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
-        @keyframes typing-bounce {
-            0%, 80%, 100% { transform: scale(0); }
-            40% { transform: scale(1.0); }
-        }
-        .chat-input {
-            display: flex;
-            padding: 15px 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        .chat-input input {
-            flex-grow: 1;
-            background: none;
-            border: none;
-            color: var(--primary-text-color);
-            font-size: 1rem;
-            outline: none;
-        }
-        .chat-input button {
-            background: var(--accent-color);
-            border: none;
-            color: var(--highlight-color);
-            padding: 10px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 700;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        .chat-input button:hover {
-            background-color: #4338ca;
-            transform: scale(1.05);
-        }
-
-
-        /* --- Sección Contacto --- */
-        #contacto {
-            padding: 0; /* Similar a la sección #inicio */
-        }
-        #contacto .content-wrapper {
-            position: relative;
-            z-index: 3;
-            background: rgba(10, 10, 10, 0.5);
-            padding: 50px;
-            border-radius: 16px;
-            max-width: 700px;
-        }
-        #contacto p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-        }
-        .social-links a {
-            margin: 0 15px;
-            display: inline-block;
-            transition: transform 0.3s ease;
-        }
-        .social-links a:hover {
-            transform: scale(1.2);
-        }
-        .social-links svg {
-            width: 40px;
-            height: 40px;
-            fill: var(--primary-text-color);
-            transition: fill 0.3s ease;
-        }
-        .social-links a:hover svg {
-            fill: var(--highlight-color);
-        }
-
-
-        /* --- Animaciones de Scroll --- */
-        .reveal {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* --- Responsive Design --- */
-        @media (max-width: 768px) {
-            h1 { font-size: 3rem; }
-            h2 { font-size: 2.5rem; }
-            nav { padding: 15px 20px; }
-            nav.scrolled { padding: 10px 20px; }
-            .nav-links a { margin-left: 15px; }
-            .about-row { flex-direction: column !important; }
-            #contacto .content-wrapper { padding: 30px; }
-        }
-        langflow-chat{
-              display: block;
-              width: 100%;
-              max-width: 600px;
-              min-height: 520px;  /* alto visible del widget */
-              margin: 0 auto;
-              z-index: 5;
-            }
-        /* Visible por defecto (si JS falla) */
-        .no-js .reveal { opacity: 1; transform: none; }
-        
-        /* Solo oculto cuando sí hay JS para manejarlo */
-        .js .reveal { opacity: 0; transform: translateY(50px); transition: opacity .8s, transform .8s; }
-        .reveal.visible { opacity: 1; transform: none; }
-                /* 1) Limita el absolute del viewer SOLO a #inicio y #contacto,
-           ponlo detrás y sin capturar eventos */
-        /* --- CÓDIGO CORREGIDO --- */
-
-/* 1. Estilos para la animación de INICIO (interactiva) */
-        #inicio spline-viewer {
-            position: absolute;
-            inset: 0; /* equivale a top, right, bottom, left: 0 */
-            width: 100%;
-            height: 100%;
-            outline: none;
-            z-index: 2; 
-            /* Quitamos 'pointer-events: none;' para que funcione el cursor */
-        }
-        
-        /* 2. Estilos para la animación de CONTACTO (solo fondo) */
-        #contacto spline-viewer {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            outline: none;
-            z-index: 0;
-            pointer-events: none; /* La mantenemos aquí para no bloquear los links */
-        }
-                
-        /* 2) Asegura que el chat quede siempre encima y con espacio abajo */
-        #chatbot {
-          position: relative;
-          z-index: 5;            /* por encima del fondo de otras secciones */
-          padding: 80px 0 120px; /* espacio extra abajo para que no se “pegue” al contacto */
-        }
-        
-        /* Tamaño mínimo del widget embebido */
-        #chatbot langflow-chat{
-          display: block;
-          width: 100%;
-          max-width: 640px;
-          min-height: 600px;     /* sube si tu ventana es más alta */
-          margin: 0 auto;
-        }
-        
-        /* Asegura el stacking del contacto por debajo del chat */
-        #contacto {
-          position: relative;
-          z-index: 1;
-        }
-        #contacto .content-wrapper { 
-          position: relative; 
-          z-index: 2;            /* texto por encima del viewer */
-        }
-
-    </style>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <script>
-    document.documentElement.classList.remove('no-js');
-    document.documentElement.classList.add('js');
-  </script>
+
+    <!-- Particle Background -->
     <div id="particles-js"></div>
-    
+
+    <!-- Navigation -->
     <nav id="navbar">
-        <div class="nav-logo">JJ</div>
+        <div class="nav-logo">JL</div>
+        <div class="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div class="nav-links">
-            <a href="#inicio">Inicio</a>
-            <a href="#acerca">Acerca de Mí</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#chatbot">Chatbot</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#ai-chat">AI Chat</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <main class="main-container">
 
-        <section id="inicio">
-            <spline-viewer url="https://prod.spline.design/0RaJsAVkHfWhS2ab/scene.splinecode"></spline-viewer>
+        <!-- ============================
+             HERO SECTION
+             ============================ -->
+        <section id="home">
+            <div id="vanta-hero"></div>
             <div class="hero-text">
-                <h1 class="gradient-text">Juan José Lizcano Barbosa</h1>
+                <h1 class="gradient-text">Juan Lizcano</h1>
                 <p id="subtitle"></p>
             </div>
+            <div class="scroll-indicator">
+                <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+            </div>
         </section>
 
-        <section id="acerca" class="reveal">
+        <!-- ============================
+             ABOUT SECTION
+             ============================ -->
+        <section id="about">
             <div class="content-wrapper">
-                <h2 class="gradient-text">Acerca de Mí</h2>
-                <p class="intro-text">Hola!, soy Juan, un estudiante altamente motivado y orientado a resultados en Ciencia de Datos en la Pontificia Universidad Javeriana, donde actualmente curso mi pregrado. Me caracterizo por poseer una sólida formación técnica combinada con una pasión genuina por aprovechar los datos para resolver problemas complejos de manera innovadora.</p>
-                
-                <div class="about-row">
+                <h2 class="gradient-text reveal">About Me</h2>
+                <p class="section-subtitle reveal delay-1">Turning data into decisions, and ideas into intelligent systems.</p>
+
+                <p class="intro-text reveal delay-2">Hi! I'm Juan, a highly motivated and results-driven Data Science student at Pontificia Universidad Javeriana. I combine solid technical expertise with a genuine passion for leveraging data to solve complex problems in innovative ways. Currently working as an MLOps Engineer, I specialize in building full-stack AI systems — from computer vision pipelines to automated trading algorithms.</p>
+
+                <div class="about-row reveal">
                     <div class="about-photo">
-                        <img src="img/Me.jpg" alt="Una foto tuya">
+                        <img src="img/profile.jpg" alt="Juan Lizcano" loading="lazy" decoding="async">
                     </div>
                     <div class="about-description">
-                        <h3>Mi Filosofía</h3>
-                        <p>Mi filosofía fundamental es sencilla pero poderosa: creo firmemente que todo se puede aprender. Para mí, los retos no son obstáculos, sino oportunidades para crecer y expandir mis horizontes. He descubierto que con esfuerzo constante, dedicación genuina y una mentalidad abierta, prácticamente cualquier meta es alcanzable. Valoro profundamente el trabajo en equipo, pues considero que es la forma más efectiva de avanzar; cuando colaboramos, no solo sumamos habilidades, sino que creamos sinergias que nos permiten complementarnos y superar nuestras limitaciones individuales. Antes de sumergirme en cualquier proyecto, siempre priorizo entender el negocio a profundidad, ir "más allá de lo evidente" y captar la esencia de lo que realmente necesitamos resolver.</p>
+                        <h3>My Philosophy</h3>
+                        <p>My core philosophy is simple yet powerful: everything can be learned. Challenges aren't obstacles — they're opportunities to grow. I deeply value teamwork because collaboration creates synergies that let us overcome individual limitations. Before diving into any project, I always prioritize understanding the business at a deep level — going beyond the obvious to grasp the essence of what truly needs to be solved.</p>
                     </div>
                 </div>
 
-                <div class="about-row reverse">
+                <div class="about-row reverse reveal">
                     <div class="about-photo">
-                        <img src="img/hack4edu.png" alt="Otra foto tuya">
+                        <img src="img/hack4edu_opt.png" alt="H4CKFOREDU Hackathon" loading="lazy" decoding="async">
                     </div>
                     <div class="about-description">
-                        <h3>Más Allá de la Tecnología</h3>
-                        <p>Fuera del ámbito tecnológico, soy una persona apasionada por el equilibrio entre mente y cuerpo: el gimnasio y la actividad física son parte esencial de mi rutina, no solo por los beneficios físicos sino por la disciplina mental que cultivan. También disfruto sumergirme en libros de filosofía, buscando entender mejor el mundo y mi lugar en él. Mantengo una curiosidad insaciable por las últimas tendencias tecnológicas, no solo por interés profesional, sino porque me encanta explorar cómo pueden mejorar mi productividad diaria y comprender tanto sus capacidades como sus límites. Me defino como alguien profundamente curioso y energético, con un deseo constante de explorar, aprender y evolucionar. Mi compromiso no solo es ser un mejor profesional cada día, sino también cultivar mi crecimiento personal, porque creo que ambos aspectos están intrínsecamente conectados en la búsqueda de una vida plena y significativa.</p>
+                        <h3>Beyond Technology</h3>
+                        <p>Outside of tech, I'm passionate about balancing mind and body — the gym and physical activity are essential parts of my routine. I enjoy reading philosophy books, seeking to better understand the world and my place in it. I maintain an insatiable curiosity for the latest technological trends, exploring how they can improve daily productivity. I define myself as deeply curious and energetic, with a constant desire to explore, learn, and evolve.</p>
                     </div>
                 </div>
 
-                <h3 class="skills-title">Mis Habilidades</h3>
-                <div class="skills-list">
-                    <span class="skill-item">Python</span>
-                    <span class="skill-item">Java</span>
-                    <span class="skill-item">C++</span>
-                    <span class="skill-item">Machine Learning</span>
-                    <span class="skill-item">Bases de Datos SQL & NoSQL</span>
-                    <span class="skill-item">LLMs</span>
-                    <span class="skill-item">Conda</span>
-                    <span class="skill-item">Git & GitHub</span>
-                    <span class="skill-item">Data Analysis</span>
-                    <span class="skill-item">Data Science</span>
-                    <span class="skill-item">ETL</span>
+                <!-- Stats Bar -->
+                <div class="stats-bar reveal">
+                    <div class="stat-item">
+                        <div class="stat-number"><span data-count="3" data-suffix="+">0</span></div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number"><span data-count="7" data-suffix="+">0</span></div>
+                        <div class="stat-label">Professional Roles</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number"><span data-count="12" data-suffix="+">0</span></div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="proyectos" class="reveal">
+        <!-- ============================
+             SKILLS SECTION
+             ============================ -->
+        <section id="skills">
             <div class="content-wrapper">
-                <h2 class="gradient-text">Proyectos Destacados</h2>
+                <h2 class="gradient-text reveal">Technical Skills</h2>
+                <p class="section-subtitle reveal delay-1">A versatile toolkit for building data-driven solutions.</p>
+
+                <div class="skills-grid">
+                    <div class="skill-category reveal delay-1">
+                        <span class="skill-category-icon">&#60;/&#62;</span>
+                        <h4>Programming</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">R</span>
+                            <span class="skill-tag">Golang</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category reveal delay-2">
+                        <span class="skill-category-icon">&#128202;</span>
+                        <h4>Data & Analytics</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">Tableau</span>
+                            <span class="skill-tag">ETL Pipelines</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Data Modeling</span>
+                            <span class="skill-tag">Databricks</span>
+                            <span class="skill-tag">Data Warehouse</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category reveal delay-3">
+                        <span class="skill-category-icon">&#129302;</span>
+                        <h4>AI & Machine Learning</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Deep Learning</span>
+                            <span class="skill-tag">NLP</span>
+                            <span class="skill-tag">Computer Vision</span>
+                            <span class="skill-tag">LLMs & RAGs</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">YOLO</span>
+                            <span class="skill-tag">CUDA</span>
+                            <span class="skill-tag">Explainable AI</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category reveal delay-4">
+                        <span class="skill-category-icon">&#9881;</span>
+                        <h4>Tools & Platforms</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git & GitHub</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Conda</span>
+                            <span class="skill-tag">Hugging Face</span>
+                            <span class="skill-tag">Oracle</span>
+                            <span class="skill-tag">NVIDIA DLA</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category reveal delay-5">
+                        <span class="skill-category-icon">&#129309;</span>
+                        <h4>Soft Skills</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Critical Thinking</span>
+                            <span class="skill-tag">Teamwork</span>
+                            <span class="skill-tag">Problem Solving</span>
+                            <span class="skill-tag">Leadership</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category reveal delay-6">
+                        <span class="skill-category-icon">&#127760;</span>
+                        <h4>Languages</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Spanish (Native)</span>
+                            <span class="skill-tag">English (C1)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================
+             EXPERIENCE TIMELINE
+             ============================ -->
+        <section id="experience">
+            <div class="content-wrapper">
+                <h2 class="gradient-text reveal">Experience</h2>
+                <p class="section-subtitle reveal delay-1">A track record of delivering value across data, AI, and engineering.</p>
+
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Nov 2025 — Present</div>
+                            <h3>MLOps Engineer</h3>
+                            <div class="timeline-company">Vigias de Colombia</div>
+                            <p>Led the development of a full-stack video intelligence system utilizing a hybrid model approach (YOLO, D-FINE, ReDetv2, and PaddlePaddle) to automate event detection and metadata generation from live camera streams.</p>
+                            <div class="project-tags" style="margin-top:12px">
+                                <span class="project-tag">CUDA</span>
+                                <span class="project-tag">Computer Vision</span>
+                                <span class="project-tag">Docker</span>
+                                <span class="project-tag">YOLO</span>
+                                <span class="project-tag">Deep Learning</span>
+                                <span class="project-tag">TensorFlow</span>
+                                <span class="project-tag">Golang</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Jun 2025 — Nov 2025</div>
+                            <h3>Database Administrator</h3>
+                            <div class="timeline-company">Fiduprevisora — FOMAG</div>
+                            <p>Developed a robust SQL database schema and relational model for a new public health platform dedicated to the Colombian teaching workforce, ensuring data integrity, scalability, and support for longitudinal health tracking.</p>
+                            <div class="project-tags" style="margin-top:12px">
+                                <span class="project-tag">SQL</span>
+                                <span class="project-tag">Data Modeling</span>
+                                <span class="project-tag">Databricks</span>
+                                <span class="project-tag">Data Governance</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Feb 2024 — Jun 2025</div>
+                            <h3>Junior Data Scientist</h3>
+                            <div class="timeline-company">Tu Alianza</div>
+                            <p>Designed and implemented automated dashboards for directors to monitor organizational health and process efficiency, enabling data-driven decision-making across the organization.</p>
+                            <div class="project-tags" style="margin-top:12px">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">SQL</span>
+                                <span class="project-tag">R</span>
+                                <span class="project-tag">PostgreSQL</span>
+                                <span class="project-tag">Power BI</span>
+                                <span class="project-tag">Tableau</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Feb 2024 — Jun 2025</div>
+                            <h3>Analyst</h3>
+                            <div class="timeline-company">Financial Group Javeriana</div>
+                            <p>Developing a comprehensive market analysis pipeline in Python integrating fundamental and quantitative methodologies. Leveraging yfinance API for financial data extraction, implementing NLP for market sentiment analysis, calculating technical indicators like EMA, and incorporating risk management logic to drive automated trading algorithms.</p>
+                            <div class="project-tags" style="margin-top:12px">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">Linear Regression</span>
+                                <span class="project-tag">TradingView</span>
+                                <span class="project-tag">CNN-LSTM</span>
+                                <span class="project-tag">NLP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Nov 2023 — Apr 2025</div>
+                            <h3>Database Administrator</h3>
+                            <div class="timeline-company">Comercializadora TS</div>
+                            <p>Architected and structured complex datasets by normalizing schemas and developing robust ETL pipelines for analytical processing.</p>
+                            <div class="project-tags" style="margin-top:12px">
+                                <span class="project-tag">SQL</span>
+                                <span class="project-tag">PostgreSQL</span>
+                                <span class="project-tag">Data Modeling</span>
+                                <span class="project-tag">Data Warehouse</span>
+                                <span class="project-tag">Databricks</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Jul 2024 — Jul 2025</div>
+                            <h3>Administrative Assistant</h3>
+                            <div class="timeline-company">Pontificia Universidad Javeriana</div>
+                            <p>Optimized university course scheduling by aligning departmental requirements with student enrollment needs.</p>
+                            <div class="project-tags" style="margin-top:12px">
+                                <span class="project-tag">SQL</span>
+                                <span class="project-tag">Excel</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Jan 2024 — Jul 2024</div>
+                            <h3>Advanced Programming Tutor</h3>
+                            <div class="timeline-company">Pontificia Universidad Javeriana</div>
+                            <p>Guiding students through the core pillars of OOP using Java, the mechanics of programming logic, and the intricacies of C++ pointer manipulation.</p>
+                            <div class="project-tags" style="margin-top:12px">
+                                <span class="project-tag">Java</span>
+                                <span class="project-tag">C++</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================
+             PROJECTS SECTION
+             ============================ -->
+        <section id="projects">
+            <div class="content-wrapper">
+                <h2 class="gradient-text reveal">Featured Projects</h2>
+                <p class="section-subtitle reveal delay-1">Real-world solutions built with data and intelligence.</p>
+
                 <div class="projects-grid">
-                    <div class="project-card">
-                        <img src="img/DATABASE.png" alt="Placeholder del Proyecto 1">
+
+                    <!-- VIGIAS-IA -->
+                    <div class="project-card reveal delay-1">
+                        <div class="project-icon-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            <span class="project-status live">In Production</span>
+                        </div>
                         <div class="project-info">
-                            <h3>Diseño de la base de datos del FOMAG</h3>
-                            <p>Como DBA de la Fiduprevisora, mi labor es diseñar el sistema de bases de datos para el nuevo software interno del Fondo Nacional de Prestaciones Sociales del Magisterio (FOMAG). El objetivo es garantizar una gestión eficiente y segura de los datos, asegurando que todos los docentes del pais que trabajan en colegios publicos esten asegurados y tengan un sistema de salud eficiente</p>
+                            <h3>VIGIAS-IA: Real-Time Video Analytics</h3>
+                            <p>Full-stack video intelligence system for security and surveillance. Processes multiple live camera streams in real-time using a hybrid model approach (YOLO, D-FINE, ReDetv2, PaddlePaddle) for anomaly and intrusion detection. Deployed on Linux with NVIDIA DeepStream 8.0 and GStreamer pipelines.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">NVIDIA DeepStream</span>
+                                <span class="project-tag">YOLO</span>
+                                <span class="project-tag">D-FINE</span>
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">C++</span>
+                                <span class="project-tag">CUDA</span>
+                                <span class="project-tag">GStreamer</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="project-card">
-                        <img src="img/LLM.png" alt="Placeholder del Proyecto 2">
+
+                    <!-- EAOA -->
+                    <div class="project-card reveal delay-2">
+                        <div class="project-icon-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                            <span class="project-status dev">In Development</span>
+                        </div>
                         <div class="project-info">
-                            <h3>Desarrollo de RAG</h3>
-                            <p>He desarrollado e implementado múltiples asistentes de IA utilizando el marco RAG (Retrieval-Augmented Generation). Esto permite que los modelos de lenguaje (LLMs) respondan basándose exclusivamente en una base de conocimientos específica, minimizando drásticamente la alucinación.</p>
+                            <h3>EAOA: Autonomous Operations Ecosystem</h3>
+                            <p>Multi-agent system designed for enterprise process automation without constant human supervision. Orchestrates specialized AI agents with persistent memory, function calling, and agentic workflows to solve complex business problems autonomously.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">LangChain</span>
+                                <span class="project-tag">LangGraph</span>
+                                <span class="project-tag">Llama 3</span>
+                                <span class="project-tag">Claude API</span>
+                                <span class="project-tag">Agentic AI</span>
+                                <span class="project-tag">Function Calling</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="project-card">
-                        <img src="img/XIA.png">
-                        <div class="project-info">
-                            <h3> IA Explicable</h3>
-                            <p>Mi proyecto de grado se enfoca en la explicabilidad de la inteligencia artificial (XAI), específicamente en el aprendizaje por refuerzo (RL).
-                            </p>
-                            <p>Busco desarrollar y aplicar técnicas de destilación de modelos para comprender el funcionamiento interno de las redes neuronales en RL. El objetivo es analizar la activación neuronal para obtener una mayor "interpretabilidad" del modelo y poder entender lo mejor.</p>
+
+                    <!-- Financial Analytics -->
+                    <div class="project-card reveal delay-3">
+                        <div class="project-icon-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            <span class="project-status live">Active</span>
                         </div>
+                        <div class="project-info">
+                            <h3>Financial Analytics & Market Prediction</h3>
+                            <p>Quantitative market analysis pipeline integrating fundamental and algorithmic methodologies. Uses yfinance API for data extraction, NLP for sentiment analysis, CNN-LSTM models for price prediction, and automated trading with risk management logic including limit orders and stop-loss thresholds.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">CNN-LSTM</span>
+                                <span class="project-tag">NLP</span>
+                                <span class="project-tag">Pandas</span>
+                                <span class="project-tag">Power BI</span>
+                                <span class="project-tag">Time Series</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- XAI Thesis -->
+                    <div class="project-card reveal delay-1">
+                        <div class="project-icon-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                            <span class="project-status research">Thesis</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>Explainable AI (XAI) — Thesis</h3>
+                            <p>Research on Explainable AI applied to Reinforcement Learning. Developing model distillation techniques to understand the internal workings of neural networks in RL — analyzing neural activation patterns for greater model interpretability and trustworthiness.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">XAI</span>
+                                <span class="project-tag">Reinforcement Learning</span>
+                                <span class="project-tag">Deep Learning</span>
+                                <span class="project-tag">Model Distillation</span>
+                                <span class="project-tag">Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FOMAG Database -->
+                    <div class="project-card reveal delay-2">
+                        <div class="project-icon-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                            <span class="project-status complete">Delivered</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>FOMAG Database Architecture</h3>
+                            <p>Robust SQL database schema and relational model for a new public health platform dedicated to Colombia's teaching workforce. Ensured data integrity, scalability, and support for longitudinal health tracking across the national education system.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">SQL</span>
+                                <span class="project-tag">Data Modeling</span>
+                                <span class="project-tag">Databricks</span>
+                                <span class="project-tag">Data Governance</span>
+                                <span class="project-tag">ETL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RAG Assistants -->
+                    <div class="project-card reveal delay-3">
+                        <div class="project-icon-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            <span class="project-status live">Active</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>RAG-Powered AI Assistants</h3>
+                            <p>Multiple AI assistants built with the Retrieval-Augmented Generation framework. LLMs grounded on specific knowledge bases to minimize hallucination. Includes the personal RAG chatbot deployed on this portfolio via Hugging Face Spaces.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">LlamaIndex</span>
+                                <span class="project-tag">Gemini</span>
+                                <span class="project-tag">Gradio</span>
+                                <span class="project-tag">HuggingFace</span>
+                                <span class="project-tag">RAG</span>
+                                <span class="project-tag">NLP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================
+             EDUCATION & CERTIFICATIONS
+             ============================ -->
+        <section id="education">
+            <div class="content-wrapper">
+                <h2 class="gradient-text reveal">Education & Certifications</h2>
+                <p class="section-subtitle reveal delay-1">Continuous learning as a core principle.</p>
+
+                <!-- Education -->
+                <div class="education-card reveal">
+                    <div class="edu-icon">&#127891;</div>
+                    <h3>B.S. in Data Science</h3>
+                    <div class="edu-institution">Pontificia Universidad Javeriana</div>
+                    <div class="edu-date">2023 — 2026</div>
+                    <p style="color: var(--text-secondary); font-size: 0.92rem;">Comprehensive program covering statistics, machine learning, databases, programming, and applied AI. Building a strong foundation in turning data into actionable insights.</p>
+                    <div class="edu-highlights">
+                        <span class="edu-badge">Highest GPA in Program</span>
+                        <span class="edu-badge">Academic Excellence Scholarship</span>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <h3 class="reveal" style="margin-bottom: 30px; margin-top: 20px;">Certifications & Achievements</h3>
+
+                <div class="certs-grid">
+                    <div class="cert-card reveal delay-1">
+                        <div class="cert-issuer">Huawei</div>
+                        <h4>HCIA-Big Data v3.0</h4>
+                        <div class="cert-date">July 2024</div>
+                    </div>
+
+                    <div class="cert-card reveal delay-2">
+                        <div class="cert-issuer">Duke University / Coursera</div>
+                        <h4>Introduction to Machine Learning</h4>
+                        <div class="cert-date">May 2021</div>
+                    </div>
+
+                    <div class="cert-card reveal delay-3">
+                        <div class="cert-issuer">Oracle Academy</div>
+                        <h4>Database Design & Foundations</h4>
+                        <div class="cert-date">September 2024</div>
+                    </div>
+
+                    <div class="cert-card reveal delay-1">
+                        <div class="cert-issuer">Microsoft & LinkedIn</div>
+                        <h4>Professional Foundations of Data Analysis</h4>
+                        <div class="cert-date">August 2024</div>
+                    </div>
+
+                    <div class="cert-card reveal delay-2">
+                        <div class="cert-issuer">Universidad de Salamanca</div>
+                        <h4>H4CKFOREDU International Hackathon</h4>
+                        <div class="cert-date">October 2024</div>
+                    </div>
+
+                    <div class="cert-card reveal delay-3">
+                        <div class="cert-issuer">United Nations</div>
+                        <h4>UN Datathon 2024</h4>
+                        <div class="cert-date">November 2024</div>
+                    </div>
+
+                    <div class="cert-card reveal delay-1">
+                        <div class="cert-issuer">University of Michigan / Coursera</div>
+                        <h4>Problem Solving Using Computational Thinking</h4>
+                        <div class="cert-date">May 2021</div>
+                    </div>
+
+                    <div class="cert-card reveal delay-2">
+                        <div class="cert-issuer">Oracle Academy</div>
+                        <h4>Java Fundamentals & Java Foundations</h4>
+                        <div class="cert-date">August 2022</div>
+                    </div>
+
+                    <div class="cert-card reveal delay-3">
+                        <div class="cert-issuer">Google Active & Incibe</div>
+                        <h4>Cybersecurity in the Workplace</h4>
+                        <div class="cert-date">August 2022</div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- === CHATBOT (LangFlow) === -->
-        <section id="chatbot">
-          <div class="content-wrapper">
-            <h2 class="gradient-text">Hablemos con mi IA</h2>
-        
-            <langflow-chat
-              window_title="RAG-JUAN"
-              flow_id="b83ef24a-bd69-4a07-8fd0-4a3047baf0f5" 
-              host_url="https://juanjlb2005-rag-juan.hf.space"
-              theme="dark"
-              placeholder="Escribe tu pregunta..."
-              accent_color="#4f46e5">
-            </langflow-chat>
-          </div>
-        </section>
-        <!-- === /CHATBOT === -->
 
-        
-        <section id="contacto" class="reveal">
-            <spline-viewer url="https://prod.spline.design/rnw0ov1MkHWQePEx/scene.splinecode"></spline-viewer>
+        <!-- ============================
+             AI ASSISTANT SECTION
+             ============================ -->
+        <section id="ai-chat">
             <div class="content-wrapper">
-                <h2 class="gradient-text">Construyamos Algo Juntos</h2>
-                <p>Siempre estoy abierto a discutir nuevos proyectos, ideas creativas o oportunidades para ser parte de tus visiones. Si tienes algo en mente, ¡contáctame!</p>
+                <h2 class="gradient-text reveal">Talk to My AI</h2>
+                <p class="section-subtitle reveal delay-1">Ask anything about my experience, skills, or projects — powered by RAG.</p>
+
+                <div class="chat-wrapper reveal delay-2">
+                    <!-- Terminal header -->
+                    <div class="chat-terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                            RAG-JUAN
+                        </div>
+                        <div class="terminal-status">
+                            <span class="status-dot-live" id="chat-status-dot"></span>
+                            <span class="status-text" id="chat-status-text">Connecting...</span>
+                        </div>
+                    </div>
+
+                    <!-- Gradio iframe embed -->
+                    <div class="chat-iframe-container">
+                        <iframe
+                            id="rag-iframe"
+                            src="https://juanjlb2005-rag-juan.hf.space"
+                            frameborder="0"
+                            allow="microphone"
+                            title="RAG-JUAN AI Assistant"
+                        ></iframe>
+
+                        <!-- Fallback overlay (shown if connection fails) -->
+                        <div class="chat-fallback" id="chat-fallback">
+                            <div class="fallback-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5">
+                                    <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"/>
+                                    <path d="M12 8v4M12 16h.01"/>
+                                </svg>
+                            </div>
+                            <h3>AI Assistant Offline</h3>
+                            <p>The RAG model is currently warming up or temporarily unavailable. It may take a moment to load on first visit.</p>
+                            <a href="https://juanjlb2005-rag-juan.hf.space" target="_blank" rel="noopener" class="fallback-btn">
+                                Open Directly on Hugging Face
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Suggested prompts -->
+                    <div class="chat-prompts">
+                        <span class="chat-prompt-chip">Who are you?</span>
+                        <span class="chat-prompt-chip">What tech stack do you use?</span>
+                        <span class="chat-prompt-chip">Tell me about your ML experience</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================
+             CONTACT SECTION
+             ============================ -->
+        <section id="contact">
+            <div id="vanta-contact"></div>
+            <div class="content-wrapper reveal">
+                <h2 class="gradient-text">Let's Build Something Together</h2>
+                <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether it's data, AI, or engineering — let's connect.</p>
                 <div class="social-links">
-                    <a href="mailto:juanjlb2005@gmail.com" title="Email">
+                    <a href="mailto:juanjlb2005@gmail.com" class="social-link" title="Email" aria-label="Send email">
                         <svg viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/juan-lizcano-barbosa-8a8517244/" title="LinkedIn">
-                        <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-7 2h-2v3h2V5m-2 4H8v7h2v-7m4 0h-2v7h2v-7z"/></svg>
+                    <a href="https://www.linkedin.com/in/juan-lizcano-barbosa-8a8517244/" class="social-link" title="LinkedIn" aria-label="LinkedIn profile" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                     </a>
-                    <a href="https://github.com/LizcanoJuan1010" title="GitHub">
+                    <a href="https://github.com/LizcanoJuan1010" class="social-link" title="GitHub" aria-label="GitHub profile" target="_blank" rel="noopener">
                         <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 22 12C22 6.48 17.52 2 12 2z"/></svg>
                     </a>
                 </div>
@@ -657,80 +622,24 @@
 
     </main>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        // --- Configuración de Particles.js ---
-        particlesJS("particles-js", {
-            "particles": {
-                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-                "color": { "value": "#ffffff" },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.5, "random": false },
-                "size": { "value": 3, "random": true },
-                "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
-                "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
-                "modes": {
-                    "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
-                    "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 },
-                    "repulse": { "distance": 200, "duration": 0.4 },
-                    "push": { "particles_nb": 4 },
-                    "remove": { "particles_nb": 2 }
-                }
-            },
-            "retina_detect": true
-        });
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <p class="footer-copy">Built by Juan Lizcano &mdash; 2025</p>
+    </footer>
 
-        // --- Lógica de JavaScript para la página ---
-        document.addEventListener('DOMContentLoaded', () => {
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 
-            // --- Efecto de la barra de navegación al hacer scroll ---
-            const nav = document.getElementById('navbar');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    nav.classList.add('scrolled');
-                } else {
-                    nav.classList.remove('scrolled');
-                }
-            });
-
-            // --- EFECTO: Escritura (Typing) ---
-            const subtitle = document.getElementById('subtitle');
-            const text = "Data Scientist & AI Developer";
-            let index = 0;
-            function type() {
-                if (index < text.length) {
-                    subtitle.innerHTML = text.slice(0, index + 1) + '<span class="typing-cursor"></span>';
-                    index++;
-                    setTimeout(type, 100);
-                } else {
-                    subtitle.innerHTML = text + '<span class="typing-cursor"></span>';
-                }
-            }
-            type();
-
-            
-            // --- Animaciones de revelación al hacer scroll ---
-            const revealElements = document.querySelectorAll('.reveal');
-
-const observer = new IntersectionObserver((entries, obs) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      obs.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1 });
-
-revealElements.forEach(el => observer.observe(el));
-             });
-    </script>
-    <script
-  src="https://cdn.jsdelivr.net/gh/logspace-ai/langflow-embedded-chat@v1.0.7/dist/build/static/js/bundle.min.js">
-    </script>
-  
-   </body>
+</body>
 </html>
