@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Conversation history sent to the API (excludes the system prompt).
     const history = [];
 
-    const keyMissing =
-        !CHAT_CONFIG.GEMINI_API_KEY ||
-        CHAT_CONFIG.GEMINI_API_KEY === 'PASTE_YOUR_GEMINI_API_KEY_HERE';
+    const proxyMissing =
+        !CHAT_CONFIG.CHAT_PROXY_URL ||
+        CHAT_CONFIG.CHAT_PROXY_URL === 'PASTE_YOUR_CLOUDFLARE_WORKER_URL_HERE';
 
     // --- Status indicator ---
     function setStatus(state, text) {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (state) statusDot.classList.add(state);
         statusText.textContent = text;
     }
-    setStatus(keyMissing ? 'offline' : 'online', keyMissing ? 'Offline' : 'Online');
+    setStatus(proxyMissing ? 'offline' : 'online', proxyMissing ? 'Offline' : 'Online');
 
     // --- Render a message bubble ---
     function addMessage(text, sender) {
@@ -57,21 +57,18 @@ document.addEventListener('DOMContentLoaded', () => {
         sendBtn.disabled = loading;
     }
 
-    // --- Call Gemini REST API directly from the browser ---
+    // --- Call Gemini through the Cloudflare Worker proxy (no key in the browser) ---
     async function askGemini(userText) {
-        const url =
-            `https://generativelanguage.googleapis.com/v1beta/models/` +
-            `${CHAT_CONFIG.MODEL}:generateContent?key=${CHAT_CONFIG.GEMINI_API_KEY}`;
-
         history.push({ role: 'user', parts: [{ text: userText }] });
 
         const body = {
+            model: CHAT_CONFIG.MODEL,
             systemInstruction: { parts: [{ text: CHAT_CONFIG.SYSTEM_PROMPT }] },
             contents: history,
             generationConfig: { temperature: 0.6, maxOutputTokens: 600 }
         };
 
-        const res = await fetch(url, {
+        const res = await fetch(CHAT_CONFIG.CHAT_PROXY_URL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(body)
@@ -99,9 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
         addMessage(userText, 'user');
         input.value = '';
 
-        if (keyMissing) {
+        if (proxyMissing) {
             addMessage(
-                "⚠️ The AI assistant isn't configured yet. Add a Gemini API key in js/chat-config.js. Meanwhile, feel free to reach Juan at juanjlb2005@gmail.com.",
+                "⚠️ The AI assistant isn't configured yet. Set the proxy URL in js/chat-config.js. Meanwhile, feel free to reach Juan at juanjlb2005@gmail.com.",
                 'bot'
             );
             return;

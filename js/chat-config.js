@@ -1,18 +1,15 @@
 /* ============================================
-   Chat Config — Gemini API
+   Chat Config — Gemini via secure proxy
    --------------------------------------------
-   1) Get a free API key at: https://aistudio.google.com/apikey
-   2) Paste it below in GEMINI_API_KEY.
-   3) IMPORTANT (security): restrict the key by HTTP referrer
-      to your domain in Google Cloud Console / AI Studio
-      (e.g. lizcanojuan1010.github.io/*) and set a spending cap.
-      The key IS visible in the browser — this restriction is
-      what prevents abuse on a static site with no backend.
+   The Gemini API key is NEVER stored here. It lives as a secret
+   in a free Cloudflare Worker that proxies requests to Gemini.
+   Deploy the worker in worker/chat-proxy.js, then paste its URL
+   below in CHAT_PROXY_URL (e.g. https://xxx.workers.dev).
    ============================================ */
 
 const CHAT_CONFIG = {
-    // 🔑 Paste your Gemini API key here:
-    GEMINI_API_KEY: "AIzaSyBc9RFtzmTnIJGG2rK5SS-De5cTMcP421k",
+    // 🔗 Paste your deployed Cloudflare Worker URL here:
+    CHAT_PROXY_URL: "PASTE_YOUR_CLOUDFLARE_WORKER_URL_HERE",
 
     // Model — most economical option, ideal for the free tier.
     MODEL: "gemini-2.5-flash-lite",
