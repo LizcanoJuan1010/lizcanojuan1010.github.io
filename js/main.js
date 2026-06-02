@@ -157,32 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const statsBar = document.querySelector('.stats-bar');
     if (statsBar) counterObserver.observe(statsBar);
 
-    // --- RAG Chat: Connection Status & Fallback ---
-    const ragIframe = document.getElementById('rag-iframe');
-    const chatFallback = document.getElementById('chat-fallback');
-    const statusDot = document.getElementById('chat-status-dot');
-    const statusText = document.getElementById('chat-status-text');
-
-    if (ragIframe) {
-        let loaded = false;
-
-        ragIframe.addEventListener('load', () => {
-            loaded = true;
-            statusDot.classList.add('online');
-            statusDot.classList.remove('offline');
-            statusText.textContent = 'Online';
-            chatFallback.classList.remove('visible');
-        });
-
-        // Timeout: if iframe hasn't loaded in 15s, show fallback
-        setTimeout(() => {
-            if (!loaded) {
-                statusDot.classList.add('offline');
-                statusText.textContent = 'Offline';
-                chatFallback.classList.add('visible');
-            }
-        }, 15000);
-    }
+    // (Chat status & logic handled in js/chat.js)
 
     // --- Vanta.js Backgrounds ---
     if (typeof VANTA !== 'undefined') {

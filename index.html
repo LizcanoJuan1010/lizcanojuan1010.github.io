@@ -52,6 +52,11 @@
             <div class="hero-text">
                 <h1 class="gradient-text">Juan Lizcano</h1>
                 <p id="subtitle"></p>
+                <!-- Place your CV at: cv/Juan-Lizcano-CV.pdf -->
+                <a href="cv/Juan-Lizcano-CV.pdf" download class="btn-cv hero-cv">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download CV
+                </a>
             </div>
             <div class="scroll-indicator">
                 <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
@@ -66,7 +71,7 @@
                 <h2 class="gradient-text reveal">About Me</h2>
                 <p class="section-subtitle reveal delay-1">Turning data into decisions, and ideas into intelligent systems.</p>
 
-                <p class="intro-text reveal delay-2">Hi! I'm Juan, a highly motivated and results-driven Data Science student at Pontificia Universidad Javeriana. I combine solid technical expertise with a genuine passion for leveraging data to solve complex problems in innovative ways. Currently working as an MLOps Engineer, I specialize in building full-stack AI systems — from computer vision pipelines to automated trading algorithms.</p>
+                <p class="intro-text reveal delay-2">Hi! I'm Juan, a highly motivated and results-driven Data Scientist. I graduated in Data Science from Pontificia Universidad Javeriana and I'm currently pursuing a Master's degree in Artificial Intelligence. I combine solid technical expertise with a genuine passion for leveraging data to solve complex problems in innovative ways. Currently working as an MLOps Engineer and Computer Vision Lead, I specialize in building full-stack AI systems — from computer vision pipelines to generative-AI solutions.</p>
 
                 <div class="about-row reveal">
                     <div class="about-photo">
@@ -88,7 +93,7 @@
                     </div>
                 </div>
 
-                <!-- Stats Bar -->
+                <!-- Stats Bar — impact metrics (numbers marked [confirmar] for Juan to refine) -->
                 <div class="stats-bar reveal">
                     <div class="stat-item">
                         <div class="stat-number"><span data-count="3" data-suffix="+">0</span></div>
@@ -97,6 +102,16 @@
                     <div class="stat-item">
                         <div class="stat-number"><span data-count="7" data-suffix="+">0</span></div>
                         <div class="stat-label">Professional Roles</div>
+                    </div>
+                    <div class="stat-item">
+                        <!-- [confirmar] nº real de modelos de IA desplegados -->
+                        <div class="stat-number"><span data-count="10" data-suffix="+">0</span></div>
+                        <div class="stat-label">AI Models Deployed</div>
+                    </div>
+                    <div class="stat-item">
+                        <!-- [confirmar] nº real de streams de cámara en producción -->
+                        <div class="stat-number"><span data-count="20" data-suffix="+">0</span></div>
+                        <div class="stat-label">Camera Streams in Prod</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number"><span data-count="12" data-suffix="+">0</span></div>
@@ -206,9 +221,9 @@
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <div class="timeline-date">Nov 2025 — Present</div>
-                            <h3>MLOps Engineer</h3>
+                            <h3>MLOps Engineer & Computer Vision Lead</h3>
                             <div class="timeline-company">Vigias de Colombia</div>
-                            <p>Led the development of a full-stack video intelligence system utilizing a hybrid model approach (YOLO, D-FINE, ReDetv2, and PaddlePaddle) to automate event detection and metadata generation from live camera streams.</p>
+                            <p>As Computer Vision Lead, I drive the development of a full-stack video intelligence system utilizing a hybrid model approach (YOLO, D-FINE, ReDetv2, and PaddlePaddle) to automate event detection and metadata generation from live camera streams.</p>
                             <div class="project-tags" style="margin-top:12px">
                                 <span class="project-tag">CUDA</span>
                                 <span class="project-tag">Computer Vision</span>
@@ -331,14 +346,14 @@
                 <div class="projects-grid">
 
                     <!-- VIGIAS-IA -->
-                    <div class="project-card reveal delay-1">
+                    <div class="project-card reveal delay-1" data-project="vigias">
                         <div class="project-icon-header">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                             <span class="project-status live">In Production</span>
                         </div>
                         <div class="project-info">
                             <h3>VIGIAS-IA: Real-Time Video Analytics</h3>
-                            <p>Full-stack video intelligence system for security and surveillance. Processes multiple live camera streams in real-time using a hybrid model approach (YOLO, D-FINE, ReDetv2, PaddlePaddle) for anomaly and intrusion detection. Deployed on Linux with NVIDIA DeepStream 8.0 and GStreamer pipelines.</p>
+                            <p>Full-stack video intelligence system for security and surveillance, where I serve as <strong>Computer Vision Lead</strong>. Processes multiple live camera streams in real-time using a hybrid model approach (YOLO, D-FINE, ReDetv2, PaddlePaddle) for anomaly and intrusion detection. Deployed on Linux with NVIDIA DeepStream 8.0 and GStreamer pipelines.</p>
                             <div class="project-tags">
                                 <span class="project-tag">NVIDIA DeepStream</span>
                                 <span class="project-tag">YOLO</span>
@@ -348,11 +363,58 @@
                                 <span class="project-tag">CUDA</span>
                                 <span class="project-tag">GStreamer</span>
                             </div>
+                            <span class="case-cue">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                        </div>
+                    </div>
+
+                    <!-- PIPE-IA / Condor AI -->
+                    <div class="project-card reveal delay-2" data-project="pipe-ia">
+                        <div class="project-icon-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                            <span class="project-status live">In Production</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>PIPE-IA: Generative AI for Network Analysis</h3>
+                            <p>Generative-AI platform (Condor AI) for network and territory analysis — an analytical and operational system for tracking territory, key leaders, and base structure. Leverages generative models to turn complex relational data into actionable strategic insights.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Generative AI</span>
+                                <span class="project-tag">LLMs</span>
+                                <span class="project-tag">Network Analysis</span>
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">Data Analytics</span>
+                            </div>
+                            <div class="project-info-footer">
+                                <a href="https://pipe-ia.com/login" target="_blank" rel="noopener" class="project-link">
+                                    Visit Platform
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                </a>
+                                <span class="case-cue">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Generative AI for Fiscal Control -->
+                    <div class="project-card reveal delay-3" data-project="fiscal">
+                        <div class="project-icon-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
+                            <span class="project-status live">In Production</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>Generative AI for Fiscal Control</h3>
+                            <p>Generative-AI models applied to fiscal oversight and control. Automates the analysis of large volumes of financial and regulatory data, surfacing anomalies and generating structured reports to support transparent, data-driven fiscal decision-making.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Generative AI</span>
+                                <span class="project-tag">LLMs</span>
+                                <span class="project-tag">NLP</span>
+                                <span class="project-tag">Fiscal Control</span>
+                                <span class="project-tag">Python</span>
+                            </div>
+                            <span class="case-cue">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                         </div>
                     </div>
 
                     <!-- EAOA -->
-                    <div class="project-card reveal delay-2">
+                    <div class="project-card reveal delay-2" data-project="eaoa">
                         <div class="project-icon-header">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
                             <span class="project-status dev">In Development</span>
@@ -368,11 +430,12 @@
                                 <span class="project-tag">Agentic AI</span>
                                 <span class="project-tag">Function Calling</span>
                             </div>
+                            <span class="case-cue">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                         </div>
                     </div>
 
                     <!-- Financial Analytics -->
-                    <div class="project-card reveal delay-3">
+                    <div class="project-card reveal delay-3" data-project="financial">
                         <div class="project-icon-header">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
                             <span class="project-status live">Active</span>
@@ -388,11 +451,12 @@
                                 <span class="project-tag">Power BI</span>
                                 <span class="project-tag">Time Series</span>
                             </div>
+                            <span class="case-cue">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                         </div>
                     </div>
 
                     <!-- XAI Thesis -->
-                    <div class="project-card reveal delay-1">
+                    <div class="project-card reveal delay-1" data-project="xai">
                         <div class="project-icon-header">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
                             <span class="project-status research">Thesis</span>
@@ -407,11 +471,12 @@
                                 <span class="project-tag">Model Distillation</span>
                                 <span class="project-tag">Python</span>
                             </div>
+                            <span class="case-cue">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                         </div>
                     </div>
 
                     <!-- FOMAG Database -->
-                    <div class="project-card reveal delay-2">
+                    <div class="project-card reveal delay-2" data-project="fomag">
                         <div class="project-icon-header">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
                             <span class="project-status complete">Delivered</span>
@@ -426,11 +491,12 @@
                                 <span class="project-tag">Data Governance</span>
                                 <span class="project-tag">ETL</span>
                             </div>
+                            <span class="case-cue">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                         </div>
                     </div>
 
                     <!-- RAG Assistants -->
-                    <div class="project-card reveal delay-3">
+                    <div class="project-card reveal delay-3" data-project="rag">
                         <div class="project-icon-header">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                             <span class="project-status live">Active</span>
@@ -446,6 +512,7 @@
                                 <span class="project-tag">RAG</span>
                                 <span class="project-tag">NLP</span>
                             </div>
+                            <span class="case-cue">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                         </div>
                     </div>
 
@@ -463,11 +530,23 @@
 
                 <!-- Education -->
                 <div class="education-card reveal">
+                    <div class="edu-icon">&#129504;</div>
+                    <h3>M.S. in Artificial Intelligence</h3>
+                    <div class="edu-institution">Master's Degree — In Progress</div>
+                    <div class="edu-date">2026 — Present</div>
+                    <p style="color: var(--text-secondary); font-size: 0.92rem;">Advanced graduate studies in Artificial Intelligence, deepening expertise in deep learning, generative AI, and intelligent systems — building on a strong data science foundation.</p>
+                    <div class="edu-highlights">
+                        <span class="edu-badge">In Progress</span>
+                        <span class="edu-badge">Generative AI</span>
+                    </div>
+                </div>
+
+                <div class="education-card reveal delay-1">
                     <div class="edu-icon">&#127891;</div>
                     <h3>B.S. in Data Science</h3>
                     <div class="edu-institution">Pontificia Universidad Javeriana</div>
-                    <div class="edu-date">2023 — 2026</div>
-                    <p style="color: var(--text-secondary); font-size: 0.92rem;">Comprehensive program covering statistics, machine learning, databases, programming, and applied AI. Building a strong foundation in turning data into actionable insights.</p>
+                    <div class="edu-date">2023 — 2026 · Graduated</div>
+                    <p style="color: var(--text-secondary); font-size: 0.92rem;">Comprehensive program covering statistics, machine learning, databases, programming, and applied AI. Built a strong foundation in turning data into actionable insights.</p>
                     <div class="edu-highlights">
                         <span class="edu-badge">Highest GPA in Program</span>
                         <span class="edu-badge">Academic Excellence Scholarship</span>
@@ -541,7 +620,7 @@
         <section id="ai-chat">
             <div class="content-wrapper">
                 <h2 class="gradient-text reveal">Talk to My AI</h2>
-                <p class="section-subtitle reveal delay-1">Ask anything about my experience, skills, or projects — powered by RAG.</p>
+                <p class="section-subtitle reveal delay-1">Ask anything about my experience, skills, or projects — powered by Gemini.</p>
 
                 <div class="chat-wrapper reveal delay-2">
                     <!-- Terminal header -->
@@ -561,39 +640,33 @@
                         </div>
                     </div>
 
-                    <!-- Gradio iframe embed -->
-                    <div class="chat-iframe-container">
-                        <iframe
-                            id="rag-iframe"
-                            src="https://juanjlb2005-rag-juan.hf.space"
-                            frameborder="0"
-                            allow="microphone"
-                            title="RAG-JUAN AI Assistant"
-                        ></iframe>
-
-                        <!-- Fallback overlay (shown if connection fails) -->
-                        <div class="chat-fallback" id="chat-fallback">
-                            <div class="fallback-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5">
-                                    <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"/>
-                                    <path d="M12 8v4M12 16h.01"/>
-                                </svg>
-                            </div>
-                            <h3>AI Assistant Offline</h3>
-                            <p>The RAG model is currently warming up or temporarily unavailable. It may take a moment to load on first visit.</p>
-                            <a href="https://juanjlb2005-rag-juan.hf.space" target="_blank" rel="noopener" class="fallback-btn">
-                                Open Directly on Hugging Face
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-                            </a>
+                    <!-- Chat messages -->
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="chat-msg bot">
+                            <div class="chat-bubble">Hi! I'm Juan's AI assistant. Ask me anything about his experience, skills, or projects. 🤖</div>
                         </div>
                     </div>
 
                     <!-- Suggested prompts -->
-                    <div class="chat-prompts">
+                    <div class="chat-prompts" id="chat-prompts">
                         <span class="chat-prompt-chip">Who are you?</span>
                         <span class="chat-prompt-chip">What tech stack do you use?</span>
                         <span class="chat-prompt-chip">Tell me about your ML experience</span>
                     </div>
+
+                    <!-- Input bar -->
+                    <form class="chat-input-bar" id="chat-form" autocomplete="off">
+                        <input
+                            type="text"
+                            id="chat-input"
+                            placeholder="Ask me anything..."
+                            aria-label="Chat message"
+                            maxlength="500"
+                        >
+                        <button type="submit" id="chat-send" aria-label="Send message">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                        </button>
+                    </form>
                 </div>
             </div>
         </section>
@@ -606,6 +679,22 @@
             <div class="content-wrapper reveal">
                 <h2 class="gradient-text">Let's Build Something Together</h2>
                 <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether it's data, AI, or engineering — let's connect.</p>
+
+                <!-- Schedule a meeting (Google Calendar) + CV -->
+                <div class="contact-actions">
+                    <a id="schedule-btn"
+                       class="cta-btn cta-primary"
+                       href="https://calendar.app.google/13iYCdRy9raq79JJ7"
+                       target="_blank" rel="noopener">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        Schedule a Meeting
+                    </a>
+                    <a href="cv/Juan-Lizcano-CV.pdf" download class="cta-btn cta-secondary btn-cv">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download CV
+                    </a>
+                </div>
+
                 <div class="social-links">
                     <a href="mailto:juanjlb2005@gmail.com" class="social-link" title="Email" aria-label="Send email">
                         <svg viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
@@ -621,6 +710,37 @@
         </section>
 
     </main>
+
+    <!-- Case Study Modal (populated by js/projects.js) -->
+    <div class="case-modal" id="case-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="case-modal-title">
+        <div class="case-modal-backdrop" data-close></div>
+        <div class="case-modal-content" role="document">
+            <button class="case-modal-close" data-close aria-label="Close">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <span class="case-modal-status" id="case-modal-status"></span>
+            <h2 id="case-modal-title" class="gradient-text"></h2>
+            <div class="case-modal-body">
+                <div class="case-block">
+                    <h4>The Challenge</h4>
+                    <p id="case-problem"></p>
+                </div>
+                <div class="case-block">
+                    <h4>My Approach</h4>
+                    <p id="case-approach"></p>
+                </div>
+                <div class="case-block">
+                    <h4>Impact &amp; Results</h4>
+                    <ul id="case-impact"></ul>
+                </div>
+            </div>
+            <div class="case-modal-tags" id="case-tags"></div>
+            <a class="case-modal-link" id="case-link" target="_blank" rel="noopener" hidden>
+                Visit Platform
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -639,7 +759,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js" defer></script>
+    <script src="js/chat-config.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="js/chat.js" defer></script>
+    <script src="js/projects.js" defer></script>
 
 </body>
 </html>
