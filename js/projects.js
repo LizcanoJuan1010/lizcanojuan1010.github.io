@@ -29,8 +29,7 @@ const CASE_STUDIES = {
             'Centralized tracking of territory, key leaders, and base structure in one platform',
             'Deployed and accessible in production at pipe-ia.com'
         ],
-        tech: ['Generative AI', 'LLMs', 'Network Analysis', 'Python', 'Data Analytics'],
-        link: 'https://pipe-ia.com/login'
+        tech: ['Generative AI', 'LLMs', 'Network Analysis', 'Python', 'Data Analytics']
     },
     fiscal: {
         status: 'In Production',
@@ -116,7 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const elApproach = document.getElementById('case-approach');
     const elImpact = document.getElementById('case-impact');
     const elTags = document.getElementById('case-tags');
-    const elLink = document.getElementById('case-link');
 
     let lastFocused = null;
 
@@ -144,13 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
             elTags.appendChild(span);
         });
 
-        if (data.link) {
-            elLink.href = data.link;
-            elLink.hidden = false;
-        } else {
-            elLink.hidden = true;
-        }
-
         lastFocused = document.activeElement;
         modal.classList.add('open');
         modal.setAttribute('aria-hidden', 'false');
@@ -172,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.setAttribute('tabindex', '0');
 
         card.addEventListener('click', (e) => {
-            if (e.target.closest('a')) return; // let "Visit Platform" work normally
+            if (e.target.closest('a')) return; // let any real link inside the card work normally
             openCase(card.dataset.project);
         });
         card.addEventListener('keydown', (e) => {
