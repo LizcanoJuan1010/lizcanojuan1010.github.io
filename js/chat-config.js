@@ -8,8 +8,8 @@
    ============================================ */
 
 const CHAT_CONFIG = {
-    // 🔗 Paste your deployed Cloudflare Worker URL here:
-    CHAT_PROXY_URL: "PASTE_YOUR_CLOUDFLARE_WORKER_URL_HERE",
+    // 🔗 Deployed Cloudflare Worker (proxies to Gemini; holds the secret key):
+    CHAT_PROXY_URL: "https://chat-juan.lizcanojj20051010.workers.dev",
 
     // Model — most economical option, ideal for the free tier.
     MODEL: "gemini-2.5-flash-lite",
