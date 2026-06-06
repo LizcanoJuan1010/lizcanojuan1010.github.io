@@ -76,17 +76,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections.forEach(section => sectionObserver.observe(section));
 
-    // --- Typing Animation with Rotation ---
+    // --- Typing Animation with Rotation (language-aware) ---
     const subtitle = document.getElementById('subtitle');
-    const titles = [
+    const fallbackTitles = [
         "Data Scientist & AI Engineer",
         "Machine Learning Developer",
         "Database Architect",
         "NLP & Computer Vision Specialist"
     ];
+    function getTitles() {
+        return (window.I18N && window.I18N.pick(window.I18N.dyn.titles)) || fallbackTitles;
+    }
+    let titles = getTitles();
     let titleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
+
+    // Restart the rotation in the new language when the user toggles ES/EN.
+    if (window.I18N) {
+        window.I18N.onChange(() => {
+            titles = getTitles();
+            titleIndex = 0;
+            charIndex = 0;
+            isDeleting = false;
+        });
+    }
 
     function typeEffect() {
         const currentTitle = titles[titleIndex];

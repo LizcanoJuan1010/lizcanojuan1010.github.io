@@ -130,6 +130,34 @@ nav.scrolled {
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
+/* Right-side nav cluster: language toggle + hamburger */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    user-select: none;
+}
+.lang-opt {
+    background: none;
+    border: none;
+    padding: 2px 3px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+    transition: color var(--transition);
+}
+.lang-opt:hover { color: var(--text-highlight); }
+.lang-opt.active { color: var(--accent); }
+.lang-sep { color: var(--border-hover); font-size: 0.8rem; }
+
 /* ============================================
    SECTIONS - COMMON
    ============================================ */
@@ -1070,6 +1098,253 @@ h3 {
 }
 
 /* ============================================
+   VISION LAB SECTION (on-device computer vision)
+   ============================================ */
+#vision-lab {
+    min-height: auto;
+    padding: 100px 40px;
+}
+.vision-wrapper {
+    max-width: 920px;
+    margin: 0 auto;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-secondary);
+    box-shadow: 0 0 60px rgba(79, 70, 229, 0.08), 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+.vision-body {
+    display: flex;
+    align-items: stretch;
+}
+
+/* --- Left: camera stage --- */
+.vision-stage {
+    position: relative;
+    flex: 1 1 60%;
+    background: #000;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-right: 1px solid var(--border-subtle);
+}
+.vision-stage video,
+.vision-stage canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1); /* selfie mirror; canvas overlay mirrors with it */
+}
+.vision-stage canvas { pointer-events: none; }
+
+/* Reticle corner brackets */
+.vision-bracket {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border: 2px solid var(--accent);
+    opacity: 0.55;
+    z-index: 3;
+    pointer-events: none;
+}
+.vision-bracket.tl { top: 14px; left: 14px; border-right: none; border-bottom: none; }
+.vision-bracket.tr { top: 14px; right: 14px; border-left: none; border-bottom: none; }
+.vision-bracket.bl { bottom: 14px; left: 14px; border-right: none; border-top: none; }
+.vision-bracket.br { bottom: 14px; right: 14px; border-left: none; border-top: none; }
+
+/* Scanning line (only animates while live) */
+.vision-scanline {
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+}
+.vision-stage.live .vision-scanline {
+    opacity: 0.8;
+    animation: vision-scan 3.2s linear infinite;
+}
+@keyframes vision-scan {
+    0% { top: 4%; }
+    50% { top: 96%; }
+    100% { top: 4%; }
+}
+
+/* FPS chip + stop button: only while live */
+.vision-fps-chip,
+.vision-stop {
+    position: absolute;
+    z-index: 4;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: rgba(10, 10, 10, 0.65);
+    border: 1px solid var(--border-subtle);
+    backdrop-filter: blur(6px);
+    color: var(--text-highlight);
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+.vision-fps-chip { top: 12px; left: 50%; transform: translateX(-50%); color: #28c840; }
+.vision-stop {
+    bottom: 12px; left: 50%; transform: translateX(-50%);
+    display: inline-flex; align-items: center; gap: 6px;
+    cursor: pointer;
+}
+.vision-stop:hover { border-color: var(--accent); background: rgba(79, 70, 229, 0.25); }
+.vision-stage.live .vision-fps-chip,
+.vision-stage.live .vision-stop { opacity: 1; }
+
+/* Idle / boot overlay */
+.vision-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 24px;
+    text-align: center;
+    background: radial-gradient(circle at center, rgba(79, 70, 229, 0.12), rgba(0, 0, 0, 0.85));
+    transition: opacity var(--transition);
+}
+.vision-stage.live .vision-overlay { opacity: 0; pointer-events: none; }
+.vision-boot {
+    font-family: 'Courier New', monospace;
+    font-size: 0.74rem;
+    line-height: 1.5;
+    color: #28c840;
+    text-align: left;
+    min-height: 18px;
+    margin: 0;
+    white-space: pre-wrap;
+    text-shadow: 0 0 8px rgba(40, 200, 64, 0.4);
+}
+.vision-activate {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 13px 26px;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), #7c3aed);
+    box-shadow: 0 0 30px var(--accent-glow);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+.vision-activate:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 0 45px var(--accent-glow);
+}
+.vision-activate:disabled { opacity: 0.6; cursor: wait; }
+.vision-overlay.loading .vision-activate { display: none; }
+.vision-privacy {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.74rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+.vision-privacy svg { color: var(--accent); }
+
+/* --- Right: telemetry panel --- */
+.vision-panel {
+    flex: 1 1 40%;
+    min-width: 240px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background: rgba(255, 255, 255, 0.015);
+}
+.vision-panel-title {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+.vision-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+}
+.vision-hint {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin: 0;
+    align-self: center;
+    text-align: center;
+}
+.vision-bar {
+    display: grid;
+    grid-template-columns: 70px 1fr 38px;
+    align-items: center;
+    gap: 10px;
+}
+.vision-bar-label {
+    font-size: 0.76rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+.vision-bar-track {
+    height: 8px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.07);
+    overflow: hidden;
+}
+.vision-bar-fill {
+    display: block;
+    height: 100%;
+    width: 0%;
+    border-radius: 6px;
+    background: linear-gradient(90deg, var(--accent), #818cf8);
+    transition: width 0.09s linear;
+}
+.vision-bar-val {
+    font-size: 0.72rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-primary);
+    text-align: right;
+}
+.vision-readout {
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.vision-dominant {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-highlight);
+}
+.vision-dominant .vision-emoji { font-size: 1.4rem; }
+.vision-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 0.72rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-secondary);
+}
+
+/* ============================================
    CONTACT SECTION
    ============================================ */
 #contact {
@@ -1296,6 +1571,10 @@ footer {
     .chat-messages { height: 360px; }
     .chat-prompts { justify-content: center; }
     .chat-msg { max-width: 92%; }
+
+    .vision-body { flex-direction: column; }
+    .vision-stage { flex-basis: auto; border-right: none; border-bottom: 1px solid var(--border-subtle); }
+    .vision-panel { flex-basis: auto; }
 
     #contact .content-wrapper { padding: 30px 24px; margin: 0 16px; }
     .footer-links { flex-wrap: wrap; gap: 16px; }

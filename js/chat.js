@@ -20,13 +20,28 @@ document.addEventListener('DOMContentLoaded', () => {
         !CHAT_CONFIG.CHAT_PROXY_URL ||
         CHAT_CONFIG.CHAT_PROXY_URL === 'PASTE_YOUR_CLOUDFLARE_WORKER_URL_HERE';
 
-    // --- Status indicator ---
-    function setStatus(state, text) {
+    // --- Localized chat strings (falls back to English) ---
+    function cstr() {
+        return (window.I18N && window.I18N.dyn.chat[window.I18N.lang]) || {
+            connecting: 'Connecting...', online: 'Online', offline: 'Offline', error: 'Error',
+            noReply: "Sorry, I couldn't generate a response. Try rephrasing your question.",
+            notConfigured: "⚠️ The AI assistant isn't configured yet. Set the proxy URL in js/chat-config.js. Meanwhile, feel free to reach Juan at juanjlb2005@gmail.com.",
+            reachError: 'Hmm, I had trouble reaching the AI service. Please try again in a moment, or email Juan at juanjlb2005@gmail.com.'
+        };
+    }
+
+    // --- Status indicator (key indexes the localized strings) ---
+    let statusState = 'offline';
+    let statusKey = 'offline';
+    function setStatus(state, key) {
+        statusState = state;
+        statusKey = key;
         statusDot.classList.remove('online', 'offline');
         if (state) statusDot.classList.add(state);
-        statusText.textContent = text;
+        statusText.textContent = cstr()[key] || key;
     }
-    setStatus(proxyMissing ? 'offline' : 'online', proxyMissing ? 'Offline' : 'Online');
+    if (window.I18N) window.I18N.onChange(() => setStatus(statusState, statusKey));
+    setStatus(proxyMissing ? 'offline' : 'online', proxyMissing ? 'offline' : 'online');
 
     // --- Render a message bubble ---
     function addMessage(text, sender) {
@@ -82,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = await res.json();
         const reply =
             data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim() ||
-            "Sorry, I couldn't generate a response. Try rephrasing your question.";
+            cstr().noReply;
 
         history.push({ role: 'model', parts: [{ text: reply }] });
         return reply;
@@ -97,10 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
         input.value = '';
 
         if (proxyMissing) {
-            addMessage(
-                "⚠️ The AI assistant isn't configured yet. Set the proxy URL in js/chat-config.js. Meanwhile, feel free to reach Juan at juanjlb2005@gmail.com.",
-                'bot'
-            );
+            addMessage(cstr().notConfigured, 'bot');
             return;
         }
 
@@ -111,15 +123,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const reply = await askGemini(userText);
             typing.remove();
             addMessage(reply, 'bot');
-            setStatus('online', 'Online');
+            setStatus('online', 'online');
         } catch (e) {
             console.error(e);
             typing.remove();
-            addMessage(
-                "Hmm, I had trouble reaching the AI service. Please try again in a moment, or email Juan at juanjlb2005@gmail.com.",
-                'bot'
-            );
-            setStatus('offline', 'Error');
+            addMessage(cstr().reachError, 'bot');
+            setStatus('offline', 'error');
         } finally {
             setLoading(false);
             input.focus();

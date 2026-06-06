@@ -117,11 +117,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const elTags = document.getElementById('case-tags');
 
     let lastFocused = null;
+    let currentKey = null;
 
-    function openCase(key) {
-        const data = CASE_STUDIES[key];
+    // Merge the English base with the Spanish overrides when ES is active.
+    function localized(key) {
+        const en = CASE_STUDIES[key];
+        if (!en) return null;
+        const lang = window.I18N ? window.I18N.lang : 'en';
+        const es = lang === 'es' && window.I18N.dyn.cases.es[key];
+        return es ? Object.assign({}, en, es) : en;
+    }
+
+    function fillCase(data) {
         if (!data) return;
-
         elStatus.textContent = data.status || '';
         elTitle.textContent = data.title;
         elProblem.textContent = data.problem;
@@ -141,6 +149,13 @@ document.addEventListener('DOMContentLoaded', () => {
             span.textContent = tag;
             elTags.appendChild(span);
         });
+    }
+
+    function openCase(key) {
+        const data = localized(key);
+        if (!data) return;
+        currentKey = key;
+        fillCase(data);
 
         lastFocused = document.activeElement;
         modal.classList.add('open');
@@ -153,7 +168,15 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.classList.remove('open');
         modal.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+        currentKey = null;
         if (lastFocused) lastFocused.focus();
+    }
+
+    // Re-render an open modal in the newly selected language.
+    if (window.I18N) {
+        window.I18N.onChange(() => {
+            if (currentKey && modal.classList.contains('open')) fillCase(localized(currentKey));
+        });
     }
 
     // Open on card click (ignore clicks on real links inside the card)

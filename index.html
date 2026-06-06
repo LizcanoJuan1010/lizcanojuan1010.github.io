@@ -25,20 +25,28 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-logo">JL</div>
-        <div class="hamburger" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
         <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-            <a href="#ai-chat">AI Chat</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" data-i18n="nav.home">Home</a>
+            <a href="#about" data-i18n="nav.about">About</a>
+            <a href="#skills" data-i18n="nav.skills">Skills</a>
+            <a href="#experience" data-i18n="nav.experience">Experience</a>
+            <a href="#projects" data-i18n="nav.projects">Projects</a>
+            <a href="#education" data-i18n="nav.education">Education</a>
+            <a href="#ai-chat" data-i18n="nav.chat">AI Chat</a>
+            <a href="#vision-lab" data-i18n="nav.vision">Vision Lab</a>
+            <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <div class="lang-toggle" role="group" aria-label="Language / Idioma">
+                <button type="button" class="lang-opt" data-lang="es">ES</button>
+                <span class="lang-sep">|</span>
+                <button type="button" class="lang-opt" data-lang="en">EN</button>
+            </div>
+            <div class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
@@ -55,7 +63,7 @@
                 <!-- Place your CV at: cv/Juan-Lizcano-CV.pdf -->
                 <a href="cv/Juan-Lizcano-CV.pdf" download class="btn-cv hero-cv">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    Download CV
+                    <span data-i18n="cv.download">Download CV</span>
                 </a>
             </div>
             <div class="scroll-indicator">
@@ -68,18 +76,18 @@
              ============================ -->
         <section id="about">
             <div class="content-wrapper">
-                <h2 class="gradient-text reveal">About Me</h2>
-                <p class="section-subtitle reveal delay-1">Turning data into decisions, and ideas into intelligent systems.</p>
+                <h2 class="gradient-text reveal" data-i18n="about.title">About Me</h2>
+                <p class="section-subtitle reveal delay-1" data-i18n="about.subtitle">Turning data into decisions, and ideas into intelligent systems.</p>
 
-                <p class="intro-text reveal delay-2">Hi! I'm Juan, a highly motivated and results-driven Data Scientist. I graduated in Data Science from Pontificia Universidad Javeriana and I'm currently pursuing a Master's degree in Artificial Intelligence. I combine solid technical expertise with a genuine passion for leveraging data to solve complex problems in innovative ways. Currently working as an MLOps Engineer and Computer Vision Lead, I specialize in building full-stack AI systems — from computer vision pipelines to generative-AI solutions.</p>
+                <p class="intro-text reveal delay-2" data-i18n="about.intro">Hi! I'm Juan, a highly motivated and results-driven Data Scientist. I graduated in Data Science from Pontificia Universidad Javeriana and I'm currently pursuing a Master's degree in Artificial Intelligence. I combine solid technical expertise with a genuine passion for leveraging data to solve complex problems in innovative ways. Currently working as an MLOps Engineer and Computer Vision Lead, I specialize in building full-stack AI systems — from computer vision pipelines to generative-AI solutions.</p>
 
                 <div class="about-row reveal">
                     <div class="about-photo">
                         <img src="img/profile.jpg" alt="Juan Lizcano" loading="lazy" decoding="async">
                     </div>
                     <div class="about-description">
-                        <h3>My Philosophy</h3>
-                        <p>My core philosophy is simple yet powerful: everything can be learned. Challenges aren't obstacles — they're opportunities to grow. I deeply value teamwork because collaboration creates synergies that let us overcome individual limitations. Before diving into any project, I always prioritize understanding the business at a deep level — going beyond the obvious to grasp the essence of what truly needs to be solved.</p>
+                        <h3 data-i18n="about.philTitle">My Philosophy</h3>
+                        <p data-i18n="about.philBody">My core philosophy is simple yet powerful: everything can be learned. Challenges aren't obstacles — they're opportunities to grow. I deeply value teamwork because collaboration creates synergies that let us overcome individual limitations. Before diving into any project, I always prioritize understanding the business at a deep level — going beyond the obvious to grasp the essence of what truly needs to be solved.</p>
                     </div>
                 </div>
 
@@ -88,8 +96,8 @@
                         <img src="img/hack4edu_opt.png" alt="H4CKFOREDU Hackathon" loading="lazy" decoding="async">
                     </div>
                     <div class="about-description">
-                        <h3>Beyond Technology</h3>
-                        <p>Outside of tech, I'm passionate about balancing mind and body — the gym and physical activity are essential parts of my routine. I enjoy reading philosophy books, seeking to better understand the world and my place in it. I maintain an insatiable curiosity for the latest technological trends, exploring how they can improve daily productivity. I define myself as deeply curious and energetic, with a constant desire to explore, learn, and evolve.</p>
+                        <h3 data-i18n="about.beyondTitle">Beyond Technology</h3>
+                        <p data-i18n="about.beyondBody">Outside of tech, I'm passionate about balancing mind and body — the gym and physical activity are essential parts of my routine. I enjoy reading philosophy books, seeking to better understand the world and my place in it. I maintain an insatiable curiosity for the latest technological trends, exploring how they can improve daily productivity. I define myself as deeply curious and energetic, with a constant desire to explore, learn, and evolve.</p>
                     </div>
                 </div>
 
@@ -97,25 +105,25 @@
                 <div class="stats-bar reveal">
                     <div class="stat-item">
                         <div class="stat-number"><span data-count="3" data-suffix="+">0</span></div>
-                        <div class="stat-label">Years Experience</div>
+                        <div class="stat-label" data-i18n="stat.years">Years Experience</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number"><span data-count="7" data-suffix="+">0</span></div>
-                        <div class="stat-label">Professional Roles</div>
+                        <div class="stat-label" data-i18n="stat.roles">Professional Roles</div>
                     </div>
                     <div class="stat-item">
                         <!-- [confirmar] nº real de modelos de IA desplegados -->
                         <div class="stat-number"><span data-count="10" data-suffix="+">0</span></div>
-                        <div class="stat-label">AI Models Deployed</div>
+                        <div class="stat-label" data-i18n="stat.models">AI Models Deployed</div>
                     </div>
                     <div class="stat-item">
                         <!-- [confirmar] nº real de streams de cámara en producción -->
                         <div class="stat-number"><span data-count="20" data-suffix="+">0</span></div>
-                        <div class="stat-label">Camera Streams in Prod</div>
+                        <div class="stat-label" data-i18n="stat.streams">Camera Streams in Prod</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number"><span data-count="12" data-suffix="+">0</span></div>
-                        <div class="stat-label">Certifications</div>
+                        <div class="stat-label" data-i18n="stat.certs">Certifications</div>
                     </div>
                 </div>
             </div>
@@ -126,13 +134,13 @@
              ============================ -->
         <section id="skills">
             <div class="content-wrapper">
-                <h2 class="gradient-text reveal">Technical Skills</h2>
-                <p class="section-subtitle reveal delay-1">A versatile toolkit for building data-driven solutions.</p>
+                <h2 class="gradient-text reveal" data-i18n="skills.title">Technical Skills</h2>
+                <p class="section-subtitle reveal delay-1" data-i18n="skills.subtitle">A versatile toolkit for building data-driven solutions.</p>
 
                 <div class="skills-grid">
                     <div class="skill-category reveal delay-1">
                         <span class="skill-category-icon">&#60;/&#62;</span>
-                        <h4>Programming</h4>
+                        <h4 data-i18n="skills.programming">Programming</h4>
                         <div class="skill-tags">
                             <span class="skill-tag">Python</span>
                             <span class="skill-tag">Java</span>
@@ -145,7 +153,7 @@
 
                     <div class="skill-category reveal delay-2">
                         <span class="skill-category-icon">&#128202;</span>
-                        <h4>Data & Analytics</h4>
+                        <h4 data-i18n="skills.data">Data &amp; Analytics</h4>
                         <div class="skill-tags">
                             <span class="skill-tag">Power BI</span>
                             <span class="skill-tag">Tableau</span>
@@ -159,7 +167,7 @@
 
                     <div class="skill-category reveal delay-3">
                         <span class="skill-category-icon">&#129302;</span>
-                        <h4>AI & Machine Learning</h4>
+                        <h4 data-i18n="skills.ai">AI &amp; Machine Learning</h4>
                         <div class="skill-tags">
                             <span class="skill-tag">Deep Learning</span>
                             <span class="skill-tag">NLP</span>
@@ -174,7 +182,7 @@
 
                     <div class="skill-category reveal delay-4">
                         <span class="skill-category-icon">&#9881;</span>
-                        <h4>Tools & Platforms</h4>
+                        <h4 data-i18n="skills.tools">Tools &amp; Platforms</h4>
                         <div class="skill-tags">
                             <span class="skill-tag">Git & GitHub</span>
                             <span class="skill-tag">Docker</span>
@@ -187,21 +195,21 @@
 
                     <div class="skill-category reveal delay-5">
                         <span class="skill-category-icon">&#129309;</span>
-                        <h4>Soft Skills</h4>
+                        <h4 data-i18n="skills.soft">Soft Skills</h4>
                         <div class="skill-tags">
-                            <span class="skill-tag">Critical Thinking</span>
-                            <span class="skill-tag">Teamwork</span>
-                            <span class="skill-tag">Problem Solving</span>
-                            <span class="skill-tag">Leadership</span>
+                            <span class="skill-tag" data-i18n="skills.critical">Critical Thinking</span>
+                            <span class="skill-tag" data-i18n="skills.teamwork">Teamwork</span>
+                            <span class="skill-tag" data-i18n="skills.problem">Problem Solving</span>
+                            <span class="skill-tag" data-i18n="skills.leadership">Leadership</span>
                         </div>
                     </div>
 
                     <div class="skill-category reveal delay-6">
                         <span class="skill-category-icon">&#127760;</span>
-                        <h4>Languages</h4>
+                        <h4 data-i18n="skills.languages">Languages</h4>
                         <div class="skill-tags">
-                            <span class="skill-tag">Spanish (Native)</span>
-                            <span class="skill-tag">English (C1)</span>
+                            <span class="skill-tag" data-i18n="skills.spanish">Spanish (Native)</span>
+                            <span class="skill-tag" data-i18n="skills.english">English (C1)</span>
                         </div>
                     </div>
                 </div>
@@ -213,17 +221,17 @@
              ============================ -->
         <section id="experience">
             <div class="content-wrapper">
-                <h2 class="gradient-text reveal">Experience</h2>
-                <p class="section-subtitle reveal delay-1">A track record of delivering value across data, AI, and engineering.</p>
+                <h2 class="gradient-text reveal" data-i18n="exp.title">Experience</h2>
+                <p class="section-subtitle reveal delay-1" data-i18n="exp.subtitle">A track record of delivering value across data, AI, and engineering.</p>
 
                 <div class="timeline">
                     <div class="timeline-item reveal">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-date">Nov 2025 — Present</div>
-                            <h3>MLOps Engineer & Computer Vision Lead</h3>
+                            <div class="timeline-date" data-i18n="exp.d1">Nov 2025 — Present</div>
+                            <h3 data-i18n="exp.t1">MLOps Engineer &amp; Computer Vision Lead</h3>
                             <div class="timeline-company">Vigias de Colombia</div>
-                            <p>As Computer Vision Lead, I drive the development of a full-stack video intelligence system utilizing a hybrid model approach (YOLO, D-FINE, ReDetv2, and PaddlePaddle) to automate event detection and metadata generation from live camera streams.</p>
+                            <p data-i18n="exp.p1">As Computer Vision Lead, I drive the development of a full-stack video intelligence system utilizing a hybrid model approach (YOLO, D-FINE, ReDetv2, and PaddlePaddle) to automate event detection and metadata generation from live camera streams.</p>
                             <div class="project-tags" style="margin-top:12px">
                                 <span class="project-tag">CUDA</span>
                                 <span class="project-tag">Computer Vision</span>
@@ -239,10 +247,10 @@
                     <div class="timeline-item reveal">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-date">Jun 2025 — Nov 2025</div>
-                            <h3>Database Administrator</h3>
+                            <div class="timeline-date" data-i18n="exp.d2">Jun 2025 — Nov 2025</div>
+                            <h3 data-i18n="exp.t2">Database Administrator</h3>
                             <div class="timeline-company">Fiduprevisora — FOMAG</div>
-                            <p>Developed a robust SQL database schema and relational model for a new public health platform dedicated to the Colombian teaching workforce, ensuring data integrity, scalability, and support for longitudinal health tracking.</p>
+                            <p data-i18n="exp.p2">Developed a robust SQL database schema and relational model for a new public health platform dedicated to the Colombian teaching workforce, ensuring data integrity, scalability, and support for longitudinal health tracking.</p>
                             <div class="project-tags" style="margin-top:12px">
                                 <span class="project-tag">SQL</span>
                                 <span class="project-tag">Data Modeling</span>
@@ -255,10 +263,10 @@
                     <div class="timeline-item reveal">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-date">Feb 2024 — Jun 2025</div>
-                            <h3>Junior Data Scientist</h3>
+                            <div class="timeline-date" data-i18n="exp.d3">Feb 2024 — Jun 2025</div>
+                            <h3 data-i18n="exp.t3">Junior Data Scientist</h3>
                             <div class="timeline-company">Tu Alianza</div>
-                            <p>Designed and implemented automated dashboards for directors to monitor organizational health and process efficiency, enabling data-driven decision-making across the organization.</p>
+                            <p data-i18n="exp.p3">Designed and implemented automated dashboards for directors to monitor organizational health and process efficiency, enabling data-driven decision-making across the organization.</p>
                             <div class="project-tags" style="margin-top:12px">
                                 <span class="project-tag">Python</span>
                                 <span class="project-tag">SQL</span>
@@ -273,10 +281,10 @@
                     <div class="timeline-item reveal">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-date">Feb 2024 — Jun 2025</div>
-                            <h3>Analyst</h3>
+                            <div class="timeline-date" data-i18n="exp.d4">Feb 2024 — Jun 2025</div>
+                            <h3 data-i18n="exp.t4">Analyst</h3>
                             <div class="timeline-company">Financial Group Javeriana</div>
-                            <p>Developing a comprehensive market analysis pipeline in Python integrating fundamental and quantitative methodologies. Leveraging yfinance API for financial data extraction, implementing NLP for market sentiment analysis, calculating technical indicators like EMA, and incorporating risk management logic to drive automated trading algorithms.</p>
+                            <p data-i18n="exp.p4">Developing a comprehensive market analysis pipeline in Python integrating fundamental and quantitative methodologies. Leveraging yfinance API for financial data extraction, implementing NLP for market sentiment analysis, calculating technical indicators like EMA, and incorporating risk management logic to drive automated trading algorithms.</p>
                             <div class="project-tags" style="margin-top:12px">
                                 <span class="project-tag">Python</span>
                                 <span class="project-tag">Linear Regression</span>
@@ -290,10 +298,10 @@
                     <div class="timeline-item reveal">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-date">Nov 2023 — Apr 2025</div>
-                            <h3>Database Administrator</h3>
+                            <div class="timeline-date" data-i18n="exp.d5">Nov 2023 — Apr 2025</div>
+                            <h3 data-i18n="exp.t5">Database Administrator</h3>
                             <div class="timeline-company">Comercializadora TS</div>
-                            <p>Architected and structured complex datasets by normalizing schemas and developing robust ETL pipelines for analytical processing.</p>
+                            <p data-i18n="exp.p5">Architected and structured complex datasets by normalizing schemas and developing robust ETL pipelines for analytical processing.</p>
                             <div class="project-tags" style="margin-top:12px">
                                 <span class="project-tag">SQL</span>
                                 <span class="project-tag">PostgreSQL</span>
@@ -307,10 +315,10 @@
                     <div class="timeline-item reveal">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-date">Jul 2024 — Jul 2025</div>
-                            <h3>Administrative Assistant</h3>
+                            <div class="timeline-date" data-i18n="exp.d6">Jul 2024 — Jul 2025</div>
+                            <h3 data-i18n="exp.t6">Administrative Assistant</h3>
                             <div class="timeline-company">Pontificia Universidad Javeriana</div>
-                            <p>Optimized university course scheduling by aligning departmental requirements with student enrollment needs.</p>
+                            <p data-i18n="exp.p6">Optimized university course scheduling by aligning departmental requirements with student enrollment needs.</p>
                             <div class="project-tags" style="margin-top:12px">
                                 <span class="project-tag">SQL</span>
                                 <span class="project-tag">Excel</span>
@@ -321,10 +329,10 @@
                     <div class="timeline-item reveal">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-date">Jan 2024 — Jul 2024</div>
-                            <h3>Advanced Programming Tutor</h3>
+                            <div class="timeline-date" data-i18n="exp.d7">Jan 2024 — Jul 2024</div>
+                            <h3 data-i18n="exp.t7">Advanced Programming Tutor</h3>
                             <div class="timeline-company">Pontificia Universidad Javeriana</div>
-                            <p>Guiding students through the core pillars of OOP using Java, the mechanics of programming logic, and the intricacies of C++ pointer manipulation.</p>
+                            <p data-i18n="exp.p7">Guiding students through the core pillars of OOP using Java, the mechanics of programming logic, and the intricacies of C++ pointer manipulation.</p>
                             <div class="project-tags" style="margin-top:12px">
                                 <span class="project-tag">Java</span>
                                 <span class="project-tag">C++</span>
@@ -340,8 +348,8 @@
              ============================ -->
         <section id="projects">
             <div class="content-wrapper">
-                <h2 class="gradient-text reveal">Featured Projects</h2>
-                <p class="section-subtitle reveal delay-1">Real-world solutions built with data and intelligence.</p>
+                <h2 class="gradient-text reveal" data-i18n="proj.title">Featured Projects</h2>
+                <p class="section-subtitle reveal delay-1" data-i18n="proj.subtitle">Real-world solutions built with data and intelligence.</p>
 
                 <div class="projects-grid">
 
@@ -349,11 +357,11 @@
                     <div class="project-card reveal delay-1" data-project="vigias">
                         <div class="project-icon-header">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                            <span class="project-status live">In Production</span>
+                            <span class="project-status live" data-i18n="proj.stProd">In Production</span>
                         </div>
                         <div class="project-info">
-                            <h3>VIGIAS-IA: Real-Time Video Analytics</h3>
-                            <p>Full-stack video intelligence system for security and surveillance, where I serve as <strong>Computer Vision Lead</strong>. Processes multiple live camera streams in real-time using a hybrid model approach (YOLO, D-FINE, ReDetv2, PaddlePaddle) for anomaly and intrusion detection. Deployed on Linux with NVIDIA DeepStream 8.0 and GStreamer pipelines.</p>
+                            <h3 data-i18n="proj.vigiasT">VIGIAS-IA: Real-Time Video Analytics</h3>
+                            <p data-i18n="proj.vigiasD">Full-stack video intelligence system for security and surveillance, where I serve as <strong>Computer Vision Lead</strong>. Processes multiple live camera streams in real-time using a hybrid model approach (YOLO, D-FINE, ReDetv2, PaddlePaddle) for anomaly and intrusion detection. Deployed on Linux with NVIDIA DeepStream 8.0 and GStreamer pipelines.</p>
                             <div class="project-tags">
                                 <span class="project-tag">NVIDIA DeepStream</span>
                                 <span class="project-tag">YOLO</span>
@@ -363,7 +371,7 @@
                                 <span class="project-tag">CUDA</span>
                                 <span class="project-tag">GStreamer</span>
                             </div>
-                            <span class="case-cue">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                            <span class="case-cue"><span data-i18n="proj.caseCue">View case study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                         </div>
                     </div>
 
@@ -371,11 +379,11 @@
                     <div class="project-card reveal delay-2" data-project="pipe-ia">
                         <div class="project-icon-header">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-                            <span class="project-status live">In Production</span>
+                            <span class="project-status live" data-i18n="proj.stProd">In Production</span>
                         </div>
                         <div class="project-info">
-                            <h3>PIPE-IA: Generative AI for Network Analysis</h3>
-                            <p>Generative-AI platform (Condor AI) for network and territory analysis — an analytical and operational system for tracking territory, key leaders, and base structure. Leverages generative models to turn complex relational data into actionable strategic insights.</p>
+                            <h3 data-i18n="proj.pipeT">PIPE-IA: Generative AI for Network Analysis</h3>
+                            <p data-i18n="proj.pipeD">Generative-AI platform (Condor AI) for network and territory analysis — an analytical and operational system for tracking territory, key leaders, and base structure. Leverages generative models to turn complex relational data into actionable strategic insights.</p>
                             <div class="project-tags">
                                 <span class="project-tag">Generative AI</span>
                                 <span class="project-tag">LLMs</span>
@@ -383,7 +391,7 @@
                                 <span class="project-tag">Python</span>
                                 <span class="project-tag">Data Analytics</span>
                             </div>
-                            <span class="case-cue">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                            <span class="case-cue"><span data-i18n="proj.caseCue">View case study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                         </div>
                     </div>
 
@@ -391,11 +399,11 @@
                     <div class="project-card reveal delay-3" data-project="fiscal">
                         <div class="project-icon-header">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
-                            <span class="project-status live">In Production</span>
+                            <span class="project-status live" data-i18n="proj.stProd">In Production</span>
                         </div>
                         <div class="project-info">
-                            <h3>Generative AI for Fiscal Control</h3>
-                            <p>Generative-AI models applied to fiscal oversight and control. Automates the analysis of large volumes of financial and regulatory data, surfacing anomalies and generating structured reports to support transparent, data-driven fiscal decision-making.</p>
+                            <h3 data-i18n="proj.fiscalT">Generative AI for Fiscal Control</h3>
+                            <p data-i18n="proj.fiscalD">Generative-AI models applied to fiscal oversight and control. Automates the analysis of large volumes of financial and regulatory data, surfacing anomalies and generating structured reports to support transparent, data-driven fiscal decision-making.</p>
                             <div class="project-tags">
                                 <span class="project-tag">Generative AI</span>
                                 <span class="project-tag">LLMs</span>
@@ -403,7 +411,7 @@
                                 <span class="project-tag">Fiscal Control</span>
                                 <span class="project-tag">Python</span>
                             </div>
-                            <span class="case-cue">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                            <span class="case-cue"><span data-i18n="proj.caseCue">View case study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                         </div>
                     </div>
 
@@ -411,11 +419,11 @@
                     <div class="project-card reveal delay-2" data-project="eaoa">
                         <div class="project-icon-header">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-                            <span class="project-status dev">In Development</span>
+                            <span class="project-status dev" data-i18n="proj.stDev">In Development</span>
                         </div>
                         <div class="project-info">
-                            <h3>EAOA: Autonomous Operations Ecosystem</h3>
-                            <p>Multi-agent system designed for enterprise process automation without constant human supervision. Orchestrates specialized AI agents with persistent memory, function calling, and agentic workflows to solve complex business problems autonomously.</p>
+                            <h3 data-i18n="proj.eaoaT">EAOA: Autonomous Operations Ecosystem</h3>
+                            <p data-i18n="proj.eaoaD">Multi-agent system designed for enterprise process automation without constant human supervision. Orchestrates specialized AI agents with persistent memory, function calling, and agentic workflows to solve complex business problems autonomously.</p>
                             <div class="project-tags">
                                 <span class="project-tag">LangChain</span>
                                 <span class="project-tag">LangGraph</span>
@@ -424,7 +432,7 @@
                                 <span class="project-tag">Agentic AI</span>
                                 <span class="project-tag">Function Calling</span>
                             </div>
-                            <span class="case-cue">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                            <span class="case-cue"><span data-i18n="proj.caseCue">View case study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                         </div>
                     </div>
 
@@ -432,11 +440,11 @@
                     <div class="project-card reveal delay-3" data-project="financial">
                         <div class="project-icon-header">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                            <span class="project-status live">Active</span>
+                            <span class="project-status live" data-i18n="proj.stActive">Active</span>
                         </div>
                         <div class="project-info">
-                            <h3>Financial Analytics & Market Prediction</h3>
-                            <p>Quantitative market analysis pipeline integrating fundamental and algorithmic methodologies. Uses yfinance API for data extraction, NLP for sentiment analysis, CNN-LSTM models for price prediction, and automated trading with risk management logic including limit orders and stop-loss thresholds.</p>
+                            <h3 data-i18n="proj.finT">Financial Analytics &amp; Market Prediction</h3>
+                            <p data-i18n="proj.finD">Quantitative market analysis pipeline integrating fundamental and algorithmic methodologies. Uses yfinance API for data extraction, NLP for sentiment analysis, CNN-LSTM models for price prediction, and automated trading with risk management logic including limit orders and stop-loss thresholds.</p>
                             <div class="project-tags">
                                 <span class="project-tag">Python</span>
                                 <span class="project-tag">CNN-LSTM</span>
@@ -445,7 +453,7 @@
                                 <span class="project-tag">Power BI</span>
                                 <span class="project-tag">Time Series</span>
                             </div>
-                            <span class="case-cue">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                            <span class="case-cue"><span data-i18n="proj.caseCue">View case study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                         </div>
                     </div>
 
@@ -453,11 +461,11 @@
                     <div class="project-card reveal delay-1" data-project="xai">
                         <div class="project-icon-header">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
-                            <span class="project-status research">Thesis</span>
+                            <span class="project-status research" data-i18n="proj.stThesis">Thesis</span>
                         </div>
                         <div class="project-info">
-                            <h3>Explainable AI (XAI) — Thesis</h3>
-                            <p>Research on Explainable AI applied to Reinforcement Learning. Developing model distillation techniques to understand the internal workings of neural networks in RL — analyzing neural activation patterns for greater model interpretability and trustworthiness.</p>
+                            <h3 data-i18n="proj.xaiT">Explainable AI (XAI) — Thesis</h3>
+                            <p data-i18n="proj.xaiD">Research on Explainable AI applied to Reinforcement Learning. Developing model distillation techniques to understand the internal workings of neural networks in RL — analyzing neural activation patterns for greater model interpretability and trustworthiness.</p>
                             <div class="project-tags">
                                 <span class="project-tag">XAI</span>
                                 <span class="project-tag">Reinforcement Learning</span>
@@ -465,7 +473,7 @@
                                 <span class="project-tag">Model Distillation</span>
                                 <span class="project-tag">Python</span>
                             </div>
-                            <span class="case-cue">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                            <span class="case-cue"><span data-i18n="proj.caseCue">View case study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                         </div>
                     </div>
 
@@ -473,11 +481,11 @@
                     <div class="project-card reveal delay-2" data-project="fomag">
                         <div class="project-icon-header">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-                            <span class="project-status complete">Delivered</span>
+                            <span class="project-status complete" data-i18n="proj.stDelivered">Delivered</span>
                         </div>
                         <div class="project-info">
-                            <h3>FOMAG Database Architecture</h3>
-                            <p>Robust SQL database schema and relational model for a new public health platform dedicated to Colombia's teaching workforce. Ensured data integrity, scalability, and support for longitudinal health tracking across the national education system.</p>
+                            <h3 data-i18n="proj.fomagT">FOMAG Database Architecture</h3>
+                            <p data-i18n="proj.fomagD">Robust SQL database schema and relational model for a new public health platform dedicated to Colombia's teaching workforce. Ensured data integrity, scalability, and support for longitudinal health tracking across the national education system.</p>
                             <div class="project-tags">
                                 <span class="project-tag">SQL</span>
                                 <span class="project-tag">Data Modeling</span>
@@ -485,7 +493,7 @@
                                 <span class="project-tag">Data Governance</span>
                                 <span class="project-tag">ETL</span>
                             </div>
-                            <span class="case-cue">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                            <span class="case-cue"><span data-i18n="proj.caseCue">View case study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                         </div>
                     </div>
 
@@ -493,11 +501,11 @@
                     <div class="project-card reveal delay-3" data-project="rag">
                         <div class="project-icon-header">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                            <span class="project-status live">Active</span>
+                            <span class="project-status live" data-i18n="proj.stActive">Active</span>
                         </div>
                         <div class="project-info">
-                            <h3>RAG-Powered AI Assistants</h3>
-                            <p>Multiple AI assistants built with the Retrieval-Augmented Generation framework. LLMs grounded on specific knowledge bases to minimize hallucination. Includes the personal RAG chatbot deployed on this portfolio via Hugging Face Spaces.</p>
+                            <h3 data-i18n="proj.ragT">RAG-Powered AI Assistants</h3>
+                            <p data-i18n="proj.ragD">Multiple AI assistants built with the Retrieval-Augmented Generation framework. LLMs grounded on specific knowledge bases to minimize hallucination. Includes the personal RAG chatbot deployed on this portfolio via Hugging Face Spaces.</p>
                             <div class="project-tags">
                                 <span class="project-tag">LlamaIndex</span>
                                 <span class="project-tag">Gemini</span>
@@ -506,7 +514,7 @@
                                 <span class="project-tag">RAG</span>
                                 <span class="project-tag">NLP</span>
                             </div>
-                            <span class="case-cue">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                            <span class="case-cue"><span data-i18n="proj.caseCue">View case study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                         </div>
                     </div>
 
@@ -519,90 +527,90 @@
              ============================ -->
         <section id="education">
             <div class="content-wrapper">
-                <h2 class="gradient-text reveal">Education & Certifications</h2>
-                <p class="section-subtitle reveal delay-1">Continuous learning as a core principle.</p>
+                <h2 class="gradient-text reveal" data-i18n="edu.title">Education &amp; Certifications</h2>
+                <p class="section-subtitle reveal delay-1" data-i18n="edu.subtitle">Continuous learning as a core principle.</p>
 
                 <!-- Education -->
                 <div class="education-card reveal">
                     <div class="edu-icon">&#129504;</div>
-                    <h3>M.S. in Artificial Intelligence</h3>
-                    <div class="edu-institution">Master's Degree — In Progress</div>
-                    <div class="edu-date">2026 — Present</div>
-                    <p style="color: var(--text-secondary); font-size: 0.92rem;">Advanced graduate studies in Artificial Intelligence, deepening expertise in deep learning, generative AI, and intelligent systems — building on a strong data science foundation.</p>
+                    <h3 data-i18n="edu.degree1">M.S. in Artificial Intelligence</h3>
+                    <div class="edu-institution" data-i18n="edu.inst1">Master's Degree — In Progress</div>
+                    <div class="edu-date" data-i18n="edu.date1">2026 — Present</div>
+                    <p style="color: var(--text-secondary); font-size: 0.92rem;" data-i18n="edu.desc1">Advanced graduate studies in Artificial Intelligence, deepening expertise in deep learning, generative AI, and intelligent systems — building on a strong data science foundation.</p>
                     <div class="edu-highlights">
-                        <span class="edu-badge">In Progress</span>
-                        <span class="edu-badge">Generative AI</span>
+                        <span class="edu-badge" data-i18n="edu.badgeProgress">In Progress</span>
+                        <span class="edu-badge" data-i18n="edu.badgeGenAI">Generative AI</span>
                     </div>
                 </div>
 
                 <div class="education-card reveal delay-1">
                     <div class="edu-icon">&#127891;</div>
-                    <h3>B.S. in Data Science</h3>
+                    <h3 data-i18n="edu.degree2">B.S. in Data Science</h3>
                     <div class="edu-institution">Pontificia Universidad Javeriana</div>
-                    <div class="edu-date">2023 — 2026 · Graduated</div>
-                    <p style="color: var(--text-secondary); font-size: 0.92rem;">Comprehensive program covering statistics, machine learning, databases, programming, and applied AI. Built a strong foundation in turning data into actionable insights.</p>
+                    <div class="edu-date" data-i18n="edu.date2">2023 — 2026 · Graduated</div>
+                    <p style="color: var(--text-secondary); font-size: 0.92rem;" data-i18n="edu.desc2">Comprehensive program covering statistics, machine learning, databases, programming, and applied AI. Built a strong foundation in turning data into actionable insights.</p>
                     <div class="edu-highlights">
-                        <span class="edu-badge">Highest GPA in Program</span>
-                        <span class="edu-badge">Academic Excellence Scholarship</span>
+                        <span class="edu-badge" data-i18n="edu.badgeGpa">Highest GPA in Program</span>
+                        <span class="edu-badge" data-i18n="edu.badgeScholarship">Academic Excellence Scholarship</span>
                     </div>
                 </div>
 
                 <!-- Certifications -->
-                <h3 class="reveal" style="margin-bottom: 30px; margin-top: 20px;">Certifications & Achievements</h3>
+                <h3 class="reveal" style="margin-bottom: 30px; margin-top: 20px;" data-i18n="edu.certsTitle">Certifications &amp; Achievements</h3>
 
                 <div class="certs-grid">
                     <div class="cert-card reveal delay-1">
                         <div class="cert-issuer">Huawei</div>
                         <h4>HCIA-Big Data v3.0</h4>
-                        <div class="cert-date">July 2024</div>
+                        <div class="cert-date" data-i18n="edu.cd1">July 2024</div>
                     </div>
 
                     <div class="cert-card reveal delay-2">
                         <div class="cert-issuer">Duke University / Coursera</div>
-                        <h4>Introduction to Machine Learning</h4>
-                        <div class="cert-date">May 2021</div>
+                        <h4 data-i18n="edu.cert2">Introduction to Machine Learning</h4>
+                        <div class="cert-date" data-i18n="edu.cd2">May 2021</div>
                     </div>
 
                     <div class="cert-card reveal delay-3">
                         <div class="cert-issuer">Oracle Academy</div>
-                        <h4>Database Design & Foundations</h4>
-                        <div class="cert-date">September 2024</div>
+                        <h4 data-i18n="edu.cert3">Database Design &amp; Foundations</h4>
+                        <div class="cert-date" data-i18n="edu.cd3">September 2024</div>
                     </div>
 
                     <div class="cert-card reveal delay-1">
-                        <div class="cert-issuer">Microsoft & LinkedIn</div>
-                        <h4>Professional Foundations of Data Analysis</h4>
-                        <div class="cert-date">August 2024</div>
+                        <div class="cert-issuer">Microsoft &amp; LinkedIn</div>
+                        <h4 data-i18n="edu.cert4">Professional Foundations of Data Analysis</h4>
+                        <div class="cert-date" data-i18n="edu.cd4">August 2024</div>
                     </div>
 
                     <div class="cert-card reveal delay-2">
                         <div class="cert-issuer">Universidad de Salamanca</div>
-                        <h4>H4CKFOREDU International Hackathon</h4>
-                        <div class="cert-date">October 2024</div>
+                        <h4 data-i18n="edu.cert5">H4CKFOREDU International Hackathon</h4>
+                        <div class="cert-date" data-i18n="edu.cd5">October 2024</div>
                     </div>
 
                     <div class="cert-card reveal delay-3">
-                        <div class="cert-issuer">United Nations</div>
+                        <div class="cert-issuer" data-i18n="edu.iss6">United Nations</div>
                         <h4>UN Datathon 2024</h4>
-                        <div class="cert-date">November 2024</div>
+                        <div class="cert-date" data-i18n="edu.cd6">November 2024</div>
                     </div>
 
                     <div class="cert-card reveal delay-1">
                         <div class="cert-issuer">University of Michigan / Coursera</div>
-                        <h4>Problem Solving Using Computational Thinking</h4>
-                        <div class="cert-date">May 2021</div>
+                        <h4 data-i18n="edu.cert7">Problem Solving Using Computational Thinking</h4>
+                        <div class="cert-date" data-i18n="edu.cd7">May 2021</div>
                     </div>
 
                     <div class="cert-card reveal delay-2">
                         <div class="cert-issuer">Oracle Academy</div>
-                        <h4>Java Fundamentals & Java Foundations</h4>
-                        <div class="cert-date">August 2022</div>
+                        <h4>Java Fundamentals &amp; Java Foundations</h4>
+                        <div class="cert-date" data-i18n="edu.cd8">August 2022</div>
                     </div>
 
                     <div class="cert-card reveal delay-3">
-                        <div class="cert-issuer">Google Active & Incibe</div>
-                        <h4>Cybersecurity in the Workplace</h4>
-                        <div class="cert-date">August 2022</div>
+                        <div class="cert-issuer">Google Active &amp; Incibe</div>
+                        <h4 data-i18n="edu.cert9">Cybersecurity in the Workplace</h4>
+                        <div class="cert-date" data-i18n="edu.cd9">August 2022</div>
                     </div>
                 </div>
             </div>
@@ -613,8 +621,8 @@
              ============================ -->
         <section id="ai-chat">
             <div class="content-wrapper">
-                <h2 class="gradient-text reveal">Talk to My AI</h2>
-                <p class="section-subtitle reveal delay-1">Ask anything about my experience, skills, or projects — powered by Gemini.</p>
+                <h2 class="gradient-text reveal" data-i18n="chat.title">Talk to My AI</h2>
+                <p class="section-subtitle reveal delay-1" data-i18n="chat.subtitle">Ask anything about my experience, skills, or projects — powered by Gemini.</p>
 
                 <div class="chat-wrapper reveal delay-2">
                     <!-- Terminal header -->
@@ -637,15 +645,15 @@
                     <!-- Chat messages -->
                     <div class="chat-messages" id="chat-messages">
                         <div class="chat-msg bot">
-                            <div class="chat-bubble">Hi! I'm Juan's AI assistant. Ask me anything about his experience, skills, or projects. 🤖</div>
+                            <div class="chat-bubble" data-i18n="chat.greeting">Hi! I'm Juan's AI assistant. Ask me anything about his experience, skills, or projects. 🤖</div>
                         </div>
                     </div>
 
                     <!-- Suggested prompts -->
                     <div class="chat-prompts" id="chat-prompts">
-                        <span class="chat-prompt-chip">Who are you?</span>
-                        <span class="chat-prompt-chip">What tech stack do you use?</span>
-                        <span class="chat-prompt-chip">Tell me about your ML experience</span>
+                        <span class="chat-prompt-chip" data-i18n="chat.p1">Who are you?</span>
+                        <span class="chat-prompt-chip" data-i18n="chat.p2">What tech stack do you use?</span>
+                        <span class="chat-prompt-chip" data-i18n="chat.p3">Tell me about your ML experience</span>
                     </div>
 
                     <!-- Input bar -->
@@ -654,6 +662,7 @@
                             type="text"
                             id="chat-input"
                             placeholder="Ask me anything..."
+                            data-i18n-attr="placeholder:chat.placeholder"
                             aria-label="Chat message"
                             maxlength="500"
                         >
@@ -666,13 +675,94 @@
         </section>
 
         <!-- ============================
+             VISION LAB SECTION
+             (on-device computer vision — MediaPipe FaceLandmarker)
+             ============================ -->
+        <section id="vision-lab">
+            <div class="content-wrapper">
+                <h2 class="gradient-text reveal" data-i18n="vision.title">Vision Lab</h2>
+
+                <div class="vision-wrapper reveal delay-2">
+                    <!-- Terminal header (shares chat terminal styles) -->
+                    <div class="chat-terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                            VISION-LAB
+                        </div>
+                        <div class="terminal-status">
+                            <span class="status-dot-live offline" id="vision-status-dot"></span>
+                            <span class="status-text" id="vision-status-text">Idle</span>
+                        </div>
+                    </div>
+
+                    <div class="vision-body">
+                        <!-- Left: live camera + landmark overlay -->
+                        <div class="vision-stage" id="vision-stage">
+                            <video id="vision-video" playsinline muted></video>
+                            <canvas id="vision-canvas"></canvas>
+
+                            <!-- Reticle / scanning aesthetic -->
+                            <span class="vision-bracket tl"></span>
+                            <span class="vision-bracket tr"></span>
+                            <span class="vision-bracket bl"></span>
+                            <span class="vision-bracket br"></span>
+                            <div class="vision-scanline"></div>
+
+                            <!-- FPS chip (visible while live) -->
+                            <div class="vision-fps-chip" id="vision-fps">— FPS</div>
+
+                            <!-- Stop button (visible while live) -->
+                            <button class="vision-stop" id="vision-stop" aria-label="Stop camera">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>
+                                <span data-i18n="vision.stop">Stop</span>
+                            </button>
+
+                            <!-- Idle / boot overlay -->
+                            <div class="vision-overlay" id="vision-overlay">
+                                <pre class="vision-boot" id="vision-boot" aria-hidden="true"></pre>
+                                <button class="vision-activate" id="vision-toggle">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>
+                                    <span data-i18n="vision.activate">Activate Camera</span>
+                                </button>
+                                <p class="vision-privacy">
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                    <span data-i18n="vision.privacy">On-device only — your camera never leaves this page</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Right: live telemetry -->
+                        <div class="vision-panel">
+                            <div class="vision-panel-title" data-i18n="vision.panelTitle">Face Signals</div>
+                            <div class="vision-bars" id="vision-bars">
+                                <p class="vision-hint" data-i18n="vision.hint">Activate the camera to stream live blendshape signals.</p>
+                            </div>
+                            <div class="vision-readout">
+                                <div class="vision-dominant" id="vision-dominant" data-i18n="vision.waiting"><span class="vision-emoji">🛈</span> Waiting…</div>
+                                <div class="vision-meta">
+                                    <span id="vision-head" data-i18n="vision.headIdle">Head&nbsp;—</span>
+                                    <span id="vision-faces" data-i18n="vision.facesIdle">Faces&nbsp;0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================
              CONTACT SECTION
              ============================ -->
         <section id="contact">
             <div id="vanta-contact"></div>
             <div class="content-wrapper reveal">
-                <h2 class="gradient-text">Let's Build Something Together</h2>
-                <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether it's data, AI, or engineering — let's connect.</p>
+                <h2 class="gradient-text" data-i18n="contact.title">Let's Build Something Together</h2>
+                <p data-i18n="contact.body">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether it's data, AI, or engineering — let's connect.</p>
 
                 <!-- Schedule a meeting (Google Calendar) + CV -->
                 <div class="contact-actions">
@@ -681,11 +771,11 @@
                        href="https://calendar.app.google/13iYCdRy9raq79JJ7"
                        target="_blank" rel="noopener">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                        Schedule a Meeting
+                        <span data-i18n="contact.schedule">Schedule a Meeting</span>
                     </a>
                     <a href="cv/Juan-Lizcano-CV.pdf" download class="cta-btn cta-secondary btn-cv">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        Download CV
+                        <span data-i18n="cv.download">Download CV</span>
                     </a>
                 </div>
 
@@ -716,15 +806,15 @@
             <h2 id="case-modal-title" class="gradient-text"></h2>
             <div class="case-modal-body">
                 <div class="case-block">
-                    <h4>The Challenge</h4>
+                    <h4 data-i18n="case.challenge">The Challenge</h4>
                     <p id="case-problem"></p>
                 </div>
                 <div class="case-block">
-                    <h4>My Approach</h4>
+                    <h4 data-i18n="case.approach">My Approach</h4>
                     <p id="case-approach"></p>
                 </div>
                 <div class="case-block">
-                    <h4>Impact &amp; Results</h4>
+                    <h4 data-i18n="case.impact">Impact &amp; Results</h4>
                     <ul id="case-impact"></ul>
                 </div>
             </div>
@@ -735,13 +825,13 @@
     <!-- Footer -->
     <footer>
         <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" data-i18n="nav.home">Home</a>
+            <a href="#about" data-i18n="nav.about">About</a>
+            <a href="#experience" data-i18n="nav.experience">Experience</a>
+            <a href="#projects" data-i18n="nav.projects">Projects</a>
+            <a href="#contact" data-i18n="nav.contact">Contact</a>
         </div>
-        <p class="footer-copy">Built by Juan Lizcano &mdash; 2025</p>
+        <p class="footer-copy" data-i18n="footer.copy">Built by Juan Lizcano &mdash; 2025</p>
     </footer>
 
     <!-- Scripts -->
@@ -750,9 +840,12 @@
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js" defer></script>
     <script src="js/chat-config.js" defer></script>
+    <script src="js/vision-config.js" defer></script>
+    <script src="js/i18n.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/chat.js" defer></script>
     <script src="js/projects.js" defer></script>
+    <script type="module" src="js/vision.js"></script>
 
 </body>
 </html>
