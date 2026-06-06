@@ -18,14 +18,21 @@
 
 const ALLOWED_ORIGINS = [
     "https://lizcanojuan1010.github.io",
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
 ];
+
+// Any localhost / 127.0.0.1 port is allowed for local development.
+// (localhost can only be the user's own machine, and the API key never
+//  leaves the Worker, so this is safe.)
+const LOCALHOST = /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/;
+
+function isAllowedOrigin(origin) {
+    return ALLOWED_ORIGINS.includes(origin) || LOCALHOST.test(origin);
+}
 
 export default {
     async fetch(request, env) {
         const origin = request.headers.get("Origin") || "";
-        const allowOrigin = ALLOWED_ORIGINS.includes(origin) ? origin : "";
+        const allowOrigin = isAllowedOrigin(origin) ? origin : "";
 
         // CORS preflight
         if (request.method === "OPTIONS") {
