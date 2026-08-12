@@ -245,10 +245,10 @@ function init() {
     }
 
     const C = {
-        tess: 'rgba(99, 102, 241, 0.22)',
-        line: 'rgba(129, 140, 248, 0.9)',
+        tess: 'rgba(212, 162, 78, 0.2)',
+        line: 'rgba(230, 200, 140, 0.9)',
         iris: 'rgba(56, 200, 120, 0.95)',
-        oval: 'rgba(79, 70, 229, 0.85)'
+        oval: 'rgba(212, 162, 78, 0.85)'
     };
 
     function drawMesh(landmarks) {
@@ -284,15 +284,15 @@ function init() {
     function updateDominant(map) {
         const g = (k) => map[k] || 0;
         const t = CFG.EXPR;
-        const setDom = (emoji, label) => {
-            dominantEl.innerHTML = `<span class="vision-emoji">${emoji}</span> ${label}`;
+        const setDom = (icon, label) => {
+            dominantEl.innerHTML = `<span class="vision-icon">${icon}</span> ${label}`;
         };
 
         // Asymmetric blink is an unambiguous signal — handle it first.
         const blinkL = g('eyeBlinkLeft');
         const blinkR = g('eyeBlinkRight');
         if (Math.abs(blinkL - blinkR) > t.wink.diff && Math.max(blinkL, blinkR) > t.wink.min) {
-            return setDom(t.emoji.Wink, 'Wink');
+            return setDom(t.icons.Wink, 'Wink');
         }
 
         // Build the action-unit signals referenced by EXPR.scores.
@@ -318,7 +318,7 @@ function init() {
             if (s > bestScore) { bestScore = s; best = name; }
         }
 
-        setDom(t.emoji[best] || '😐', (V().expr && V().expr[best]) || best);
+        setDom(t.icons[best] || t.icons.Neutral, (V().expr && V().expr[best]) || best);
     }
 
     // --- Head pose: approximate Euler angles from the 4x4 (column-major) ---

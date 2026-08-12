@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return (window.I18N && window.I18N.dyn.chat[window.I18N.lang]) || {
             connecting: 'Connecting...', online: 'Online', offline: 'Offline', error: 'Error',
             noReply: "Sorry, I couldn't generate a response. Try rephrasing your question.",
-            notConfigured: "⚠️ The AI assistant isn't configured yet. Set the proxy URL in js/chat-config.js. Meanwhile, feel free to reach Juan at juanjlb2005@gmail.com.",
+            notConfigured: "The AI assistant isn't configured yet. Set the proxy URL in js/chat-config.js. Meanwhile, feel free to reach Juan at juanjlb2005@gmail.com.",
             reachError: 'Hmm, I had trouble reaching the AI service. Please try again in a moment, or email Juan at juanjlb2005@gmail.com.'
         };
     }

@@ -13,10 +13,9 @@ const ES = {
     // Navigation
     'nav.home': 'Inicio',
     'nav.about': 'Sobre mí',
-    'nav.skills': 'Habilidades',
     'nav.experience': 'Experiencia',
     'nav.projects': 'Proyectos',
-    'nav.education': 'Educación',
+    'nav.certs': 'Certificaciones',
     'nav.chat': 'Chat IA',
     'nav.vision': 'Vision Lab',
     'nav.contact': 'Contacto',
@@ -27,41 +26,17 @@ const ES = {
     // About
     'about.title': 'Sobre mí',
     'about.subtitle': 'Convirtiendo datos en decisiones, e ideas en sistemas inteligentes.',
-    'about.intro': '¡Hola! Soy Juan, un Científico de Datos altamente motivado y orientado a resultados. Me gradué en Ciencia de Datos de la Pontificia Universidad Javeriana y actualmente curso una Maestría en Inteligencia Artificial. Combino una sólida experiencia técnica con una verdadera pasión por aprovechar los datos para resolver problemas complejos de formas innovadoras. Actualmente trabajo como Ingeniero MLOps y Líder de Visión por Computador, especializándome en construir sistemas de IA full-stack — desde pipelines de visión por computador hasta soluciones de IA generativa.',
-    'about.philTitle': 'Mi Filosofía',
-    'about.philBody': 'Mi filosofía central es simple pero poderosa: todo se puede aprender. Los retos no son obstáculos — son oportunidades para crecer. Valoro profundamente el trabajo en equipo porque la colaboración crea sinergias que nos permiten superar las limitaciones individuales. Antes de entrar en cualquier proyecto, siempre priorizo entender el negocio a fondo — yendo más allá de lo obvio para captar la esencia de lo que realmente hay que resolver.',
-    'about.beyondTitle': 'Más allá de la Tecnología',
-    'about.beyondBody': 'Fuera de la tecnología, me apasiona equilibrar mente y cuerpo — el gimnasio y la actividad física son parte esencial de mi rutina. Disfruto leer libros de filosofía, buscando entender mejor el mundo y mi lugar en él. Mantengo una curiosidad insaciable por las últimas tendencias tecnológicas, explorando cómo pueden mejorar la productividad diaria. Me defino como profundamente curioso y enérgico, con un deseo constante de explorar, aprender y evolucionar.',
-
-    // Stats
-    'stat.years': 'Años de Experiencia',
-    'stat.roles': 'Roles Profesionales',
-    'stat.models': 'Modelos de IA Desplegados',
-    'stat.streams': 'Cámaras en Producción',
-    'stat.certs': 'Certificaciones',
-
-    // Skills
-    'skills.title': 'Habilidades Técnicas',
-    'skills.subtitle': 'Un conjunto de herramientas versátil para construir soluciones basadas en datos.',
-    'skills.programming': 'Programación',
-    'skills.data': 'Datos y Analítica',
-    'skills.ai': 'IA y Machine Learning',
-    'skills.tools': 'Herramientas y Plataformas',
-    'skills.soft': 'Habilidades Blandas',
-    'skills.languages': 'Idiomas',
-    'skills.spanish': 'Español (Nativo)',
-    'skills.english': 'Inglés (C1)',
-    'skills.critical': 'Pensamiento Crítico',
-    'skills.teamwork': 'Trabajo en Equipo',
-    'skills.problem': 'Resolución de Problemas',
-    'skills.leadership': 'Liderazgo',
+    'about.intro': '¡Hola! Soy Juan, Científico de Datos e Ingeniero de IA, graduado en Ciencia de Datos de la Pontificia Universidad Javeriana. Actualmente trabajo como Ingeniero de Datos freelance en Imuko, construyendo pipelines de datos para clientes — tras liderar Visión por Computador en Vigías de Colombia — y me apasiona entender a fondo cada problema antes de resolverlo con datos.',
 
     // Experience
     'exp.title': 'Experiencia',
     'exp.subtitle': 'Un historial de aportar valor en datos, IA e ingeniería.',
-    'exp.d1': 'Nov 2025 — Presente',
+    'exp.d0': 'Jul 2026 — Presente',
+    'exp.t0': 'Ingeniero de Datos Freelance',
+    'exp.p0': 'Construyo y mejoro pipelines de datos para entregas a clientes, trabajando de forma independiente como ingeniero freelance. Actualmente apoyo la ingeniería de datos de un pipeline para Alteon Insurance.',
+    'exp.d1': 'Nov 2025 — Jul 2026',
     'exp.t1': 'Ingeniero MLOps y Líder de Visión por Computador',
-    'exp.p1': 'Como Líder de Visión por Computador, impulso el desarrollo de un sistema full-stack de inteligencia de video que utiliza un enfoque de modelos híbridos (YOLO, D-FINE, ReDetv2 y PaddlePaddle) para automatizar la detección de eventos y la generación de metadatos a partir de cámaras en vivo.',
+    'exp.p1': 'Como Líder de Visión por Computador, impulsé el desarrollo de un sistema full-stack de inteligencia de video que utiliza un enfoque de modelos híbridos (YOLO, D-FINE, ReDetv2 y PaddlePaddle) para automatizar la detección de eventos y la generación de metadatos a partir de cámaras en vivo.',
     'exp.d2': 'Jun 2025 — Nov 2025',
     'exp.t2': 'Administrador de Bases de Datos',
     'exp.p2': 'Desarrollé un esquema de base de datos SQL robusto y un modelo relacional para una nueva plataforma de salud pública dedicada al magisterio colombiano, garantizando integridad de datos, escalabilidad y soporte para el seguimiento longitudinal de salud.',
@@ -83,7 +58,7 @@ const ES = {
 
     // Projects
     'proj.title': 'Proyectos Destacados',
-    'proj.subtitle': 'Soluciones del mundo real construidas con datos e inteligencia.',
+    'proj.subtitle': 'El trabajo detrás de la experiencia — sistemas reales en producción e investigación.',
     'proj.stProd': 'En Producción',
     'proj.stDev': 'En Desarrollo',
     'proj.stActive': 'Activo',
@@ -91,37 +66,28 @@ const ES = {
     'proj.stDelivered': 'Entregado',
     'proj.caseCue': 'Ver caso de estudio',
     'proj.vigiasT': 'VIGIAS-IA: Analítica de Video en Tiempo Real',
-    'proj.vigiasD': 'Sistema full-stack de inteligencia de video para seguridad y vigilancia, donde me desempeño como <strong>Líder de Visión por Computador</strong>. Procesa múltiples cámaras en vivo en tiempo real usando un enfoque de modelos híbridos (YOLO, D-FINE, ReDetv2, PaddlePaddle) para detección de anomalías e intrusiones. Desplegado en Linux con NVIDIA DeepStream 8.0 y pipelines de GStreamer.',
+    'proj.vigiasD': 'Sistema de inteligencia de video para seguridad donde lidero <strong>Visión por Computador</strong>: cámaras en vivo procesadas en tiempo real con un ensamble híbrido de modelos sobre NVIDIA DeepStream.',
     'proj.pipeT': 'PIPE-IA: IA Generativa para Análisis de Redes',
-    'proj.pipeD': 'Plataforma de IA generativa (Condor AI) para análisis de redes y territorio — un sistema analítico y operativo para el seguimiento de territorio, líderes clave y estructura de base. Aprovecha modelos generativos para convertir datos relacionales complejos en insights estratégicos accionables.',
+    'proj.pipeD': 'Plataforma de IA generativa (Condor AI) que convierte datos complejos de redes y territorio en insights estratégicos claros y accionables.',
     'proj.fiscalT': 'IA Generativa para Control Fiscal',
-    'proj.fiscalD': 'Modelos de IA generativa aplicados a la fiscalización y el control. Automatiza el análisis de grandes volúmenes de datos financieros y regulatorios, detectando anomalías y generando reportes estructurados para apoyar una toma de decisiones fiscal transparente y basada en datos.',
+    'proj.fiscalD': 'IA generativa aplicada a la fiscalización: automatiza el análisis de datos financieros y regulatorios, detecta anomalías y genera reportes estructurados.',
     'proj.eaoaT': 'EAOA: Ecosistema de Operaciones Autónomas',
-    'proj.eaoaD': 'Sistema multiagente diseñado para la automatización de procesos empresariales sin supervisión humana constante. Orquesta agentes de IA especializados con memoria persistente, function calling y flujos agénticos para resolver problemas de negocio complejos de forma autónoma.',
+    'proj.eaoaD': 'Sistema multiagente que orquesta agentes de IA especializados — memoria persistente, function calling, flujos agénticos — para automatizar procesos de negocio de forma autónoma.',
     'proj.finT': 'Analítica Financiera y Predicción de Mercado',
-    'proj.finD': 'Pipeline cuantitativo de análisis de mercado que integra metodologías fundamentales y algorítmicas. Usa la API de yfinance para extracción de datos, NLP para análisis de sentimiento, modelos CNN-LSTM para predicción de precios, y trading automatizado con lógica de gestión de riesgo que incluye órdenes límite y umbrales de stop-loss.',
+    'proj.finD': 'Pipeline cuantitativo de mercado: sentimiento con NLP, indicadores técnicos y predicción de precios con CNN-LSTM alimentando trading automatizado con gestión de riesgo.',
     'proj.xaiT': 'IA Explicable (XAI) — Tesis',
-    'proj.xaiD': 'Investigación sobre IA Explicable aplicada al Aprendizaje por Refuerzo. Desarrollo de técnicas de destilación de modelos para entender el funcionamiento interno de las redes neuronales en RL — analizando patrones de activación neuronal para una mayor interpretabilidad y confiabilidad del modelo.',
+    'proj.xaiD': 'Investigación de tesis sobre IA Explicable en Aprendizaje por Refuerzo: destilación de modelos y análisis de activaciones neuronales para hacer interpretables las políticas de RL.',
     'proj.fomagT': 'Arquitectura de Base de Datos FOMAG',
-    'proj.fomagD': 'Esquema de base de datos SQL robusto y modelo relacional para una nueva plataforma de salud pública dedicada al magisterio de Colombia. Garantizó integridad de datos, escalabilidad y soporte para el seguimiento longitudinal de salud en todo el sistema educativo nacional.',
+    'proj.fomagD': 'Esquema SQL y modelo relacional para una plataforma nacional de salud pública del magisterio colombiano — construido para integridad, escala y seguimiento longitudinal.',
     'proj.ragT': 'Asistentes de IA con RAG',
-    'proj.ragD': 'Múltiples asistentes de IA construidos con el framework de Generación Aumentada por Recuperación (RAG). LLMs fundamentados en bases de conocimiento específicas para minimizar las alucinaciones. Incluye el chatbot RAG personal desplegado en este portafolio vía Hugging Face Spaces.',
+    'proj.ragD': 'Asistentes de IA fundamentados en bases de conocimiento curadas para minimizar alucinaciones — incluido el chatbot RAG de este sitio.',
 
-    // Education
-    'edu.title': 'Educación y Certificaciones',
-    'edu.subtitle': 'El aprendizaje continuo como principio fundamental.',
-    'edu.degree1': 'Maestría en Inteligencia Artificial',
-    'edu.inst1': 'Maestría — En Curso',
-    'edu.date1': '2026 — Presente',
-    'edu.desc1': 'Estudios de posgrado avanzados en Inteligencia Artificial, profundizando en deep learning, IA generativa y sistemas inteligentes — sobre una sólida base en ciencia de datos.',
-    'edu.badgeProgress': 'En Curso',
-    'edu.badgeGenAI': 'IA Generativa',
-    'edu.degree2': 'Pregrado en Ciencia de Datos',
-    'edu.date2': '2023 — 2026 · Graduado',
-    'edu.desc2': 'Programa integral que abarca estadística, machine learning, bases de datos, programación e IA aplicada. Construí una base sólida para convertir datos en insights accionables.',
-    'edu.badgeGpa': 'Mejor Promedio del Programa',
-    'edu.badgeScholarship': 'Beca de Excelencia Académica',
-    'edu.certsTitle': 'Certificaciones y Logros',
+    // Certifications page (certificados.html)
+    'certs.title': 'Certificaciones y Cursos',
+    'certs.subtitle': 'Certificados, cursos y logros — cada tarjeta enlazará su PDF.',
+    'certs.back': 'Volver al portafolio',
+    'certs.soon': 'PDF próximamente',
+    'certs.view': 'Ver certificado (PDF)',
     'edu.cert2': 'Introducción al Machine Learning',
     'edu.cert3': 'Diseño y Fundamentos de Bases de Datos',
     'edu.cert4': 'Fundamentos Profesionales del Análisis de Datos',
@@ -142,7 +108,7 @@ const ES = {
     // AI Chat (static)
     'chat.title': 'Habla con mi IA',
     'chat.subtitle': 'Pregunta lo que quieras sobre mi experiencia, habilidades o proyectos — con tecnología de Gemini.',
-    'chat.greeting': '¡Hola! Soy el asistente de IA de Juan. Pregúntame lo que quieras sobre su experiencia, habilidades o proyectos. 🤖',
+    'chat.greeting': '¡Hola! Soy el asistente de IA de Juan. Pregúntame lo que quieras sobre su experiencia, habilidades o proyectos.',
     'chat.p1': '¿Quién eres?',
     'chat.p2': '¿Qué stack tecnológico usas?',
     'chat.p3': 'Cuéntame sobre tu experiencia en ML',
@@ -153,7 +119,7 @@ const ES = {
     'vision.activate': 'Activar Cámara',
     'vision.privacy': 'Solo en tu dispositivo — tu cámara nunca sale de esta página',
     'vision.stop': 'Detener',
-    'vision.waiting': '<span class="vision-emoji">🛈</span> Esperando…',
+    'vision.waiting': '<span class="vision-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></span> Esperando…',
     'vision.headIdle': 'Cabeza&nbsp;—',
     'vision.facesIdle': 'Caras&nbsp;0',
 
@@ -176,15 +142,27 @@ const ATTR_ES = {
     'chat.placeholder': 'Pregúntame lo que quieras...'
 };
 
-/* ---- Page <head> metadata ---- */
+/* ---- Page <head> metadata (per page, keyed by <body data-page>) ---- */
 const META = {
-    en: {
-        title: 'Juan Lizcano | Data Scientist & AI Engineer',
-        desc: 'Portfolio of Juan Lizcano Barbosa — Data Scientist, AI Engineer, and Machine Learning Developer based in Colombia. Specializing in NLP, Computer Vision, and database architecture.'
+    home: {
+        en: {
+            title: 'Juan Lizcano | Data Scientist & AI Engineer',
+            desc: 'Portfolio of Juan Lizcano Barbosa — Data Scientist, AI Engineer, and Machine Learning Developer based in Colombia. Specializing in NLP, Computer Vision, and database architecture.'
+        },
+        es: {
+            title: 'Juan Lizcano | Científico de Datos e Ingeniero de IA',
+            desc: 'Portafolio de Juan Lizcano Barbosa — Científico de Datos, Ingeniero de IA y Desarrollador de Machine Learning en Colombia. Especializado en NLP, Visión por Computador y arquitectura de bases de datos.'
+        }
     },
-    es: {
-        title: 'Juan Lizcano | Científico de Datos e Ingeniero de IA',
-        desc: 'Portafolio de Juan Lizcano Barbosa — Científico de Datos, Ingeniero de IA y Desarrollador de Machine Learning en Colombia. Especializado en NLP, Visión por Computador y arquitectura de bases de datos.'
+    certs: {
+        en: {
+            title: 'Certifications & Courses | Juan Lizcano',
+            desc: 'Certifications, courses, and achievements of Juan Lizcano Barbosa.'
+        },
+        es: {
+            title: 'Certificaciones y Cursos | Juan Lizcano',
+            desc: 'Certificaciones, cursos y logros de Juan Lizcano Barbosa.'
+        }
     }
 };
 
@@ -194,12 +172,14 @@ const DYN = {
     titles: {
         en: [
             'Data Scientist & AI Engineer',
+            'Data Engineer',
             'Machine Learning Developer',
             'Database Architect',
             'NLP & Computer Vision Specialist'
         ],
         es: [
             'Científico de Datos e Ingeniero de IA',
+            'Ingeniero de Datos',
             'Desarrollador de Machine Learning',
             'Arquitecto de Bases de Datos',
             'Especialista en NLP y Visión por Computador'
@@ -211,13 +191,13 @@ const DYN = {
         en: {
             connecting: 'Connecting...', online: 'Online', offline: 'Offline', error: 'Error',
             noReply: "Sorry, I couldn't generate a response. Try rephrasing your question.",
-            notConfigured: "⚠️ The AI assistant isn't configured yet. Set the proxy URL in js/chat-config.js. Meanwhile, feel free to reach Juan at juanjlb2005@gmail.com.",
+            notConfigured: "The AI assistant isn't configured yet. Set the proxy URL in js/chat-config.js. Meanwhile, feel free to reach Juan at juanjlb2005@gmail.com.",
             reachError: 'Hmm, I had trouble reaching the AI service. Please try again in a moment, or email Juan at juanjlb2005@gmail.com.'
         },
         es: {
             connecting: 'Conectando...', online: 'En línea', offline: 'Desconectado', error: 'Error',
             noReply: 'Lo siento, no pude generar una respuesta. Intenta reformular tu pregunta.',
-            notConfigured: '⚠️ El asistente de IA aún no está configurado. Define la URL del proxy en js/chat-config.js. Mientras tanto, puedes escribir a Juan a juanjlb2005@gmail.com.',
+            notConfigured: 'El asistente de IA aún no está configurado. Define la URL del proxy en js/chat-config.js. Mientras tanto, puedes escribir a Juan a juanjlb2005@gmail.com.',
             reachError: 'Mmm, tuve problemas para conectar con el servicio de IA. Inténtalo de nuevo en un momento, o escribe a Juan a juanjlb2005@gmail.com.'
         }
     },
@@ -411,7 +391,8 @@ const DYN = {
         });
 
         // <head> metadata + <html lang>
-        const meta = META[lang] || META.en;
+        const page = META[document.body.dataset.page] || META.home;
+        const meta = page[lang] || page.en;
         document.title = meta.title;
         const md = document.querySelector('meta[name="description"]');
         if (md) md.setAttribute('content', meta.desc);

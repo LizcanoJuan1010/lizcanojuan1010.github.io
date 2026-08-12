@@ -8,7 +8,7 @@
    ============================================ */
 
 const CHAT_CONFIG = {
-    // 🔗 Deployed Cloudflare Worker (proxies to Gemini; holds the secret key):
+    // Deployed Cloudflare Worker (proxies to Gemini; holds the secret key):
     CHAT_PROXY_URL: "https://chat-juan.lizcanojj20051010.workers.dev",
 
     // Model — most economical option, ideal for the free tier.
@@ -22,11 +22,21 @@ const CHAT_CONFIG = {
 - Based in Colombia.
 - Title: Data Scientist & AI Engineer / Machine Learning Developer.
 - Graduated with a B.S. in Data Science from Pontificia Universidad Javeriana (highest GPA in the program, Academic Excellence Scholarship).
-- Currently pursuing a Master's degree (M.S.) in Artificial Intelligence (in progress).
-- Currently working as an MLOps Engineer and as the Computer Vision Lead on a real-time video analytics project.
+- Currently working as a Freelance Data Engineer at Imuko (Bogotá, Colombia), building data pipelines for client delivery — currently supporting data engineering on a data pipeline for Alteon Insurance.
 
 # Summary
-Highly motivated, results-driven data scientist who builds full-stack AI systems — from computer vision pipelines to automated trading algorithms. Philosophy: "everything can be learned"; values teamwork and deeply understanding the business before building. Outside tech: gym, philosophy books, and staying on top of tech trends.
+Highly motivated, results-driven data scientist who builds full-stack AI systems — from computer vision pipelines to automated trading algorithms.
+
+# Philosophy & way of working
+- Core philosophy: "everything can be learned". Challenges aren't obstacles — they're opportunities to grow.
+- Deeply values teamwork: collaboration creates synergies that overcome individual limitations.
+- Before diving into any project, he prioritizes understanding the business at a deep level — going beyond the obvious to grasp the essence of what truly needs to be solved.
+
+# Beyond technology (personal)
+- Passionate about balancing mind and body: the gym and physical activity are essential parts of his routine.
+- Enjoys reading philosophy books, seeking to better understand the world and his place in it.
+- Insatiable curiosity for the latest tech trends and how they can improve daily productivity.
+- Defines himself as deeply curious and energetic, with a constant desire to explore, learn, and evolve.
 
 # Technical skills
 - Programming: Python, Java, C++, SQL, R, Golang.
@@ -37,7 +47,8 @@ Highly motivated, results-driven data scientist who builds full-stack AI systems
 - Languages: Spanish (native), English (C1).
 
 # Experience
-- MLOps Engineer & Computer Vision Lead — Vigias de Colombia (Nov 2025 – Present): leads the Computer Vision side of a full-stack video intelligence system using hybrid models (YOLO, D-FINE, ReDetv2, PaddlePaddle) to automate event detection and metadata generation from live camera streams. Stack: CUDA, Computer Vision, Docker, YOLO, Deep Learning, TensorFlow, Golang.
+- Freelance Data Engineer — Imuko (Jul 2026 – Present, Bogotá): builds and improves data pipelines for client delivery, working independently as a freelance engineer; currently supporting data engineering on a data pipeline for Alteon Insurance.
+- MLOps Engineer & Computer Vision Lead — Vigias de Colombia (Nov 2025 – Jul 2026): led the Computer Vision side of a full-stack video intelligence system using hybrid models (YOLO, D-FINE, ReDetv2, PaddlePaddle) to automate event detection and metadata generation from live camera streams. Stack: CUDA, Computer Vision, Docker, YOLO, Deep Learning, TensorFlow, Golang.
 - Generative AI projects: built generative-AI solutions for network/territory analysis (PIPE-IA / Condor AI — an analytical and operational platform for tracking territory, leaders, and base structure, https://pipe-ia.com/login) and for fiscal control / oversight.
 - Database Administrator — Fiduprevisora/FOMAG (Jun 2025 – Nov 2025): SQL schema and relational model for a public health platform for Colombia's teaching workforce.
 - Junior Data Scientist — Tu Alianza (Feb 2024 – Jun 2025): automated dashboards for directors (Python, SQL, R, PostgreSQL, Power BI, Tableau).
@@ -58,10 +69,9 @@ Highly motivated, results-driven data scientist who builds full-stack AI systems
 
 # Education
 - B.S. in Data Science — Pontificia Universidad Javeriana (graduated; highest GPA in the program, Academic Excellence Scholarship).
-- M.S. in Artificial Intelligence — currently in progress.
 
 # Certifications
-Huawei HCIA-Big Data v3.0; Duke/Coursera Intro to ML; Oracle Academy Database Design & Java Fundamentals; Microsoft & LinkedIn Data Analysis Foundations; H4CKFOREDU International Hackathon (U. de Salamanca); UN Datathon 2024; U. of Michigan Computational Thinking; Google/Incibe Cybersecurity.
+Huawei HCIA-Big Data v3.0; Duke/Coursera Intro to ML; Oracle Academy Database Design & Java Fundamentals; Microsoft & LinkedIn Data Analysis Foundations; H4CKFOREDU International Hackathon (U. de Salamanca); UN Datathon 2024; U. of Michigan Computational Thinking; Google/Incibe Cybersecurity. The full list (with PDFs) lives on the site's Certifications page: certificados.html.
 
 # Contact
 - Email: juanjlb2005@gmail.com
