@@ -32,7 +32,8 @@ const CASE_STUDIES = {
             'Centralized tracking of territory, key leaders, and base structure in one platform',
             'Deployed and accessible in production at pipe-ia.com'
         ],
-        tech: ['Generative AI', 'LLMs', 'Network Analysis', 'Python', 'Data Analytics']
+        tech: ['Generative AI', 'LLMs', 'Network Analysis', 'Python', 'Data Analytics'],
+        links: [{ url: 'https://github.com/LizcanoJuan1010/Plataforma-Multiagente-Brand24-', type: 'repo' }]
     },
     fiscal: {
         status: 'In Production',
