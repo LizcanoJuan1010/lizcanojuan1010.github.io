@@ -65,6 +65,8 @@ const ES = {
     'proj.stThesis': 'Tesis',
     'proj.stDelivered': 'Entregado',
     'proj.caseCue': 'Ver caso de estudio',
+    'proj.code': 'Código',
+    'proj.demo': 'Demo en vivo',
     'proj.vigiasT': 'VIGIAS-IA: Analítica de Video en Tiempo Real',
     'proj.vigiasD': 'Sistema de inteligencia de video para seguridad donde lidero <strong>Visión por Computador</strong>: cámaras en vivo procesadas en tiempo real con un ensamble híbrido de modelos sobre NVIDIA DeepStream.',
     'proj.pipeT': 'PIPE-IA: IA Generativa para Análisis de Redes',

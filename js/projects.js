@@ -17,7 +17,11 @@ const CASE_STUDIES = {
             'Reduced manual monitoring effort and latency between event and alert',
             'Hybrid ensemble improved detection robustness across varied scenes and lighting'
         ],
-        tech: ['NVIDIA DeepStream', 'YOLO', 'D-FINE', 'ReDetv2', 'PaddlePaddle', 'Python', 'C++', 'CUDA', 'GStreamer', 'Docker']
+        tech: ['NVIDIA DeepStream', 'YOLO', 'D-FINE', 'ReDetv2', 'PaddlePaddle', 'Python', 'C++', 'CUDA', 'GStreamer', 'Docker'],
+        links: [
+            { url: 'https://landing.ars-intelligence.com/laboratorio', type: 'site' },
+            { url: 'https://github.com/LizcanoJuan1010/Computer_vision', type: 'repo' }
+        ]
     },
     'pipe-ia': {
         status: 'In Production',
@@ -53,7 +57,8 @@ const CASE_STUDIES = {
             'Agents coordinate with shared memory and tool/function calling',
             'Designed to operate without constant human supervision'
         ],
-        tech: ['LangChain', 'LangGraph', 'Llama 3', 'Claude API', 'Agentic AI', 'Function Calling']
+        tech: ['LangChain', 'LangGraph', 'Llama 3', 'Claude API', 'Agentic AI', 'Function Calling'],
+        links: [{ url: 'https://github.com/LizcanoJuan1010/EAOA', type: 'repo' }]
     },
     financial: {
         status: 'Active',
@@ -65,7 +70,8 @@ const CASE_STUDIES = {
             'CNN-LSTM models for price prediction with back-testable signals',
             'Risk management logic (stop-loss, limit orders) built into execution'
         ],
-        tech: ['Python', 'CNN-LSTM', 'NLP', 'Pandas', 'Power BI', 'Time Series', 'yfinance']
+        tech: ['Python', 'CNN-LSTM', 'NLP', 'Pandas', 'Power BI', 'Time Series', 'yfinance'],
+        links: [{ url: 'https://github.com/LizcanoJuan1010/TESLA-ANALYSIS', type: 'repo' }]
     },
     xai: {
         status: 'Thesis',
@@ -77,7 +83,8 @@ const CASE_STUDIES = {
             'Uses model distillation to make complex policies explainable',
             'Aims to increase trust and debuggability of deep RL systems'
         ],
-        tech: ['XAI', 'Reinforcement Learning', 'Deep Learning', 'Model Distillation', 'Python']
+        tech: ['XAI', 'Reinforcement Learning', 'Deep Learning', 'Model Distillation', 'Python'],
+        links: [{ url: 'https://github.com/LizcanoJuan1010/Proyecto_de_grado_-analisis_ablacion_gpt2_medium', type: 'repo' }]
     },
     fomag: {
         status: 'Delivered',
@@ -101,7 +108,8 @@ const CASE_STUDIES = {
             'Delivered multiple deployed assistants, including a personal portfolio chatbot',
             'Reusable RAG pattern applied across different domains'
         ],
-        tech: ['LlamaIndex', 'Gemini', 'Gradio', 'Hugging Face', 'RAG', 'NLP']
+        tech: ['LlamaIndex', 'Gemini', 'Gradio', 'Hugging Face', 'RAG', 'NLP'],
+        links: [{ url: 'https://github.com/LizcanoJuan1010/Corrective-RAG-Server-in-Flask', type: 'repo' }]
     }
 };
 
@@ -115,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const elApproach = document.getElementById('case-approach');
     const elImpact = document.getElementById('case-impact');
     const elTags = document.getElementById('case-tags');
+    const elLinks = document.getElementById('case-links');
 
     let lastFocused = null;
     let currentKey = null;
@@ -149,6 +158,23 @@ document.addEventListener('DOMContentLoaded', () => {
             span.textContent = tag;
             elTags.appendChild(span);
         });
+
+        // External links (repo / live site), localized on the fly.
+        if (elLinks) {
+            elLinks.innerHTML = '';
+            const t = window.I18N ? window.I18N.t.bind(window.I18N) : (en) => en;
+            (data.links || []).forEach((l) => {
+                const a = document.createElement('a');
+                a.className = 'case-modal-link';
+                a.href = l.url;
+                a.target = '_blank';
+                a.rel = 'noopener';
+                a.textContent = l.type === 'site'
+                    ? t('Visit live site', 'Ver sitio en vivo')
+                    : t('View repository on GitHub', 'Ver repositorio en GitHub');
+                elLinks.appendChild(a);
+            });
+        }
     }
 
     function openCase(key) {
