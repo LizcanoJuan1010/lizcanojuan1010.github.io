@@ -104,6 +104,8 @@ const ES = {
     'edu.cd7': 'Mayo 2021',
     'edu.cd8': 'Agosto 2022',
     'edu.cd9': 'Agosto 2022',
+    'edu.cert10': 'CS50: Introducción a Bases de Datos con SQL',
+    'edu.cd11': 'Abril 2023',
 
     // AI Chat (static)
     'chat.title': 'Habla con mi IA',

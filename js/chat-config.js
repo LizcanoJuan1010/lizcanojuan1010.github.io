@@ -71,7 +71,7 @@ Highly motivated, results-driven data scientist who builds full-stack AI systems
 - B.S. in Data Science — Pontificia Universidad Javeriana (graduated; highest GPA in the program, Academic Excellence Scholarship).
 
 # Certifications
-Huawei HCIA-Big Data v3.0; Duke/Coursera Intro to ML; Oracle Academy Database Design & Java Fundamentals; Microsoft & LinkedIn Data Analysis Foundations; H4CKFOREDU International Hackathon (U. de Salamanca); UN Datathon 2024; U. of Michigan Computational Thinking; Google/Incibe Cybersecurity. The full list (with PDFs) lives on the site's Certifications page: certificados.html.
+Harvard CS50's Introduction to Databases with SQL (2026); AWS Cloud Practitioner Essentials Day (2023); Huawei HCIA-Big Data v3.0; Duke/Coursera Intro to ML; Oracle Academy Database Design & Java Fundamentals; Microsoft & LinkedIn Data Analysis Foundations; H4CKFOREDU International Hackathon (U. de Salamanca); UN Datathon 2024; U. of Michigan Computational Thinking; Google/Incibe Cybersecurity. The full list (with PDFs) lives on the site's Certifications page: certificados.html.
 
 # Contact
 - Email: juanjlb2005@gmail.com

@@ -864,6 +864,11 @@ h3 {
     color: var(--accent);
 }
 a.cert-pdf:hover { text-decoration: underline; }
+/* Second PDF link in the same card stacks right below the first */
+.cert-pdf + .cert-pdf {
+    margin-top: 0;
+    padding-top: 6px;
+}
 .cert-pdf.pending {
     color: var(--text-secondary);
     opacity: 0.7;
