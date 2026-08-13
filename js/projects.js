@@ -19,8 +19,7 @@ const CASE_STUDIES = {
         ],
         tech: ['NVIDIA DeepStream', 'YOLO', 'D-FINE', 'ReDetv2', 'PaddlePaddle', 'Python', 'C++', 'CUDA', 'GStreamer', 'Docker'],
         links: [
-            { url: 'https://landing.ars-intelligence.com/laboratorio', type: 'site' },
-            { url: 'https://github.com/LizcanoJuan1010/Computer_vision', type: 'repo' }
+            { url: 'https://landing.ars-intelligence.com/laboratorio', type: 'site' }
         ]
     },
     'pipe-ia': {
