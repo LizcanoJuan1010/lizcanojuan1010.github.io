@@ -26,17 +26,17 @@ const ES = {
     // About
     'about.title': 'Sobre mí',
     'about.subtitle': 'Convirtiendo datos en decisiones, e ideas en sistemas inteligentes.',
-    'about.intro': '¡Hola! Soy Juan, Científico de Datos e Ingeniero de IA, graduado en Ciencia de Datos de la Pontificia Universidad Javeriana. Actualmente trabajo como Ingeniero de Datos freelance en Imuko, construyendo pipelines de datos para clientes — tras liderar Visión por Computador en Vigías de Colombia — y me apasiona entender a fondo cada problema antes de resolverlo con datos.',
+    'about.intro': '¡Hola! Soy Juan, Científico de Datos e Ingeniero de IA, graduado cum laude en Ciencia de Datos de la Pontificia Universidad Javeriana. Trabajo como Ingeniero de Datos e IA independiente — recientemente entregué un pipeline de datos para Alteon Insurance a través de Imuko — tras liderar Visión por Computador en Vigías de Colombia, y me apasiona entender a fondo cada problema antes de resolverlo con datos.',
 
     // Experience
     'exp.title': 'Experiencia',
     'exp.subtitle': 'Un historial de aportar valor en datos, IA e ingeniería.',
     'exp.d0': 'Jul 2026 — Presente',
-    'exp.t0': 'Ingeniero de Datos Freelance',
-    'exp.p0': 'Construyo y mejoro pipelines de datos para entregas a clientes, trabajando de forma independiente como ingeniero freelance. Actualmente apoyo la ingeniería de datos de un pipeline para Alteon Insurance.',
+    'exp.t0': 'Ingeniero de Datos e IA Freelance',
+    'exp.p0': 'Ingeniería independiente de datos e IA para clientes. Encargo más reciente — a través de Imuko — construyendo un pipeline de datos para Alteon Insurance, entregado entre julio y agosto de 2026.',
     'exp.d1': 'Nov 2025 — Jul 2026',
     'exp.t1': 'Ingeniero MLOps y Líder de Visión por Computador',
-    'exp.p1': 'Como Líder de Visión por Computador, impulsé el desarrollo de un sistema full-stack de inteligencia de video que utiliza un enfoque de modelos híbridos (YOLO, D-FINE, ReDetv2 y PaddlePaddle) para automatizar la detección de eventos y la generación de metadatos a partir de cámaras en vivo.',
+    'exp.p1': 'Como Líder de Visión por Computador, impulsé el desarrollo de un sistema full-stack de inteligencia de video que utiliza un enfoque de modelos híbridos (YOLO, D-FINE, RT-DETRv2 y PaddlePaddle) para automatizar la detección de eventos y la generación de metadatos a partir de cámaras en vivo.',
     'exp.d2': 'Jun 2025 — Nov 2025',
     'exp.t2': 'Administrador de Bases de Datos',
     'exp.p2': 'Desarrollé un esquema de base de datos SQL robusto y un modelo relacional para una nueva plataforma de salud pública dedicada al magisterio colombiano, garantizando integridad de datos, escalabilidad y soporte para el seguimiento longitudinal de salud.',
@@ -56,6 +56,16 @@ const ES = {
     'exp.t7': 'Tutor de Programación Avanzada',
     'exp.p7': 'Guiando a estudiantes a través de los pilares de la POO con Java, la mecánica de la lógica de programación y los detalles de la manipulación de punteros en C++.',
 
+    // Education
+    'edu.title': 'Educación',
+    'edu.subtitle': 'Graduado de la Pontificia Universidad Javeriana — Ciencia de Datos, cum laude.',
+    'edu.degree': 'Pregrado en Ciencia de Datos',
+    'edu.dates': '2023 — 2026 · Graduado',
+    'edu.desc': 'Graduado cum laude con un promedio acumulado de 4.53 / 5.0. Tesis sobre interpretabilidad de modelos Transformer: mapeo de circuitos conceptuales en GPT-2 Medium mediante intervenciones causales que simulan afasia semántica.',
+    'edu.h1': 'Beca Semestral por Excelencia Académica (2023-1) — el promedio acumulado más alto de la Carrera de Ciencia de Datos.',
+    'edu.h2': 'Beca Bachiller Destacado — Pontificia Universidad Javeriana.',
+    'edu.h3': 'Representante de la universidad en el Hackathon Internacional H4CKFOREDU (Universidad Pontificia de Salamanca, 2024); participante en el UN Datathon 2024.',
+
     // Projects
     'proj.title': 'Proyectos Destacados',
     'proj.subtitle': 'El trabajo detrás de la experiencia — sistemas reales en producción e investigación.',
@@ -64,6 +74,9 @@ const ES = {
     'proj.stActive': 'Activo',
     'proj.stThesis': 'Tesis',
     'proj.stDelivered': 'Entregado',
+    'proj.stHack': 'Hackathon',
+    'proj.stDemo': 'Demo',
+    'proj.video': 'Video demo',
     'proj.caseCue': 'Ver caso de estudio',
     'proj.code': 'Código',
     'proj.demo': 'Demo en vivo',
@@ -77,8 +90,12 @@ const ES = {
     'proj.eaoaD': 'Sistema multiagente que orquesta agentes de IA especializados — memoria persistente, function calling, flujos agénticos — para automatizar procesos de negocio de forma autónoma.',
     'proj.finT': 'Analítica Financiera y Predicción de Mercado',
     'proj.finD': 'Pipeline cuantitativo de mercado: sentimiento con NLP, indicadores técnicos y predicción de precios con CNN-LSTM alimentando trading automatizado con gestión de riesgo.',
-    'proj.xaiT': 'IA Explicable (XAI) — Tesis',
-    'proj.xaiD': 'Investigación de tesis sobre IA Explicable en Aprendizaje por Refuerzo: destilación de modelos y análisis de activaciones neuronales para hacer interpretables las políticas de RL.',
+    'proj.tequendamaT': 'Tequendama: Plataforma de Seguros con IA',
+    'proj.tequendamaD': 'Asistente conversacional de seguros construido para el hackathon Colsubsidio 30X — chat web, voz en vivo y WhatsApp: perfila, cotiza, verifica identidad (KYC), cobra y emite la póliza sin intervención humana.',
+    'proj.voiceT': 'Agente de Voz con IA para Cobranza',
+    'proj.voiceD': 'Agente de voz saliente en tiempo real para cobranza de tarjetas de crédito: voz a texto y texto a voz con Deepgram, un LLM como cerebro, guion conforme a la FDCPA, persistencia de llamadas y modo chat de respaldo.',
+    'proj.xaiT': 'Tesis: Interpretabilidad de Modelos Transformer',
+    'proj.xaiD': 'Trabajo de grado (Javeriana, 2026): mapeo de circuitos conceptuales en GPT-2 Medium con intervenciones causales — ablaciones y hooks que simulan afasia semántica — para entender cómo los Transformers representan el significado.',
     'proj.fomagT': 'Arquitectura de Base de Datos FOMAG',
     'proj.fomagD': 'Esquema SQL y modelo relacional para una plataforma nacional de salud pública del magisterio colombiano — construido para integridad, escala y seguimiento longitudinal.',
     'proj.ragT': 'Asistentes de IA con RAG',
@@ -86,10 +103,12 @@ const ES = {
 
     // Certifications page (certificados.html)
     'certs.title': 'Certificaciones y Cursos',
-    'certs.subtitle': 'Certificados, cursos y logros — cada tarjeta enlazará su PDF.',
+    'certs.subtitle': 'Certificados, cursos y logros — los más recientes primero, cada uno con su PDF.',
     'certs.back': 'Volver al portafolio',
     'certs.soon': 'PDF próximamente',
     'certs.view': 'Ver certificado (PDF)',
+    'certs.view4': 'Ver certificados (PDF, 4 páginas)',
+    'certs.verify': 'Verificar en línea',
     'edu.cert2': 'Introducción al Machine Learning',
     'edu.cert3': 'Diseño y Fundamentos de Bases de Datos',
     'edu.cert4': 'Fundamentos Profesionales del Análisis de Datos',
@@ -100,7 +119,7 @@ const ES = {
     'edu.cd1': 'Julio 2024',
     'edu.cd2': 'Mayo 2021',
     'edu.cd3': 'Septiembre 2024',
-    'edu.cd4': 'Agosto 2024',
+    'edu.cd4': 'Octubre 2023',
     'edu.cd5': 'Octubre 2024',
     'edu.cd6': 'Noviembre 2024',
     'edu.cd7': 'Mayo 2021',
@@ -108,6 +127,24 @@ const ES = {
     'edu.cd9': 'Agosto 2022',
     'edu.cert10': 'CS50: Introducción a Bases de Datos con SQL',
     'edu.cd11': 'Abril 2023',
+    'edu.cert12': 'Especialización en Procesamiento de Lenguaje Natural',
+    'edu.note12': 'Certificado Profesional · 4 cursos: Clasificación y Espacios Vectoriales · Modelos Probabilísticos · Modelos de Secuencia · Modelos de Atención',
+    'edu.cd12': 'Septiembre 2026',
+    'edu.cert13': 'Especialización en Machine Learning',
+    'edu.note13': 'Certificado Profesional · 3 cursos: ML Supervisado (Regresión y Clasificación) · Algoritmos de Aprendizaje Avanzados · Aprendizaje No Supervisado, Recomendadores y Aprendizaje por Refuerzo',
+    'edu.cd13': 'Agosto 2026',
+    'edu.cert14': 'Machine Learning en Producción (MLOps)',
+    'edu.note14': 'Certificado de curso firmado por Andrew Ng — el ciclo de vida completo de ML: alcance, datos, modelado y despliegue.',
+    'edu.cert15': 'Construcción de Agentes de Voz con IA para Producción',
+    'edu.iss16': 'Universidad de los Andes · Depto. de Ingeniería Industrial',
+    'edu.cert16': 'Analytics Forum 2025 (novena edición)',
+    'edu.cd16': 'Mayo 2025',
+    'edu.cert17': 'Crack The Case: Consulteam Universitario Bogotá',
+    'edu.note17': 'Reconocimiento por participación y compromiso destacados — primera edición, Bogotá (8 horas).',
+    'edu.cd17': 'Mayo 2024',
+    'edu.cert18': 'Entrenamiento Avanzado para Math Masters',
+    'edu.note18': 'Tercer entrenamiento avanzado liderado por el programa de Matemáticas (8 horas).',
+    'edu.cd18': 'Junio 2021',
 
     // AI Chat (static)
     'chat.title': 'Habla con mi IA',
@@ -257,7 +294,7 @@ const DYN = {
                 status: 'En Producción',
                 title: 'VIGIAS-IA: Analítica de Video en Tiempo Real',
                 problem: 'Las operaciones de seguridad dependían de personas vigilando decenas de cámaras en vivo de forma simultánea — una tarea agotadora y propensa a errores, donde eventos críticos (intrusiones, anomalías) se pasaban por alto fácilmente y los metadatos debían registrarse a mano.',
-                approach: 'Como Líder de Visión por Computador, diseñé y construí un sistema full-stack de inteligencia de video que ingiere múltiples streams en vivo y ejecuta un ensamble híbrido de modelos (YOLO, D-FINE, ReDetv2, PaddlePaddle) para detección y seguimiento. Los pipelines corren en Linux con NVIDIA DeepStream 8.0 y GStreamer, con inferencia acelerada por CUDA y despliegue basado en Docker.',
+                approach: 'Como Líder de Visión por Computador, diseñé y construí un sistema full-stack de inteligencia de video que ingiere múltiples streams en vivo y ejecuta un ensamble híbrido de modelos (YOLO, D-FINE, RT-DETRv2, PaddlePaddle) para detección y seguimiento. Los pipelines corren en Linux con NVIDIA DeepStream 8.0 y GStreamer, con inferencia acelerada por CUDA y despliegue basado en Docker.',
                 impact: [
                     'Detección automática y generación de metadatos en [confirm] cámaras simultáneas en producción',
                     'Redujo el esfuerzo de monitoreo manual y la latencia entre evento y alerta',
@@ -297,6 +334,28 @@ const DYN = {
                     'Diseñado para operar sin supervisión humana constante'
                 ]
             },
+            tequendama: {
+                status: 'Hackathon',
+                title: 'Tequendama: Plataforma de Seguros con IA',
+                problem: 'Comprar un seguro en LATAM todavía implica formularios, llamadas y un asesor humano. El reto del hackathon Colsubsidio 30X: llevar a una persona de "no sé qué seguro necesito" a "ya quedé asegurada" — de punta a punta y sin intervención humana.',
+                approach: 'Construí Tequendama, un asistente conversacional que funciona por chat web, voz en vivo y WhatsApp, además de llamadas telefónicas salientes. Perfila al cliente, cotiza con tasas de cambio reales de 12 países de LATAM, cobra (Polar), verifica identidad (KYC con Didit), captura la firma electrónica y emite la póliza en PDF. Un "cerebro" en FastAPI (DeepSeek + herramientas) convive con un backend de dominio en NestJS/Prisma sobre PostgreSQL y Redis; la voz corre en Deepgram Voice Agent y ElevenLabs; y el gerente tiene un panel de KPIs con alertas, campañas con IA y reportes por correo.',
+                impact: [
+                    'Recorrido de seguros 100% autoservicio: perfilamiento → cotización → KYC → pago → emisión de póliza',
+                    'Omnicanal: chat web, voz en vivo, WhatsApp y llamadas salientes sobre un mismo núcleo de IA',
+                    'Entregado como monorepo contenedorizado (Docker / Railway) con video demo público'
+                ]
+            },
+            voice: {
+                status: 'Demo',
+                title: 'Agente de Voz con IA para Cobranza',
+                problem: 'La cobranza pre-charge-off de tarjetas de crédito depende de grandes call centers que siguen guiones estrictos de cumplimiento (FDCPA). Un agente de voz debe sostener una conversación natural en tiempo real, mantenerse dentro de la norma y dejar registro de cada llamada.',
+                approach: 'Construí una demo de agente de voz saliente en vivo: Deepgram Voice Agent se encarga de voz a texto (nova-3) y texto a voz, un LLM compatible con OpenAI (DeepSeek, con respaldo en gpt-4o-mini) conduce la conversación con una persona conforme a la FDCPA, las llamadas se persisten con Prisma, y un modo chat con server-sent events permite que el evaluador haga de cliente. Frontend en React + Vite, backend en Node, desplegable en Render.',
+                impact: [
+                    'Pipeline de voz de extremo a extremo: STT → razonamiento LLM → TTS en tiempo real desde el navegador',
+                    'Persona y guion conscientes del cumplimiento normativo para un escenario regulado de cobranza',
+                    'Doble modo (voz y chat) con historial de llamadas y manejo de webhooks'
+                ]
+            },
             financial: {
                 status: 'Activo',
                 title: 'Analítica Financiera y Predicción de Mercado',
@@ -310,13 +369,13 @@ const DYN = {
             },
             xai: {
                 status: 'Tesis',
-                title: 'IA Explicable (XAI) — Tesis',
-                problem: 'Los agentes de Aprendizaje por Refuerzo se comportan como cajas negras — es difícil confiar o depurar sus decisiones cuando no se puede ver por qué la red actúa como lo hace.',
-                approach: 'Investigando IA Explicable para RL usando destilación de modelos para aproximar e interpretar la política, y analizando patrones de activación neuronal para entender el comportamiento interno de la red y mejorar su interpretabilidad y confiabilidad.',
+                title: 'Tesis: Interpretabilidad de Modelos Transformer',
+                problem: 'Los grandes modelos de lenguaje representan el significado de formas que no podemos leer directamente. ¿Qué circuitos internos cargan un concepto y qué le pasa al comportamiento del modelo cuando se dañan? Sin ese mapa, la interpretabilidad y la confianza se quedan en la superficie.',
+                approach: 'Trabajo de grado en Ciencia de Datos (Pontificia Universidad Javeriana, 2026 — tutor: Jorge Andrés Alvarado Valencia): "Mapeo de circuitos conceptuales: análisis de la representación en modelos Transformer mediante intervención causal simulando afasia semántica". Con hooks y ablaciones dirigidas sobre GPT-2 Medium, intervengo las activaciones para simular déficits tipo afasia semántica y mido cómo se degradan las representaciones conceptuales, mapeando qué componentes cargan qué conceptos.',
                 impact: [
-                    'Desarrolla técnicas para interpretar la toma de decisiones interna de agentes de RL',
-                    'Usa destilación de modelos para hacer explicables políticas complejas',
-                    'Busca aumentar la confianza y la depurabilidad de los sistemas de RL profundo'
+                    'Evidencia causal (no solo correlacional) de dónde viven los conceptos dentro de un Transformer',
+                    'Herramientas reutilizables de intervención: hooks de activación, experimentos de ablación y notebooks de análisis',
+                    'Conecta la neurociencia (afasia semántica) con la interpretabilidad mecanicista de los LLMs'
                 ]
             },
             fomag: {

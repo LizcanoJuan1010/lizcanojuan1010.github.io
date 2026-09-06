@@ -510,6 +510,52 @@ h3 {
 /* ============================================
    PROJECTS SECTION
    ============================================ */
+/* ============================================
+   Education (single card, reuses .timeline-content styling)
+   ============================================ */
+#education {
+    min-height: auto;
+    padding: 20px 40px 100px;
+}
+.edu-card {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: left;
+}
+.edu-card .edu-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 6px 16px;
+}
+.edu-card .edu-head .timeline-date { margin-bottom: 0; }
+.edu-honors {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+    display: grid;
+    gap: 8px;
+}
+.edu-honors li {
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+    color: var(--text-primary);
+    line-height: 1.55;
+    position: relative;
+    padding-left: 22px;
+}
+.edu-honors li::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 0.55em;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -875,6 +921,14 @@ h3 {
     font-size: 0.8rem;
     color: var(--text-secondary);
     margin-bottom: 4px;
+}
+/* Optional one-line detail under a certificate title (course list, scope) */
+.cert-card .cert-note {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin: 0 0 8px;
 }
 /* PDF slot: a muted "coming soon" span, or a live link once the PDF exists */
 .cert-pdf {

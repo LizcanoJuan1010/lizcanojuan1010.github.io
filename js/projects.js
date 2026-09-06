@@ -11,13 +11,13 @@ const CASE_STUDIES = {
         status: 'In Production',
         title: 'VIGIAS-IA: Real-Time Video Analytics',
         problem: 'Security operations relied on humans watching dozens of live camera feeds simultaneously — a fatiguing, error-prone task where critical events (intrusions, anomalies) were easily missed and metadata had to be logged by hand.',
-        approach: 'As Computer Vision Lead, I designed and built a full-stack video intelligence system that ingests multiple live streams and runs a hybrid model ensemble (YOLO, D-FINE, ReDetv2, PaddlePaddle) for detection and tracking. Pipelines run on Linux with NVIDIA DeepStream 8.0 and GStreamer, with CUDA-accelerated inference and Docker-based deployment.',
+        approach: 'As Computer Vision Lead, I designed and built a full-stack video intelligence system that ingests multiple live streams and runs a hybrid model ensemble (YOLO, D-FINE, RT-DETRv2, PaddlePaddle) for detection and tracking. Pipelines run on Linux with NVIDIA DeepStream 8.0 and GStreamer, with CUDA-accelerated inference and Docker-based deployment.',
         impact: [
             'Automated detection and metadata generation across [confirm] simultaneous camera streams in production',
             'Reduced manual monitoring effort and latency between event and alert',
             'Hybrid ensemble improved detection robustness across varied scenes and lighting'
         ],
-        tech: ['NVIDIA DeepStream', 'YOLO', 'D-FINE', 'ReDetv2', 'PaddlePaddle', 'Python', 'C++', 'CUDA', 'GStreamer', 'Docker'],
+        tech: ['NVIDIA DeepStream', 'YOLO', 'D-FINE', 'RT-DETRv2', 'PaddlePaddle', 'Python', 'C++', 'CUDA', 'GStreamer', 'Docker'],
         links: [
             { url: 'https://landing.ars-intelligence.com/laboratorio', type: 'site' }
         ]
@@ -60,6 +60,35 @@ const CASE_STUDIES = {
         tech: ['LangChain', 'LangGraph', 'Llama 3', 'Claude API', 'Agentic AI', 'Function Calling'],
         links: [{ url: 'https://github.com/LizcanoJuan1010/EAOA', type: 'repo' }]
     },
+    tequendama: {
+        status: 'Hackathon',
+        title: 'Tequendama: AI Insurance Platform',
+        problem: 'Buying insurance in LATAM still means forms, calls and a human agent. The Colsubsidio 30X hackathon challenge: take a customer from "I don\'t know which insurance I need" to "I\'m covered" — end to end, with no human in the loop.',
+        approach: 'Built Tequendama, a conversational assistant that works over web chat, live voice and WhatsApp, plus outbound phone calls. It profiles the customer, quotes with real FX rates for 12 LATAM countries, collects payment (Polar), verifies identity (KYC with Didit), captures an e-signature and issues the policy PDF. A FastAPI "brain" (DeepSeek + tools) sits next to a NestJS/Prisma domain backend on PostgreSQL and Redis; voice runs on Deepgram Voice Agent and ElevenLabs; managers get a KPI dashboard with alerts, AI campaigns and email reports.',
+        impact: [
+            'Full self-service insurance journey: profiling → quote → KYC → payment → policy issuance',
+            'Omnichannel: web chat, live voice, WhatsApp and outbound phone calls on one AI core',
+            'Delivered as a containerized monorepo (Docker / Railway) with a public demo video'
+        ],
+        tech: ['FastAPI', 'NestJS', 'React 19', 'PostgreSQL', 'Redis', 'Deepgram', 'ElevenLabs', 'LLM Agents', 'Docker'],
+        links: [
+            { url: 'https://github.com/LizcanoJuan1010/AI_Seguros', type: 'repo' },
+            { url: 'https://www.youtube.com/watch?v=3NxcX0nJfu4', type: 'video' }
+        ]
+    },
+    voice: {
+        status: 'Demo',
+        title: 'AI Voice Agent for Collections',
+        problem: 'Pre-charge-off credit-card collections depend on large call centers following strict compliance scripts (FDCPA). A voice agent has to hold a natural real-time conversation, stay compliant and keep a record of every call.',
+        approach: 'Built a live outbound voice agent demo: Deepgram Voice Agent handles speech-to-text (nova-3) and text-to-speech, an OpenAI-compatible LLM (DeepSeek, with a gpt-4o-mini fallback) drives the conversation with an FDCPA-compliant persona, calls are persisted through Prisma, and a chat mode with server-sent events lets evaluators play the customer. React + Vite frontend, Node backend, deployable to Render.',
+        impact: [
+            'End-to-end voice pipeline: STT → LLM reasoning → TTS in real time from the browser',
+            'Compliance-aware persona and script for a regulated collections scenario',
+            'Dual mode (voice and chat) with call history and webhook handling'
+        ],
+        tech: ['Deepgram', 'LLMs', 'TypeScript', 'Node.js', 'React', 'Prisma', 'SSE', 'Voice AI'],
+        links: [{ url: 'https://github.com/LizcanoJuan1010/demo-voice-agent', type: 'repo' }]
+    },
     financial: {
         status: 'Active',
         title: 'Financial Analytics & Market Prediction',
@@ -75,16 +104,19 @@ const CASE_STUDIES = {
     },
     xai: {
         status: 'Thesis',
-        title: 'Explainable AI (XAI) — Thesis',
-        problem: 'Reinforcement Learning agents behave like black boxes — it\'s hard to trust or debug decisions when you can\'t see why the network acts the way it does.',
-        approach: 'Researching Explainable AI for RL using model distillation to approximate and interpret the policy, and analyzing neural activation patterns to understand the network\'s internal behavior and improve interpretability and trustworthiness.',
+        title: 'Thesis: Interpretability of Transformer Models',
+        problem: 'Large language models represent meaning in ways we can\'t read directly. Which internal circuits carry a concept, and what happens to the model\'s behaviour when they are damaged? Without that map, interpretability and trust stay superficial.',
+        approach: 'B.S. thesis in Data Science (Pontificia Universidad Javeriana, 2026 — tutor: Jorge Andrés Alvarado Valencia): "Mapping conceptual circuits — analyzing representation in Transformer models through causal intervention simulating semantic aphasia". Using hooks and targeted ablations on GPT-2 Medium, I intervene on activations to simulate semantic-aphasia-like deficits and measure how conceptual representations degrade, mapping which components carry which concepts.',
         impact: [
-            'Develops techniques to interpret RL agents\' internal decision-making',
-            'Uses model distillation to make complex policies explainable',
-            'Aims to increase trust and debuggability of deep RL systems'
+            'Causal (not just correlational) evidence of where concepts live inside a Transformer',
+            'Reusable intervention tooling: activation hooks, ablation experiments and analysis notebooks',
+            'Bridges neuroscience (semantic aphasia) and mechanistic interpretability of LLMs'
         ],
-        tech: ['XAI', 'Reinforcement Learning', 'Deep Learning', 'Model Distillation', 'Python'],
-        links: [{ url: 'https://github.com/LizcanoJuan1010/Proyecto_de_grado_-analisis_ablacion_gpt2_medium', type: 'repo' }]
+        tech: ['Mechanistic Interpretability', 'GPT-2 Medium', 'PyTorch', 'Causal Intervention', 'Ablation', 'XAI', 'Python'],
+        links: [
+            { url: 'https://github.com/LizcanoJuan1010/Experiment', type: 'repo' },
+            { url: 'https://github.com/LizcanoJuan1010/Proyecto_de_grado_-analisis_ablacion_gpt2_medium', type: 'repo', label: { en: 'Preliminary ablation analysis (GitHub)', es: 'Análisis preliminar de ablación (GitHub)' } }
+        ]
     },
     fomag: {
         status: 'Delivered',
@@ -169,9 +201,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 a.href = l.url;
                 a.target = '_blank';
                 a.rel = 'noopener';
-                a.textContent = l.type === 'site'
-                    ? t('Visit live site', 'Ver sitio en vivo')
-                    : t('View repository on GitHub', 'Ver repositorio en GitHub');
+                if (l.label) {
+                    a.textContent = window.I18N ? window.I18N.pick(l.label) : l.label.en;
+                } else if (l.type === 'site') {
+                    a.textContent = t('Visit live site', 'Ver sitio en vivo');
+                } else if (l.type === 'video') {
+                    a.textContent = t('Watch demo video', 'Ver video demo');
+                } else {
+                    a.textContent = t('View repository on GitHub', 'Ver repositorio en GitHub');
+                }
                 elLinks.appendChild(a);
             });
         }
