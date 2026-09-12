@@ -556,6 +556,56 @@ h3 {
     background: var(--accent);
 }
 
+/* Diploma & honors strip inside the education card */
+.honors-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 22px;
+}
+.honor-thumb {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    font-family: var(--font-sans);
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text-secondary);
+    transition: color var(--transition);
+}
+.honor-thumb img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background: #f7f4ee;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-subtle);
+    padding: 4px;
+    box-sizing: border-box;
+    transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+.honor-thumb:hover { color: var(--accent); }
+.honor-thumb:hover img {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4);
+}
+.honors-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 18px 0 6px;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    transition: gap var(--transition);
+}
+.honors-more:hover { gap: 12px; text-decoration: underline; }
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -992,6 +1042,23 @@ a.cert-thumb:hover img { transform: scale(1.03); }
     color: var(--text-secondary);
     opacity: 0.7;
 }
+
+/* Degree & honors block at the top of certificados.html */
+.honors-block { margin-bottom: 64px; }
+.honors-title {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-highlight);
+    margin: 0 0 10px;
+    text-align: left;
+}
+.honors-title.certs-title { margin-top: 8px; }
+.honors-subtitle { text-align: left; margin-left: 0; max-width: 760px; }
+.honors-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.honors-grid .cert-card { border-color: rgba(212, 162, 78, 0.28); }
+.honors-grid .cert-thumb-row .cert-thumb,
+.honors-grid .cert-thumb { aspect-ratio: 4 / 3; }
 
 /* ============================================
    AI CHAT SECTION
@@ -1681,6 +1748,7 @@ footer {
 
     .projects-grid { grid-template-columns: 1fr; }
     .certs-grid { grid-template-columns: 1fr; }
+    .honors-strip { grid-template-columns: repeat(2, 1fr); }
     #certificates { padding: 120px 24px 60px; }
 
     .chat-messages { height: 360px; }

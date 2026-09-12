@@ -72,8 +72,26 @@ const CASE_STUDIES = {
         ],
         tech: ['FastAPI', 'NestJS', 'React 19', 'PostgreSQL', 'Redis', 'Deepgram', 'ElevenLabs', 'LLM Agents', 'Docker'],
         links: [
+            { url: 'https://tequendama.saltoangel.co/', type: 'site' },
             { url: 'https://github.com/LizcanoJuan1010/AI_Seguros', type: 'repo' },
             { url: 'https://www.youtube.com/watch?v=3NxcX0nJfu4', type: 'video' }
+        ]
+    },
+    pulso: {
+        status: 'Hackathon',
+        title: 'PULSO: AI Emergency Routing',
+        problem: 'In a critical emergency (heart attack, stroke, major trauma) assigning the right hospital bed in Colombia still takes ~45 minutes of phone calls, and ambulances bounce from hospital to hospital — the "paseo de la muerte" — because nobody knows in real time who has the bed and the specialist. Manual capacity reporting fails by design: the official daily occupancy dataset has a single live date.',
+        approach: 'Built at Platanus Hack 26 (Bogotá, Emergencies track, team of 4). PULSO turns the paramedic\'s voice dictation into a structured clinical case with Claude (probable ICD-10 diagnosis, triage level, mandatory services), filters Bogotá\'s emergency providers from the official REPS registry with a hard services filter, and scores them in minutes — ETA with live traffic plus the expected cost of a rejection and inferred congestion — before a one-tap handshake with the receiving hospital over Telegram, WhatsApp or the web console. Every rejection becomes the prior of the next decision, so the network trains itself. I owned the field PWA (/campo: dictation → case → ranking → dispatch → navigation, with the golden-hour timer), the map and shared components, and also shipped the login/session flow, WhatsApp webhook de-duplication, the service token for the voice service, the FHIR R4 clinical-summary (RDA) builder and the admin catalogs. Stack: Next.js, NestJS, FastAPI, PostgreSQL + PostGIS, Mapbox, Claude API, Twilio/WhatsApp.',
+        impact: [
+            'From voice dictation to a confirmed receiving hospital in under 90 seconds — the target the whole product is built around',
+            'Routing by real travel time and enabled services (84 verified emergency providers in Bogotá), not by distance alone',
+            'Zero-friction adoption: hospitals only press Accept / Reject on the channel they already use; every answer is a labeled observation',
+            'Live demo deployed on Render; open-source monorepo with the whole team\'s work'
+        ],
+        tech: ['Next.js', 'NestJS', 'FastAPI', 'PostgreSQL', 'PostGIS', 'Mapbox', 'Claude API', 'FHIR R4', 'WhatsApp / Twilio', 'Docker'],
+        links: [
+            { url: 'https://pulso-frontend.onrender.com/', type: 'site' },
+            { url: 'https://github.com/platanus-hack/platanus-hack-26-co-team-6', type: 'repo' }
         ]
     },
     voice: {

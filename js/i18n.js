@@ -26,7 +26,7 @@ const ES = {
     // About
     'about.title': 'Sobre mí',
     'about.subtitle': 'Convirtiendo datos en decisiones, e ideas en sistemas inteligentes.',
-    'about.intro': '¡Hola! Soy Juan, Científico de Datos e Ingeniero de IA, graduado cum laude en Ciencia de Datos de la Pontificia Universidad Javeriana. Trabajo como Ingeniero de Datos e IA independiente — recientemente entregué un pipeline de datos para Alteon Insurance a través de Imuko — tras liderar Visión por Computador en Vigías de Colombia, y me apasiona entender a fondo cada problema antes de resolverlo con datos.',
+    'about.intro': '¡Hola! Soy Juan, Científico de Datos e Ingeniero de IA. En septiembre de 2026 me gradué de la Pontificia Universidad Javeriana (Ciencia de Datos, cum laude) con el mejor promedio de la carrera — <em>Orden al Mérito Académico Javeriano</em> y Mención de Honor al Mejor Promedio Académico. Trabajo como Ingeniero de Datos e IA independiente — recientemente entregué un pipeline de datos para Alteon Insurance a través de Imuko — tras liderar Visión por Computador en Vigías de Colombia, y me apasiona entender a fondo cada problema antes de resolverlo con datos.',
 
     // Experience
     'exp.title': 'Experiencia',
@@ -35,8 +35,8 @@ const ES = {
     'exp.t0': 'Ingeniero de Datos e IA Freelance',
     'exp.p0': 'Ingeniería independiente de datos e IA para clientes. Encargo más reciente — a través de Imuko — construyendo un pipeline de datos para Alteon Insurance, entregado entre julio y agosto de 2026.',
     'exp.d1': 'Nov 2025 — Jul 2026',
-    'exp.t1': 'Ingeniero MLOps y Líder de Visión por Computador',
-    'exp.p1': 'Como Líder de Visión por Computador, impulsé el desarrollo de un sistema full-stack de inteligencia de video que utiliza un enfoque de modelos híbridos (YOLO, D-FINE, RT-DETRv2 y PaddlePaddle) para automatizar la detección de eventos y la generación de metadatos a partir de cámaras en vivo.',
+    'exp.t1': 'Ingeniero de IA · Visión por Computador y LLM/RAG',
+    'exp.p1': 'Lideré la parte de Visión por Computador de un sistema full-stack de inteligencia de video — un ensamble híbrido de modelos (YOLO, D-FINE, RT-DETRv2, PaddlePaddle) que automatiza la detección de eventos y la generación de metadatos desde cámaras en vivo — servido como APIs contenedorizadas (Docker, FastAPI / Flask) en AWS y Azure ML / Databricks, además de componentes NLP / LLM y RAG integrados en pipelines de datos con arquitectura Medallion.',
     'exp.d2': 'Jun 2025 — Nov 2025',
     'exp.t2': 'Administrador de Bases de Datos',
     'exp.p2': 'Desarrollé un esquema de base de datos SQL robusto y un modelo relacional para una nueva plataforma de salud pública dedicada al magisterio colombiano, garantizando integridad de datos, escalabilidad y soporte para el seguimiento longitudinal de salud.',
@@ -58,13 +58,20 @@ const ES = {
 
     // Education
     'edu.title': 'Educación',
-    'edu.subtitle': 'Graduado de la Pontificia Universidad Javeriana — Ciencia de Datos, cum laude.',
-    'edu.degree': 'Pregrado en Ciencia de Datos',
-    'edu.dates': '2023 — 2026 · Graduado',
-    'edu.desc': 'Graduado cum laude con un promedio acumulado de 4.53 / 5.0. Tesis sobre interpretabilidad de modelos Transformer: mapeo de circuitos conceptuales en GPT-2 Medium mediante intervenciones causales que simulan afasia semántica.',
+    'edu.subtitle': 'Científico de Datos — Pontificia Universidad Javeriana, cum laude, mejor promedio de la carrera.',
+    'edu.degree': 'Pregrado en Ciencia de Datos (Científico de Datos)',
+    'edu.dates': '2023 — 2026 · Graduado el 10 de sep. de 2026',
+    'edu.desc': 'Graduado cum laude con un promedio acumulado de 4.53 / 5.0 — el más alto de la Carrera de Ciencia de Datos. Tesis sobre interpretabilidad de modelos Transformer: mapeo de circuitos conceptuales en GPT-2 Medium mediante intervenciones causales que simulan afasia semántica.',
+    'edu.h0': '<strong>Orden al Mérito Académico Javeriano</strong> (sep. 2026) — distinción de la universidad para los graduados con un destacado promedio ponderado acumulado final.',
+    'edu.h0b': '<strong>Mención de Honor al Mejor Promedio Académico</strong> (sep. 2026) — mención de honor de la Facultad de Ciencias al mejor promedio acumulado de la Carrera de Ciencia de Datos.',
     'edu.h1': 'Beca Semestral por Excelencia Académica (2023-1) — el promedio acumulado más alto de la Carrera de Ciencia de Datos.',
     'edu.h2': 'Beca Bachiller Destacado — Pontificia Universidad Javeriana.',
     'edu.h3': 'Representante de la universidad en el Hackathon Internacional H4CKFOREDU (Universidad Pontificia de Salamanca, 2024); participante en el UN Datathon 2024.',
+    'edu.g1': 'Diploma',
+    'edu.g2': 'Acta de grado',
+    'edu.g3': 'Orden al Mérito',
+    'edu.g4': 'Mejor Promedio',
+    'edu.more': 'Ver el diploma, el acta de grado y las distinciones completas',
 
     // Projects
     'proj.title': 'Proyectos Destacados',
@@ -92,6 +99,8 @@ const ES = {
     'proj.finD': 'Pipeline cuantitativo de mercado: sentimiento con NLP, indicadores técnicos y predicción de precios con CNN-LSTM alimentando trading automatizado con gestión de riesgo.',
     'proj.tequendamaT': 'Tequendama: Plataforma de Seguros con IA',
     'proj.tequendamaD': 'Asistente conversacional de seguros construido para el hackathon Colsubsidio 30X — chat web, voz en vivo y WhatsApp: perfila, cotiza, verifica identidad (KYC), cobra y emite la póliza sin intervención humana.',
+    'proj.pulsoT': 'PULSO: Ruteo de Urgencias con IA',
+    'proj.pulsoD': 'Construido en Platanus Hack 26 (Bogotá, track Emergencias): convierte el dictado de voz del paramédico en un caso clínico estructurado y lleva al paciente al hospital que sí puede recibirlo — por tiempo real de viaje y servicios habilitados, no solo por distancia.',
     'proj.voiceT': 'Agente de Voz con IA para Cobranza',
     'proj.voiceD': 'Agente de voz saliente en tiempo real para cobranza de tarjetas de crédito: voz a texto y texto a voz con Deepgram, un LLM como cerebro, guion conforme a la FDCPA, persistencia de llamadas y modo chat de respaldo.',
     'proj.xaiT': 'Tesis: Interpretabilidad de Modelos Transformer',
@@ -102,7 +111,22 @@ const ES = {
     'proj.ragD': 'Asistentes de IA fundamentados en bases de conocimiento curadas para minimizar alucinaciones — incluido el chatbot RAG de este sitio.',
 
     // Certifications page (certificados.html)
-    'certs.title': 'Certificaciones y Cursos',
+    'certs.title': 'Título, Distinciones y Certificaciones',
+    'certs.title2': 'Certificaciones y Cursos',
+    'honors.title': 'Título y Distinciones Académicas',
+    'honors.subtitle': 'Científico de Datos — título conferido por la Pontificia Universidad Javeriana el 10 de septiembre de 2026, junto con las dos máximas distinciones académicas de la universidad. Cada documento está firmado digitalmente y es verificable en el sitio de la universidad.',
+    'honors.c1': 'Diploma — Científico de Datos (Pregrado en Ciencia de Datos)',
+    'honors.n1': 'Título otorgado en nombre de la República de Colombia · Diploma N.º 227622 · Acta de Grado N.º 202609100500 · versiones en español y en latín.',
+    'honors.d1': '10 de septiembre de 2026',
+    'honors.v1': 'Diploma — español (PDF)',
+    'honors.v2': 'Diploma — latín (PDF)',
+    'honors.c2': 'Acta de Grado N.º 202609100500',
+    'honors.n2': 'Registro oficial de la ceremonia de graduación celebrada en Bogotá, que certifica el título de Científico de Datos y el Diploma N.º 227622.',
+    'honors.i3': 'Pontificia Universidad Javeriana · Rectoría',
+    'honors.n3': 'Distinción de toda la universidad, firmada por el Rector, para los graduados que alcanzan un destacado promedio ponderado acumulado final (fijado por el Consejo de Facultad y aprobado por el Vicerrector Académico). Certificado e insignia digital Xertify.',
+    'honors.v3': 'Certificado (PDF)',
+    'honors.v4': 'Insignia digital (PDF)',
+    'honors.n4': 'Mención de honor de la Facultad de Ciencias al mejor promedio acumulado de la Carrera de Ciencia de Datos (Acta de Consejo N.º 42 del 27 de julio de 2018). Insignia digital Xertify.',
     'certs.subtitle': 'Certificados, cursos y logros — los más recientes primero, cada uno con su PDF.',
     'certs.back': 'Volver al portafolio',
     'certs.soon': 'PDF próximamente',
@@ -175,12 +199,16 @@ const ES = {
     'case.impact': 'Impacto y Resultados',
 
     // Footer
-    'footer.copy': 'Hecho por Juan Lizcano — 2025'
+    'footer.copy': 'Hecho por Juan Lizcano — 2026'
 };
 
 /* ---- Attribute Spanish overrides (keyed by data-i18n-attr "attr:key") ---- */
 const ATTR_ES = {
-    'chat.placeholder': 'Pregúntame lo que quieras...'
+    'chat.placeholder': 'Pregúntame lo que quieras...',
+    'edu.g1': 'Diploma — Científico de Datos',
+    'edu.g2': 'Acta de Grado',
+    'edu.g3': 'Orden al Mérito Académico Javeriano — insignia digital',
+    'edu.g4': 'Mención de Honor al Mejor Promedio Académico — insignia digital'
 };
 
 /* ---- Page <head> metadata (per page, keyed by <body data-page>) ---- */
@@ -197,12 +225,12 @@ const META = {
     },
     certs: {
         en: {
-            title: 'Certifications & Courses | Juan Lizcano',
-            desc: 'Certifications, courses, and achievements of Juan Lizcano Barbosa.'
+            title: 'Degree, Honors & Certifications | Juan Lizcano',
+            desc: 'Degree (Científico de Datos, Pontificia Universidad Javeriana), academic honors, certifications and courses of Juan Lizcano Barbosa.'
         },
         es: {
-            title: 'Certificaciones y Cursos | Juan Lizcano',
-            desc: 'Certificaciones, cursos y logros de Juan Lizcano Barbosa.'
+            title: 'Título, Distinciones y Certificaciones | Juan Lizcano',
+            desc: 'Título (Científico de Datos, Pontificia Universidad Javeriana), distinciones académicas, certificaciones y cursos de Juan Lizcano Barbosa.'
         }
     }
 };
@@ -343,6 +371,18 @@ const DYN = {
                     'Recorrido de seguros 100% autoservicio: perfilamiento → cotización → KYC → pago → emisión de póliza',
                     'Omnicanal: chat web, voz en vivo, WhatsApp y llamadas salientes sobre un mismo núcleo de IA',
                     'Entregado como monorepo contenedorizado (Docker / Railway) con video demo público'
+                ]
+            },
+            pulso: {
+                status: 'Hackathon',
+                title: 'PULSO: Ruteo de Urgencias con IA',
+                problem: 'En una emergencia crítica (infarto, ACV, politraumatismo) asignar la cama correcta en Colombia todavía toma ~45 minutos de llamadas telefónicas, y las ambulancias rebotan de IPS en IPS — el "paseo de la muerte" — porque nadie sabe en tiempo real quién tiene la cama y el especialista. El reporte manual de capacidad falla por diseño: el dataset oficial de ocupación diaria tiene una sola fecha viva.',
+                approach: 'Construido en Platanus Hack 26 (Bogotá, track Emergencias, equipo de 4). PULSO convierte el dictado de voz del paramédico en un caso clínico estructurado con Claude (diagnóstico CIE-10 probable, nivel de triage, servicios obligatorios), filtra las IPS de urgencias de Bogotá desde el registro oficial REPS con un filtro duro de servicios y las puntúa en minutos — ETA con tráfico real más el costo esperado de un rechazo y la congestión inferida — antes de un handshake de un toque con el hospital receptor por Telegram, WhatsApp o consola web. Cada rechazo se vuelve el prior de la siguiente decisión: la red se entrena sola. Fui dueño de la PWA de campo (/campo: dictado → caso → ranking → despacho → navegación, con el cronómetro de hora dorada), del mapa y de los componentes compartidos, y además entregué el login y la sesión, la deduplicación de webhooks de WhatsApp, el token de servicio del módulo de voz, el constructor del resumen clínico FHIR R4 (RDA) y los catálogos de administración. Stack: Next.js, NestJS, FastAPI, PostgreSQL + PostGIS, Mapbox, Claude API, Twilio/WhatsApp.',
+                impact: [
+                    'Del dictado de voz al hospital receptor confirmado en menos de 90 segundos — la meta alrededor de la cual se construyó todo el producto',
+                    'Ruteo por tiempo real de viaje y servicios habilitados (84 IPS de urgencias verificadas en Bogotá), no solo por distancia',
+                    'Adopción sin fricción: el hospital solo pulsa Aceptar / Rechazar en el canal que ya usa; cada respuesta es una observación etiquetada',
+                    'Demo en vivo desplegada en Render; monorepo de código abierto con el trabajo de todo el equipo'
                 ]
             },
             voice: {

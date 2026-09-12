@@ -265,6 +265,13 @@ document.addEventListener('DOMContentLoaded', () => {
         let autoTimer = null;
 
         const indexAt = (p) => ((Math.round(p) % count) + count) % count;
+        const captionFor = (card) => {
+            const es = window.I18N && window.I18N.lang === 'es' && card.dataset.titleEs;
+            return es || card.dataset.title || '';
+        };
+        if (window.I18N) {
+            window.I18N.onChange(() => { if (caption && selected >= 0) caption.textContent = captionFor(cards[selected]); });
+        }
 
         function paint() {
             if (!width) return;
@@ -295,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (i === selected) return;
             selected = i;
             Array.from(dotsWrap.children).forEach((d, k) => d.classList.toggle('active', k === i));
-            if (caption) caption.textContent = cards[i].dataset.title || '';
+            if (caption) caption.textContent = captionFor(cards[i]);
         }
 
         function settle(t) {
@@ -336,6 +343,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Drag with velocity so a flick carries — capped at two cards.
         frame.addEventListener('pointerdown', (e) => {
+            // Arrow buttons live inside the frame: capturing the pointer here
+            // would retarget their click to the frame and swallow it.
+            if (e.target.closest('.carousel-btn')) return;
             if (raf !== null) { cancelAnimationFrame(raf); raf = null; }
             frame.setPointerCapture(e.pointerId);
             target = pos;

@@ -75,19 +75,22 @@
                 <h2 class="gradient-text reveal" data-i18n="about.title">About Me</h2>
                 <p class="section-subtitle reveal delay-1" data-i18n="about.subtitle">Turning data into decisions, and ideas into intelligent systems.</p>
 
-                <p class="intro-text reveal delay-2" data-i18n="about.intro">Hi! I'm Juan, a Data Scientist and AI Engineer and a Pontificia Universidad Javeriana graduate (B.S. in Data Science, cum laude). I work as an independent Data & AI Engineer — most recently delivering a data pipeline for Alteon Insurance through Imuko — after leading Computer Vision at Vigías de Colombia, and I love understanding a problem deeply before solving it with data.</p>
+                <p class="intro-text reveal delay-2" data-i18n="about.intro">Hi! I'm Juan, a Data Scientist and AI Engineer. In September 2026 I graduated from Pontificia Universidad Javeriana (B.S. in Data Science, cum laude) with the highest GPA of the program — the <em>Orden al Mérito Académico Javeriano</em> and the Honor Mention for Best Academic Average. I work as an independent Data & AI Engineer — most recently delivering a data pipeline for Alteon Insurance through Imuko — after leading Computer Vision at Vigías de Colombia, and I love understanding a problem deeply before solving it with data.</p>
 
                 <!-- Coverflow photo carousel (3D ring; logic in js/main.js) -->
                 <div class="coverflow reveal delay-3" id="about-carousel" role="region" aria-roledescription="carousel" aria-label="Photos of Juan">
                     <div class="coverflow-frame" id="coverflow-frame" tabindex="0">
                         <div class="coverflow-stage" id="coverflow-stage">
-                            <div class="coverflow-card" role="group" aria-roledescription="slide" aria-label="1 of 3" data-title="Bogotá, Colombia">
+                            <div class="coverflow-card" role="group" aria-roledescription="slide" aria-label="1 of 4" data-title="Bogotá, Colombia">
                                 <img src="img/profile.jpg" alt="Juan Lizcano" draggable="false" decoding="async">
                             </div>
-                            <div class="coverflow-card" role="group" aria-roledescription="slide" aria-label="2 of 3" data-title="H4CKFOREDU International Hackathon">
+                            <div class="coverflow-card" role="group" aria-roledescription="slide" aria-label="2 of 4" data-title="Graduation — Pontificia Universidad Javeriana, September 2026" data-title-es="Grado — Pontificia Universidad Javeriana, septiembre de 2026">
+                                <img src="img/graduation-2026.jpg" alt="Graduation ceremony at Pontificia Universidad Javeriana, September 2026" draggable="false" decoding="async">
+                            </div>
+                            <div class="coverflow-card" role="group" aria-roledescription="slide" aria-label="3 of 4" data-title="H4CKFOREDU International Hackathon">
                                 <img src="img/hack4edu_opt.png" alt="H4CKFOREDU International Hackathon" draggable="false" decoding="async">
                             </div>
-                            <div class="coverflow-card" role="group" aria-roledescription="slide" aria-label="3 of 3" data-title="AWS Event">
+                            <div class="coverflow-card" role="group" aria-roledescription="slide" aria-label="4 of 4" data-title="AWS Event">
                                 <img src="img/aws_Event.jpeg" alt="AWS Event" draggable="false" decoding="async">
                             </div>
                         </div>
@@ -133,16 +136,17 @@
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <div class="timeline-date" data-i18n="exp.d1">Nov 2025 — Jul 2026</div>
-                            <h3 data-i18n="exp.t1">MLOps Engineer &amp; Computer Vision Lead</h3>
+                            <h3 data-i18n="exp.t1">AI Engineer · Computer Vision &amp; LLM/RAG</h3>
                             <div class="timeline-company">Vigias de Colombia</div>
-                            <p data-i18n="exp.p1">As Computer Vision Lead, I drove the development of a full-stack video intelligence system utilizing a hybrid model approach (YOLO, D-FINE, RT-DETRv2, and PaddlePaddle) to automate event detection and metadata generation from live camera streams.</p>
+                            <p data-i18n="exp.p1">Led the Computer Vision side of a full-stack video intelligence system — a hybrid model ensemble (YOLO, D-FINE, RT-DETRv2, PaddlePaddle) that automates event detection and metadata generation from live camera streams — served as containerized APIs (Docker, FastAPI / Flask) on AWS and Azure ML / Databricks, plus NLP / LLM and RAG components integrated into Medallion-architecture data pipelines.</p>
                             <div class="project-tags" style="margin-top:12px">
-                                <span class="project-tag">CUDA</span>
                                 <span class="project-tag">Computer Vision</span>
-                                <span class="project-tag">Docker</span>
                                 <span class="project-tag">YOLO</span>
-                                <span class="project-tag">Deep Learning</span>
-                                <span class="project-tag">TensorFlow</span>
+                                <span class="project-tag">CUDA</span>
+                                <span class="project-tag">LLMs / RAG</span>
+                                <span class="project-tag">Docker</span>
+                                <span class="project-tag">FastAPI</span>
+                                <span class="project-tag">Azure ML / Databricks</span>
                                 <span class="project-tag">Golang</span>
                             </div>
                         </div>
@@ -253,20 +257,47 @@
         <section id="education">
             <div class="content-wrapper">
                 <h2 class="gradient-text reveal" data-i18n="edu.title">Education</h2>
-                <p class="section-subtitle reveal delay-1" data-i18n="edu.subtitle">Graduate of Pontificia Universidad Javeriana — Data Science, cum laude.</p>
+                <p class="section-subtitle reveal delay-1" data-i18n="edu.subtitle">Científico de Datos — Pontificia Universidad Javeriana, cum laude, highest GPA of the program.</p>
 
                 <div class="timeline-content edu-card reveal delay-2">
                     <div class="edu-head">
-                        <h3 data-i18n="edu.degree">B.S. in Data Science</h3>
-                        <div class="timeline-date" data-i18n="edu.dates">2023 — 2026 · Graduated</div>
+                        <h3 data-i18n="edu.degree">B.S. in Data Science (Científico de Datos)</h3>
+                        <div class="timeline-date" data-i18n="edu.dates">2023 — 2026 · Graduated Sep 10, 2026</div>
                     </div>
-                    <div class="timeline-company">Pontificia Universidad Javeriana · Bogotá, Colombia</div>
-                    <p data-i18n="edu.desc">Graduated cum laude with a 4.53 / 5.0 cumulative GPA. Thesis on the interpretability of Transformer models: mapping conceptual circuits in GPT-2 Medium through causal interventions that simulate semantic aphasia.</p>
+                    <div class="timeline-company">Pontificia Universidad Javeriana · Facultad de Ciencias · Bogotá, Colombia</div>
+                    <p data-i18n="edu.desc">Graduated cum laude with a 4.53 / 5.0 cumulative GPA — the highest of the Data Science program. Thesis on the interpretability of Transformer models: mapping conceptual circuits in GPT-2 Medium through causal interventions that simulate semantic aphasia.</p>
                     <ul class="edu-honors">
+                        <li data-i18n="edu.h0"><strong>Orden al Mérito Académico Javeriano</strong> (Sep 2026) — the university's distinction for graduates with an outstanding final cumulative GPA.</li>
+                        <li data-i18n="edu.h0b"><strong>Mención de Honor al Mejor Promedio Académico</strong> (Sep 2026) — Facultad de Ciencias honor mention for the best cumulative GPA in the Data Science program.</li>
                         <li data-i18n="edu.h1">Academic Excellence Scholarship (2023-1) — highest cumulative GPA in the Data Science program.</li>
                         <li data-i18n="edu.h2">Outstanding High School Graduate Scholarship (Beca Bachiller Destacado) — Pontificia Universidad Javeriana.</li>
                         <li data-i18n="edu.h3">University representative at the H4CKFOREDU International Hackathon (Universidad Pontificia de Salamanca, 2024); participant in the UN Datathon 2024.</li>
                     </ul>
+
+                    <!-- Diploma & honors gallery (full documents on certificados.html#honors) -->
+                    <div class="honors-strip">
+                        <a class="honor-thumb" href="honors/diploma-cientifico-de-datos.jpg" target="_blank" rel="noopener" data-i18n-attr="title:edu.g1" title="Diploma — Científico de Datos">
+                            <img src="honors/thumbs/diploma-cientifico-de-datos.jpg" alt="Diploma — Científico de Datos, Pontificia Universidad Javeriana" width="640" height="448" loading="lazy">
+                            <span data-i18n="edu.g1">Diploma</span>
+                        </a>
+                        <a class="honor-thumb" href="honors/acta-de-grado.jpg" target="_blank" rel="noopener" data-i18n-attr="title:edu.g2" title="Acta de Grado (graduation record)">
+                            <img src="honors/thumbs/acta-de-grado.jpg" alt="Acta de Grado — graduation record" width="495" height="640" loading="lazy">
+                            <span data-i18n="edu.g2">Graduation record</span>
+                        </a>
+                        <a class="honor-thumb" href="honors/orden-merito-academico-badge.jpg" target="_blank" rel="noopener" data-i18n-attr="title:edu.g3" title="Orden al Mérito Académico Javeriano — digital badge">
+                            <img src="honors/thumbs/orden-merito-academico-badge.jpg" alt="Orden al Mérito Académico Javeriano — digital badge" width="640" height="495" loading="lazy">
+                            <span data-i18n="edu.g3">Orden al Mérito</span>
+                        </a>
+                        <a class="honor-thumb" href="honors/mencion-honor-mejor-promedio-badge.jpg" target="_blank" rel="noopener" data-i18n-attr="title:edu.g4" title="Mención de Honor al Mejor Promedio Académico — digital badge">
+                            <img src="honors/thumbs/mencion-honor-mejor-promedio-badge.jpg" alt="Mención de Honor al Mejor Promedio Académico — digital badge" width="640" height="495" loading="lazy">
+                            <span data-i18n="edu.g4">Best Academic Average</span>
+                        </a>
+                    </div>
+                    <a class="honors-more" href="certificados.html#honors">
+                        <span data-i18n="edu.more">See the full diploma, graduation record and honors</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+
                     <div class="project-tags">
                         <span class="project-tag">Machine Learning</span>
                         <span class="project-tag">Statistics</span>
@@ -363,6 +394,7 @@
                             <p data-i18n="proj.tequendamaD">Conversational insurance assistant built for the Colsubsidio 30X hackathon — web chat, live voice and WhatsApp: it profiles, quotes, verifies identity (KYC), collects payment and issues the policy without a human in the loop.</p>
                             <div class="project-info-footer"><span class="case-cue"><span data-i18n="proj.caseCue">View case study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                             <div class="project-ext-links">
+                                <a class="project-ext" href="https://tequendama.saltoangel.co/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> <span data-i18n="proj.demo">Live demo</span></a>
                                 <a class="project-ext" href="https://github.com/LizcanoJuan1010/AI_Seguros" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 22 12C22 6.48 17.52 2 12 2z"/></svg> <span data-i18n="proj.code">Code</span></a>
                                 <a class="project-ext" href="https://www.youtube.com/watch?v=3NxcX0nJfu4" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg> <span data-i18n="proj.video">Video demo</span></a>
                             </div>
@@ -370,6 +402,24 @@
                         </div>
                     </div>
 
+
+                    <!-- PULSO — AI emergency routing (Platanus Hack 26) -->
+                    <div class="project-card reveal delay-1" data-project="pulso">
+                        <div class="project-icon-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            <span class="project-status research" data-i18n="proj.stHack">Hackathon</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="proj.pulsoT">PULSO: AI Emergency Routing</h3>
+                            <p data-i18n="proj.pulsoD">Built at Platanus Hack 26 (Bogotá, Emergencies track): turns a paramedic's voice dictation into a structured clinical case and routes the patient to the hospital that can actually receive them — by real travel time and enabled services, not just distance.</p>
+                            <div class="project-info-footer"><span class="case-cue"><span data-i18n="proj.caseCue">View case study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                            <div class="project-ext-links">
+                                <a class="project-ext" href="https://pulso-frontend.onrender.com/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> <span data-i18n="proj.demo">Live demo</span></a>
+                                <a class="project-ext" href="https://github.com/platanus-hack/platanus-hack-26-co-team-6" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 22 12C22 6.48 17.52 2 12 2z"/></svg> <span data-i18n="proj.code">Code</span></a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
                     <!-- AI Voice Agent for collections (demo) -->
                     <div class="project-card reveal delay-1" data-project="voice">
                         <div class="project-icon-header">
@@ -672,7 +722,7 @@
             <a href="certificados.html" data-i18n="nav.certs">Certifications</a>
             <a href="#contact" data-i18n="nav.contact">Contact</a>
         </div>
-        <p class="footer-copy" data-i18n="footer.copy">Built by Juan Lizcano &mdash; 2025</p>
+        <p class="footer-copy" data-i18n="footer.copy">Built by Juan Lizcano &mdash; 2026</p>
     </footer>
 
     <!-- Scripts -->
