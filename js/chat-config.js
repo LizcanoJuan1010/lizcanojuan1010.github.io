@@ -22,7 +22,7 @@ const CHAT_CONFIG = {
 - Based in Bogotá, Colombia.
 - Title: Data Scientist & AI Engineer / Machine Learning Developer.
 - Graduate of Pontificia Universidad Javeriana: B.S. in Data Science (official title: Científico de Datos), 2023–2026. Degree conferred on September 10, 2026 (Diploma No. 227622, Acta de Grado No. 202609100500). Graduated cum laude with a 4.53/5.0 cumulative GPA — the highest of the Data Science program — and received the university's two top academic distinctions at graduation: the Orden al Mérito Académico Javeriano (signed by the Rector) and the Mención de Honor al Mejor Promedio Académico (Facultad de Ciencias). Earlier: Academic Excellence Scholarship (2023-1) for the highest cumulative GPA in the program.
-- Officially graduated on September 10, 2026. Currently working as an independent / freelance Data & AI Engineer. Most recent engagement: a data-engineering contract through Imuko (Bogotá, Colombia), building a data pipeline for Alteon Insurance — delivered July–August 2026.
+- Officially graduated on September 10, 2026. Currently working as an AI Consultant at Deloitte (since October 13, 2026) — designing and building enterprise AI solutions with AI agents, MCP (Model Context Protocol), APIs, and knowledge graphs; project details are confidential (NDA). Before that, he worked as an independent / freelance Data & AI Engineer — most recent engagement: a data-engineering contract through Imuko (Bogotá, Colombia), building a data pipeline for Alteon Insurance, delivered July–August 2026.
 - Open to new opportunities: Data Scientist, AI / ML Engineer and Data Engineer roles (on-site in Bogotá or remote).
 
 # Summary
@@ -48,7 +48,8 @@ Data Science graduate (cum laude) and results-driven AI engineer who builds full
 - Languages: Spanish (native), English (advanced, C1).
 
 # Experience
-- Freelance Data Engineer — Imuko (Jul – Aug 2026, Bogotá): freelance contract engagement — built a data pipeline for Alteon Insurance, delivered on schedule; now working independently on data & AI projects.
+- AI Consultant — Deloitte (13 Oct 2026 – Present): enterprise AI consulting — designing and building solutions with AI agents, MCP (Model Context Protocol) integrations, APIs, and knowledge graphs for enterprise clients. Project details are confidential (NDA).
+- Freelance Data Engineer — Imuko (Jul – Aug 2026, Bogotá): freelance contract engagement — built a data pipeline for Alteon Insurance, delivered on schedule; worked independently on data & AI projects until joining Deloitte in October 2026.
 - AI Engineer (Computer Vision & LLM/RAG) — Vigías de Colombia (Nov 2025 – Jul 2026): led the Computer Vision side of a full-stack video intelligence system using hybrid models (YOLO, D-FINE, RT-DETRv2, PaddlePaddle) to automate event detection and metadata generation from live camera streams; served models as containerized APIs (Docker, FastAPI/Flask) on AWS and Azure ML / Databricks and monitored them after release; built NLP / LLM and RAG components integrated into production data pipelines (Medallion architecture). Stack: CUDA, Computer Vision, Docker, YOLO, Deep Learning, TensorFlow, Golang.
 - Generative AI projects: built generative-AI solutions for network/territory analysis (PIPE-IA / Condor AI — an analytical and operational platform for tracking territory, leaders, and base structure, https://pipe-ia.com/login) and for fiscal control / oversight.
 - Database Administrator — Fiduprevisora/FOMAG (Jun 2025 – Nov 2025): SQL schema and relational model for a public health platform for Colombia's teaching workforce.
