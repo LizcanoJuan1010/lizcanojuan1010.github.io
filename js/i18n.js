@@ -26,14 +26,14 @@ const ES = {
     // About
     'about.title': 'Sobre mí',
     'about.subtitle': 'Convirtiendo datos en decisiones, e ideas en sistemas inteligentes.',
-    'about.intro': '¡Hola! Soy Juan, Científico de Datos e Ingeniero de IA. En septiembre de 2026 me gradué de la Pontificia Universidad Javeriana (Ciencia de Datos, cum laude) con el mejor promedio de la carrera — <em>Orden al Mérito Académico Javeriano</em> y Mención de Honor al Mejor Promedio Académico. Actualmente trabajo como Consultor de IA en Deloitte, construyendo soluciones empresariales con agentes de IA, MCPs, APIs y grafos de conocimiento (detalles del proyecto bajo NDA). Antes trabajé como Ingeniero de Datos e IA independiente — entregué un pipeline de datos para Alteon Insurance a través de Imuko — tras liderar Visión por Computador en Vigías de Colombia, y me apasiona entender a fondo cada problema antes de resolverlo con datos.',
+    'about.intro': '¡Hola! Soy Juan, Científico de Datos e Ingeniero de IA. En septiembre de 2026 me gradué de la Pontificia Universidad Javeriana (Ciencia de Datos, cum laude) con el mejor promedio de la carrera — <em>Orden al Mérito Académico Javeriano</em> y Mención de Honor al Mejor Promedio Académico. En 2027-1 comenzaré la Maestría en Inteligencia Artificial de la Javeriana (grado esperado: junio de 2028). Actualmente trabajo como Consultor de IA en Deloitte, construyendo sistemas de IA agéntica, herramientas MCP e implementaciones de Claude Code, además de los pipelines y sistemas de datos que los alimentan (detalles bajo NDA). Antes trabajé como Ingeniero de Datos e IA independiente — entregué un pipeline de datos para Alteon Insurance a través de Imuko — tras liderar Visión por Computador en Vigías de Colombia, y me apasiona entender a fondo cada problema antes de resolverlo con datos.',
 
     // Experience
     'exp.title': 'Experiencia',
     'exp.subtitle': 'Un historial de aportar valor en datos, IA e ingeniería.',
     'exp.d0': 'Oct 2026 — Presente',
     'exp.t0': 'Consultor de IA',
-    'exp.p0': 'Consultoría de IA empresarial — diseño y construcción de soluciones con agentes de IA, Model Context Protocol (MCP), APIs y grafos de conocimiento para clientes. Los detalles del proyecto son confidenciales (NDA).',
+    'exp.p0': 'Soluciones empresariales de IA — diseño y construcción de sistemas de IA agéntica (agentes LLM orquestados con herramientas, APIs y grafos de conocimiento) y de las herramientas y servidores MCP (Model Context Protocol) que conectan los agentes con herramientas y fuentes de datos empresariales. También desarrollo implementaciones de Claude Code para desarrollo asistido por IA y automatización de flujos de trabajo, y construyo los pipelines y sistemas de datos que alimentan estas soluciones de IA. Los detalles del proyecto son confidenciales (NDA).',
     'exp.d1': 'Jul 2026 — Oct 2026',
     'exp.t1': 'Ingeniero de Datos e IA Freelance',
     'exp.p1': 'Ingeniería independiente de datos e IA para clientes. Encargo más reciente — a través de Imuko — construyendo un pipeline de datos para Alteon Insurance, entregado entre julio y agosto de 2026.',
@@ -61,7 +61,10 @@ const ES = {
 
     // Education
     'edu.title': 'Educación',
-    'edu.subtitle': 'Científico de Datos — Pontificia Universidad Javeriana, cum laude, mejor promedio de la carrera.',
+    'edu.subtitle': 'Científico de Datos — Pontificia Universidad Javeriana, cum laude, mejor promedio de la carrera. Próximo: Maestría en Inteligencia Artificial (2027-1).',
+    'edu.mDegree': 'Maestría en Inteligencia Artificial <span class="project-status research edu-status">Próximamente</span>',
+    'edu.mDates': 'Inicio 2027-1 · Grado esperado junio 2028',
+    'edu.mDesc': 'Programa de posgrado en Inteligencia Artificial. Las clases inician en el primer semestre de 2027 (2027-1); grado esperado en junio de 2028.',
     'edu.degree': 'Pregrado en Ciencia de Datos (Científico de Datos)',
     'edu.dates': '2023 — 2026 · Graduado el 10 de sep. de 2026',
     'edu.desc': 'Graduado cum laude con un promedio acumulado de 4.53 / 5.0 — el más alto de la Carrera de Ciencia de Datos. Tesis sobre interpretabilidad de modelos Transformer: mapeo de circuitos conceptuales en GPT-2 Medium mediante intervenciones causales que simulan afasia semántica.',

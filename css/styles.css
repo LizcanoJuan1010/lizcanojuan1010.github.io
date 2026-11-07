@@ -530,6 +530,16 @@ h3 {
     gap: 6px 16px;
 }
 .edu-card .edu-head .timeline-date { margin-bottom: 0; }
+.edu-card + .edu-card { margin-top: 24px; }
+.edu-card-upcoming .timeline-company { margin-top: 4px; }
+.edu-status {
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+    white-space: nowrap;
+}
 .edu-honors {
     list-style: none;
     padding: 0;
