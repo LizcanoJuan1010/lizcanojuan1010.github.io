@@ -56,7 +56,6 @@ Data Science graduate (cum laude) and results-driven AI engineer who builds full
 - Database Administrator — Fiduprevisora/FOMAG (Jun 2025 – Nov 2025): SQL schema and relational model for a public health platform for Colombia's teaching workforce.
 - Junior Data Scientist — Tu Alianza (Feb 2024 – Jun 2025): automated dashboards for directors (Python, SQL, R, PostgreSQL, Power BI, Tableau).
 - Capital Markets Analyst (volunteer) — Financial Group Javeriana, student investment group (2024 – 2025): market-analysis pipeline in Python (yfinance, NLP sentiment, EMA, risk management, CNN-LSTM) for automated trading.
-- Database Administrator — Comercializadora TS (Nov 2023 – Apr 2025): schema normalization and ETL pipelines.
 - Administrative Monitor — Pontificia Universidad Javeriana, Economics Specialization (Jul 2024 – Jun 2025): course scheduling optimization (SQL, Excel).
 - Advanced Programming Tutor — Pontificia Universidad Javeriana (2023 – 2024): OOP in Java, data structures and algorithms, C++ pointers.
 
